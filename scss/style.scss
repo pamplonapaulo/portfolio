@@ -1231,42 +1231,29 @@ footer {
     
     @include MQ(L) {
         text-align: none;
-        
     }
     
-    .linkedin {
-        position: relative;
-        float: left;
-        clear: both;
-        margin: auto auto 20px 40%;
-        
-        @include MQ(M) {
-            margin: auto auto 20px 45%;
-
-        }
+    .social {
+        width: 100%;
+        margin: auto;
         
         @include MQ(L) {
-            margin-left: 5em;
+            padding-left: 5em;
+            float: left;
         }
     }
     
-    .codepen {
-        margin: auto 40% 20px auto;
-        float: right;
-        
-        @include MQ(M) {
-            margin: auto 45% 20px auto;
-
-        }
+    .linkedin, .github, .codepen {
+        display: inline-block;
         
         @include MQ(L) {
             float: left;
-            margin-left: 1em;
         }
     }
     
-    div.linkedin, div.codepen {
+    div.linkedin, div.github, div.codepen {
         width: 30px;
+        margin: 0 5px;
     }
     
     div#logo-bottom {

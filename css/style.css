@@ -1052,29 +1052,21 @@ footer {
   @media only screen and (min-width: 1170px) {
     footer {
       text-align: none; } }
-  footer .linkedin {
-    position: relative;
-    float: left;
-    clear: both;
-    margin: auto auto 20px 40%; }
-    @media only screen and (min-width: 768px) {
-      footer .linkedin {
-        margin: auto auto 20px 45%; } }
+  footer .social {
+    width: 100%;
+    margin: auto; }
     @media only screen and (min-width: 1170px) {
-      footer .linkedin {
-        margin-left: 5em; } }
-  footer .codepen {
-    margin: auto 40% 20px auto;
-    float: right; }
-    @media only screen and (min-width: 768px) {
-      footer .codepen {
-        margin: auto 45% 20px auto; } }
+      footer .social {
+        padding-left: 5em;
+        float: left; } }
+  footer .linkedin, footer .github, footer .codepen {
+    display: inline-block; }
     @media only screen and (min-width: 1170px) {
-      footer .codepen {
-        float: left;
-        margin-left: 1em; } }
-  footer div.linkedin, footer div.codepen {
-    width: 30px; }
+      footer .linkedin, footer .github, footer .codepen {
+        float: left; } }
+  footer div.linkedin, footer div.github, footer div.codepen {
+    width: 30px;
+    margin: 0 5px; }
   footer div#logo-bottom {
     clear: both;
     width: 70px;

@@ -1,5 +1,14 @@
 $(document).ready(function (){
     
+    
+   $(window).scroll(function() {
+    if ($(this).scrollTop()>80) {
+        $('.arrow-wrapper').fadeOut();
+     } else {
+      $('.arrow-wrapper').fadeIn();
+     }
+ }); 
+    
    function fullScreen() {
        $("#hero").css({
            width:$(window).width(),
@@ -30,4 +39,7 @@ $(window).resize(function() {
         $('.menu').show();
     }
 });
+
+
+
 

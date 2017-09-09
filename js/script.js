@@ -31,12 +31,8 @@ $(document).ready(function (){
         $('.menu').show();
     }
     
-    $('.subMenu').click(function(){
-    if ($('#subMenuContent').contains('.openSubMenu'){
-        $('#subMenuContent').removeClass('openSubMenu', 700);
-    } else {
-        $('#subMenuContent').addClass('openSubMenu', 700);
-        });
+
+
         
     
 });

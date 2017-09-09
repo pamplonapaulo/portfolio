@@ -508,7 +508,7 @@ Responsive Top Menu
 /* line 422, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 .menu {
   z-index: 90;
-  position: absolute;
+  position: fixed;
   letter-spacing: .1em;
   font-family: "Maven Pro", sans-serif;
   width: 100%;
@@ -529,7 +529,7 @@ Responsive Top Menu
         margin-top: 0; } }
   /* line 448, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   .menu li {
-    line-height: 3em;
+    line-height: 2.25em;
     font-size: 2em;
     width: 100%; }
     /* line 453, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
@@ -652,7 +652,7 @@ Responsive Top Menu
 
 /* line 585, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 .subMenu:hover > ul, .subMenu:focus > ul {
-  height: 202px;
+  height: 150px;
   background-color: #B2D430; }
   @media only screen and (min-width: 1170px) {
     /* line 585, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */

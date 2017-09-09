@@ -154,16 +154,11 @@
     
     
 $(document).ready(function (){
-   
-        
-    
-    $('.subMenu').click(function(){
-        $('#subMenuContent').addClass('openSubMenu', 700);
+        $('.subMenu').toggle(function(){
+            $('#subMenuContent').addClass('openSubMenu', 700);
+    }, function(){
+            $('#target').removeClass('openSubMenu', 700);
     });
-    
-    
-    
-    
 });
     
 //

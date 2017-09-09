@@ -602,8 +602,12 @@ Responsive Top Menu
     }  
 }
 
+
 .openSubMenu {
     height: 150px;
+}
+.closeSubMenu {
+    height: 0px;
 }
 
 .subMenu ul li:hover {

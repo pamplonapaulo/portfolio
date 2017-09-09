@@ -154,10 +154,8 @@
     
     
 $(document).ready(function (){
-        $('.subMenu').toggle(function(){
-            $('#subMenuContent').addClass('openSubMenu', 700);
-    }, function(){
-            $('#target').removeClass('openSubMenu', 700);
+        $('.subMenu').click(function(){
+            $('#subMenuContent').toggleClass('openSubMenu closeSubMenu', 700);
     });
 });
     

@@ -422,7 +422,6 @@ Responsive Top Menu
 .menu {
     z-index: 90;
     position: fixed;
-    margin-top: $header-S;
     letter-spacing: .1em;
     font-family: $font-2;
     width: 100%;
@@ -448,7 +447,7 @@ Responsive Top Menu
     
     li {
         line-height: 3em;
-        font-size: 2.5em;
+        font-size: 2em;
         width: 100%;
         
         a {
@@ -533,21 +532,19 @@ Responsive Top Menu
 .subMenu {
     color: $color-white;
     
+    > li {
+        color: red;
+        line-height: 50px;
+    }
+    
     @include MQ(L) {
         font-weight: 800;
     }
 }
 
-.subMenu:hover {
-    
-    @include MQ(L) {
-        color: $color-black;
-    }
-}
-
 .subMenu > ul {
     background-color: $color-black;
-    font-size: .25em;
+    font-size: .35em;
     height: 0;
     list-style-type: none;
     overflow: hidden;
@@ -578,7 +575,6 @@ Responsive Top Menu
         }
     }
     li {
-        line-height: 2em;
         
         @include MQ(L) {
             display: block;            
@@ -586,8 +582,8 @@ Responsive Top Menu
     }
 }
 
-.subMenu:hover > ul {
-    height: 150px;
+.subMenu:hover > ul, .menu:focus > ul {
+    height: 202px;
     background-color: $color-green;
     
     @include MQ(L) {

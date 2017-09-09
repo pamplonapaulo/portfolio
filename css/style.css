@@ -448,7 +448,6 @@ Responsive Top Menu
 .menu {
   z-index: 90;
   position: fixed;
-  margin-top: 50px;
   letter-spacing: .1em;
   font-family: "Maven Pro", sans-serif;
   width: 100%;
@@ -466,7 +465,7 @@ Responsive Top Menu
         margin-top: 0; } }
   .menu li {
     line-height: 3em;
-    font-size: 2.5em;
+    font-size: 2em;
     width: 100%; }
     .menu li a {
       text-decoration: none;
@@ -527,17 +526,16 @@ Responsive Top Menu
 
 .subMenu {
   color: #FFF5F5; }
+  .subMenu > li {
+    color: red;
+    line-height: 50px; }
   @media only screen and (min-width: 1170px) {
     .subMenu {
       font-weight: 800; } }
 
-@media only screen and (min-width: 1170px) {
-  .subMenu:hover {
-    color: #2C343B; } }
-
 .subMenu > ul {
   background-color: #2C343B;
-  font-size: .25em;
+  font-size: .35em;
   height: 0;
   list-style-type: none;
   overflow: hidden;
@@ -563,22 +561,20 @@ Responsive Top Menu
         padding: 10px 15px; }
       .subMenu > ul li:first-child {
         margin-top: 90px; } }
-  .subMenu > ul li {
-    line-height: 2em; }
-    @media only screen and (min-width: 1170px) {
-      .subMenu > ul li {
-        display: block; } }
+  @media only screen and (min-width: 1170px) {
+    .subMenu > ul li {
+      display: block; } }
 
-.subMenu:hover > ul {
-  height: 150px;
+.subMenu:hover > ul, .menu:focus > ul {
+  height: 202px;
   background-color: #B2D430; }
   @media only screen and (min-width: 1170px) {
-    .subMenu:hover > ul {
+    .subMenu:hover > ul, .menu:focus > ul {
       background-color: rgba(178, 212, 48, 0.3);
       position: absolute;
       display: block;
       height: 205px; }
-      .subMenu:hover > ul a {
+      .subMenu:hover > ul a, .menu:focus > ul a {
         color: #FFF5F5; } }
 
 .subMenu ul li:hover {

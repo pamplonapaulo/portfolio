@@ -50,7 +50,7 @@
         <nav class="menu"> 
             <ul>
                 <li><a href="about.html" class="current">About me</a></li>
-                <li class="subMenu"><a>Know-how</a>
+                <li class="subMenu"><a class="touchSubMenu">Know-how</a>
                     <ul id="subMenuContent">
                         <li><a href="front-end.html">Front-End</a></li>
                         <li><a href="journalism.html">Journalism</a></li>
@@ -154,19 +154,11 @@
     
     
 $(document).ready(function (){
-        $('.subMenu').click(function(){
+        $('.touchSubMenu').click(function(){
             $('#subMenuContent').toggleClass('openSubMenu closeSubMenu', 700);
     });
 });
-    
-//
-//        $('.subMenu').click(function(){
-//    if ($('#subMenuContent').contains('.openSubMenu'){
-//        $('#subMenuContent').removeClass('openSubMenu', 700);
-//    } else {
-//        $('#subMenuContent').addClass('openSubMenu', 700);
-//        });
-//});
+
 
 
     

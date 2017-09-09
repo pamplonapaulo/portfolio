@@ -421,7 +421,7 @@ Responsive Top Menu
 
 .menu {
     z-index: 90;
-    position: fixed;
+    position: absolute;
     letter-spacing: .1em;
     font-family: $font-2;
     width: 100%;
@@ -435,7 +435,7 @@ Responsive Top Menu
     }
     
     > ul {
-        margin-top: 90px;
+        margin-top: 40px;
         text-shadow: 2px 2px 8px $color-black;
 
         
@@ -582,7 +582,7 @@ Responsive Top Menu
     }
 }
 
-.subMenu:hover > ul, .menu:focus > ul {
+.subMenu:hover > ul, .subMenu:focus > ul {
     height: 202px;
     background-color: $color-green;
     

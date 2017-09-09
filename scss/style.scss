@@ -567,7 +567,7 @@ Responsive Top Menu
         top: -30px;
         
         li {
-            margin: 0 auto;
+            margin: 0 auto;    
             padding: 10px 15px;
         }
         li:first-child {
@@ -582,9 +582,13 @@ Responsive Top Menu
     }
 }
 
+.subMenu > ul {
+    background-color: $color-green;
+
+}
+
 .subMenu:hover > ul, .subMenu:focus > ul {
     height: 150px;
-    background-color: $color-green;
     
     @include MQ(L) {
         background-color: rgba($color-green, .3);
@@ -597,6 +601,11 @@ Responsive Top Menu
         }
     }  
 }
+
+.openSubMenu {
+    height: 150px;
+}
+
 .subMenu ul li:hover {
     color: $color-white;
     background-color: $color-black;

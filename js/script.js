@@ -30,6 +30,15 @@ $(document).ready(function (){
     } else {
         $('.menu').show();
     }
+    
+    
+    
+    $('.subMenu').click(function(){
+        $('#subMenuContent').addClass('openSubMenu', 700);
+	   });
+
+        
+    
 });
 $(window).resize(function() {
     if ($(window).width() < 1170){

@@ -646,35 +646,32 @@ Responsive Top Menu
       .subMenu > ul li:first-child {
         margin-top: 90px; } }
   @media only screen and (min-width: 1170px) {
-    /* line 577, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+    /* line 578, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
     .subMenu > ul li {
       display: block; } }
 
-/* line 585, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 586, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 .subMenu > ul {
   background-color: #B2D430; }
 
-/* line 590, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
-.subMenu:hover > ul, .subMenu:focus > ul {
-  height: 150px; }
-  @media only screen and (min-width: 1170px) {
-    /* line 590, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
-    .subMenu:hover > ul, .subMenu:focus > ul {
-      background-color: rgba(178, 212, 48, 0.3);
-      position: absolute;
-      display: block;
-      height: 205px; }
-      /* line 599, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
-      .subMenu:hover > ul a, .subMenu:focus > ul a {
-        color: #FFF5F5; } }
-
-/* line 606, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 591, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 .openSubMenu {
   height: 150px; }
 
-/* line 609, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 594, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 .closeSubMenu {
   height: 0px; }
+
+@media only screen and (min-width: 1170px) {
+  /* line 598, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  .subMenu:hover > ul, .subMenu:focus > ul {
+    background-color: rgba(178, 212, 48, 0.3);
+    position: absolute;
+    display: block;
+    height: 205px; }
+    /* line 607, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+    .subMenu:hover > ul a, .subMenu:focus > ul a {
+      color: #FFF5F5; } }
 
 /* line 613, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 .subMenu ul li:hover {

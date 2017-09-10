@@ -50,8 +50,8 @@
         <nav class="menu"> 
             <ul>
                 <li><a href="about.html" class="current">About me</a></li>
-                <li class="subMenu"><a class="touchSubMenu">Know-how</a>
-                    <ul id="subMenuContent">
+                <li class="subMenu touchMenu"><a>Know-how</a>
+                    <ul id="menuExpand">
                         <li><a href="front-end.html">Front-End</a></li>
                         <li><a href="journalism.html">Journalism</a></li>
                         <li><a href="branding.html">Branding</a></li>
@@ -154,8 +154,25 @@
     
     
 $(document).ready(function (){
-        $('.touchSubMenu').click(function(){
-            $('#subMenuContent').toggleClass('openSubMenu closeSubMenu', 700);
+//        $.fn.toggle2classes = function(class1, class2){
+//      if( !class1 || !class2 )
+//        return this;
+//
+//      return this.each(function(){
+//        var $elm = $(this);
+//
+//        if( $elm.hasClass(class1) || $elm.hasClass(class2) )
+//          $elm.toggleClass(class1 +' '+ class2);
+//
+//        else
+//          $elm.addClass(class1);
+//      });
+//    };
+//    
+//    $('.touchSubMenu').toggle2classes('.openSubMenu', '.closeSubMenu');    
+    
+        $('.touchMenu').click(function(){
+            $('#menuExpand').addClass('openSubMenu', 700);
     });
 });
 

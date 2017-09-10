@@ -574,6 +574,7 @@ Responsive Top Menu
             margin-top:90px;
         }
     }
+    
     li {
         
         @include MQ(L) {
@@ -587,8 +588,15 @@ Responsive Top Menu
 
 }
 
-.subMenu:hover > ul, .subMenu:focus > ul {
+.openSubMenu {
     height: 150px;
+}
+.closeSubMenu {
+    height: 0px;
+}
+
+.subMenu:hover > ul, .subMenu:focus > ul {
+    //height: 150px;
     
     @include MQ(L) {
         background-color: rgba($color-green, .3);
@@ -600,14 +608,6 @@ Responsive Top Menu
             color: $color-white;
         }
     }  
-}
-
-
-.openSubMenu {
-    height: 150px;
-}
-.closeSubMenu {
-    height: 0px;
 }
 
 .subMenu ul li:hover {

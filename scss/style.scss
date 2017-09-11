@@ -530,15 +530,17 @@ Responsive Top Menu
 }
 
 .subMenu {
+    cursor:pointer;
     color: $color-white;
     
     > li {
-        color: red;
         line-height: 50px;
     }
     
     @include MQ(L) {
         font-weight: 800;
+        cursor:auto;
+
     }
 }
 
@@ -584,12 +586,18 @@ Responsive Top Menu
 }
 
 .subMenu > ul {
-    background-color: $color-green;
-
+    background-color: rgba($color-green, .3);
 }
 
-.subMenu:hover > ul, .subMenu.dropdownOpen > ul {
+.touchDropDown {
+    height: 0px;
+}
+.touchDropDown.expand {
     height: 150px;
+}
+
+.subMenu:hover > ul {
+    //height: 150px;
     
     @include MQ(L) {
         background-color: rgba($color-green, .3);

@@ -525,13 +525,14 @@ Responsive Top Menu
         z-index: 9999; } }
 
 .subMenu {
+  cursor: pointer;
   color: #FFF5F5; }
   .subMenu > li {
-    color: red;
     line-height: 50px; }
   @media only screen and (min-width: 1170px) {
     .subMenu {
-      font-weight: 800; } }
+      font-weight: 800;
+      cursor: auto; } }
 
 .subMenu > ul {
   background-color: #2C343B;
@@ -566,18 +567,22 @@ Responsive Top Menu
       display: block; } }
 
 .subMenu > ul {
-  background-color: #B2D430; }
+  background-color: rgba(178, 212, 48, 0.3); }
 
-.subMenu:hover > ul, .subMenu.dropdownOpen > ul {
+.touchDropDown {
+  height: 0px; }
+
+.touchDropDown.expand {
   height: 150px; }
-  @media only screen and (min-width: 1170px) {
-    .subMenu:hover > ul, .subMenu.dropdownOpen > ul {
-      background-color: rgba(178, 212, 48, 0.3);
-      position: absolute;
-      display: block;
-      height: 205px; }
-      .subMenu:hover > ul a, .subMenu.dropdownOpen > ul a {
-        color: #FFF5F5; } }
+
+@media only screen and (min-width: 1170px) {
+  .subMenu:hover > ul {
+    background-color: rgba(178, 212, 48, 0.3);
+    position: absolute;
+    display: block;
+    height: 205px; }
+    .subMenu:hover > ul a {
+      color: #FFF5F5; } }
 
 .subMenu ul li:hover {
   color: #FFF5F5;

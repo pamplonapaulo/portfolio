@@ -1,5 +1,6 @@
 $(document).ready(function (){
     
+//    Scroll Down Arrows
     
    $(window).scroll(function() {
     if ($(this).scrollTop()>80) {
@@ -9,6 +10,8 @@ $(document).ready(function (){
      }
  }); 
     
+//    Responsive Hero Slider
+  
    function fullScreen() {
        $("#hero").css({
            width:$(window).width(),
@@ -21,6 +24,8 @@ $(document).ready(function (){
         fullScreen();
     });
     
+//    Hamburguer Menu Icon Animation
+    
     $('#hamb-nav').click(function(){
         $(this).toggleClass('open');
         $('.menu').fadeToggle('400');
@@ -31,11 +36,16 @@ $(document).ready(function (){
         $('.menu').show();
     }
     
-
-
-        
+//    SubMenu DropDown for Touch Screen
     
+    $('.subMenu').click(function(){        $('.touchDropDown').toggleClass('expand');
+    });
+  
 });
+
+
+//    Resize Hamburguer Menu Icon Animation
+//    Problem: I need make it DRY
 $(window).resize(function() {
     if ($(window).width() < 1170){
         $('#hamb-nav').removeClass('open');

@@ -568,15 +568,15 @@ Responsive Top Menu
 .subMenu > ul {
   background-color: #B2D430; }
 
-.subMenu:hover > ul, .subMenu:active > ul {
+.subMenu:hover > ul, .subMenu.dropdownOpen > ul {
   height: 150px; }
   @media only screen and (min-width: 1170px) {
-    .subMenu:hover > ul, .subMenu:active > ul {
+    .subMenu:hover > ul, .subMenu.dropdownOpen > ul {
       background-color: rgba(178, 212, 48, 0.3);
       position: absolute;
       display: block;
       height: 205px; }
-      .subMenu:hover > ul a, .subMenu:active > ul a {
+      .subMenu:hover > ul a, .subMenu.dropdownOpen > ul a {
         color: #FFF5F5; } }
 
 .subMenu ul li:hover {

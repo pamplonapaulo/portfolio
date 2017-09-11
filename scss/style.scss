@@ -588,7 +588,7 @@ Responsive Top Menu
 
 }
 
-.subMenu:hover > ul, .subMenu:active > ul {
+.subMenu:hover > ul, .subMenu.dropdownOpen > ul {
     height: 150px;
     
     @include MQ(L) {
@@ -602,6 +602,7 @@ Responsive Top Menu
         }
     }  
 }
+
 
 .subMenu ul li:hover {
     color: $color-white;

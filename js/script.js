@@ -24,6 +24,7 @@ $(document).ready(function (){
         fullScreen();
     });
     
+    
 //    Hamburguer Menu Icon Animation
     
     $('#hamb-nav').click(function(){
@@ -38,7 +39,8 @@ $(document).ready(function (){
     
 //    SubMenu DropDown for Touch Screen
     
-    $('.subMenu').click(function(){        $('.touchDropDown').toggleClass('expand');
+    $('.subMenu').click(function(){
+        $('.touchDropDown').toggleClass('expand');
     });
   
 });

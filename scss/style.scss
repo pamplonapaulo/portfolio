@@ -588,15 +588,8 @@ Responsive Top Menu
 
 }
 
-.openSubMenu {
+.subMenu:hover > ul, .subMenu:active > ul {
     height: 150px;
-}
-.closeSubMenu {
-    height: 0px;
-}
-
-.subMenu:hover > ul, .subMenu:focus > ul {
-    //height: 150px;
     
     @include MQ(L) {
         background-color: rgba($color-green, .3);

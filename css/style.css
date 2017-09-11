@@ -568,20 +568,16 @@ Responsive Top Menu
 .subMenu > ul {
   background-color: #B2D430; }
 
-.openSubMenu {
+.subMenu:hover > ul, .subMenu:active > ul {
   height: 150px; }
-
-.closeSubMenu {
-  height: 0px; }
-
-@media only screen and (min-width: 1170px) {
-  .subMenu:hover > ul, .subMenu:focus > ul {
-    background-color: rgba(178, 212, 48, 0.3);
-    position: absolute;
-    display: block;
-    height: 205px; }
-    .subMenu:hover > ul a, .subMenu:focus > ul a {
-      color: #FFF5F5; } }
+  @media only screen and (min-width: 1170px) {
+    .subMenu:hover > ul, .subMenu:active > ul {
+      background-color: rgba(178, 212, 48, 0.3);
+      position: absolute;
+      display: block;
+      height: 205px; }
+      .subMenu:hover > ul a, .subMenu:active > ul a {
+        color: #FFF5F5; } }
 
 .subMenu ul li:hover {
   color: #FFF5F5;

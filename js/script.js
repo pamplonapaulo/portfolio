@@ -1,6 +1,21 @@
 $(document).ready(function (){
+
+// Scroll Down on Click
     
-//    Scroll Down Arrows
+   $('a[href^="#"]').on('click',function (e) {
+      e.preventDefault();
+       
+       var target = this.hash;
+       var $target = $(target);
+       
+       $('html, body').animate({
+           'scrollTop': $target.offset().top
+       }, 1000, 'swing', function () {
+           window.location.hash = target;
+       });
+   });
+    
+//    Hide Scroll Down Arrows
     
    $(window).scroll(function() {
     if ($(this).scrollTop()>80) {

@@ -20,11 +20,7 @@
 - Main Content
 - Animated Title
 */
-@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i|Maven+Pro:400,500,700,900");
-@import url(https://fonts.googleapis.com/css?family=Oswald:400);
-@font-face {
-  font-family: IntroInline;
-  src: url("../fonts/intro/Intro-Inline.otf") format("opentype"); }
+@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i|Maven+Pro:400,500,700,900|Oswald:400");
 /* -------------------------------- 
 
 Grid
@@ -255,39 +251,6 @@ img {
 Header Components 
 
 -------------------------------- */
-#heroImage {
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  height: 360px; }
-  @media only screen and (min-width: 768px) {
-    #heroImage {
-      height: 500px; } }
-  @media only screen and (min-width: 1170px) {
-    #heroImage {
-      height: 680px; } }
-
-.headerSection {
-  position: absolute;
-  top: 25px;
-  width: 100%;
-  color: #fff;
-  text-align: center;
-  transform: translate(0%, -50%); }
-  .headerSection .headerWrap {
-    background: linear-gradient(to right, #b2d430, rgba(178, 212, 48, 0.75), transparent, transparent);
-    position: absolute;
-    height: 100px;
-    width: 100%;
-    top: 210px;
-    padding-top: 10px; }
-    @media only screen and (min-width: 768px) {
-      .headerSection .headerWrap {
-        top: 350px; } }
-    @media only screen and (min-width: 1170px) {
-      .headerSection .headerWrap {
-        top: 450px; } }
-
 .header {
   position: fixed;
   z-index: 2;
@@ -326,81 +289,6 @@ Header Components
 .shadow {
   -webkit-filter: drop-shadow(-3px 3px 1px #2C343B);
   filter: drop-shadow(-3px 3px 1px #2C343B); }
-
-/* -------------------------------- 
-
-Main Content
-
--------------------------------- */
-.main-content {
-  margin: 0 auto 5em auto;
-  padding-bottom: 1em; }
-  .main-content h2 {
-    font-size: 2.2rem;
-    font-family: "Droid Serif", serif;
-    line-height: 1.8;
-    color: #2a3138;
-    margin: .8em 16px;
-    font-weight: 800; }
-  .main-content p {
-    font-size: 1.8rem;
-    font-family: "Droid Serif", serif;
-    line-height: 1.8;
-    color: #2a3138;
-    margin: .8em 16px; }
-  @media only screen and (min-width: 1170px) {
-    .main-content {
-      padding: 3em 0; }
-      .main-content p {
-        font-size: 2.1rem; } }
-
-/* -------------------------------- 
-
-Animated Title
-
--------------------------------- */
-div.main-content.container-lg {
-  top: 30%; }
-  @media only screen and (min-width: 1170px) {
-    div.main-content.container-lg {
-      top: -30px; } }
-
-h6 {
-  position: relative;
-  text-align: left;
-  z-index: 999;
-  margin-left: 16px;
-  display: block;
-  font-size: 3rem;
-  font-family: 'Oswald', sans-serif;
-  color: #FFF5F5;
-  text-shadow: 2px 2px 8px #000; }
-  @media only screen and (min-width: 768px) {
-    h6 {
-      font-size: 4rem; } }
-  @media only screen and (min-width: 1170px) {
-    h6 {
-      font-size: 5rem; } }
-
-h6 > span {
-  display: block;
-  margin-right: 0.3em;
-  float: left; }
-
-span span {
-  opacity: 0;
-  backface-visibility: visible;
-  transition-property: all;
-  transition-duration: 660ms;
-  transition-timing-function: ease-in-out;
-  transform-origin: 50% 50% 0px;
-  transform: perspective(1050px) rotateY(0deg) scale(0.5);
-  -webkit-transition-property: all;
-  -webkit-transition-duration: 660ms;
-  -webkit-transition-timing-function: ease-in-out;
-  -webkit-transform-origin: 50% 50% 0px;
-  -webkit-transform: perspective(1050px) rotateY(0deg) scale(0.5);
-  display: inline-block; }
 
 /* -------------------------------- 
 
@@ -657,6 +545,91 @@ Responsive Top Menu
   @media only screen and (min-width: 1170px) {
     .subMenu ul li:hover {
       background-color: #b2d430; } }
+
+/* -------------------------------- 
+
+Hero Image 
+
+-------------------------------- */
+#heroImage {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 360px; }
+  @media only screen and (min-width: 768px) {
+    #heroImage {
+      height: 500px; } }
+  @media only screen and (min-width: 1170px) {
+    #heroImage {
+      height: 680px; } }
+
+.headerSection {
+  position: absolute;
+  top: 25px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  transform: translate(0%, -50%); }
+  .headerSection .headerWrap {
+    background: linear-gradient(to right, #b2d430, rgba(178, 212, 48, 0.75), transparent, transparent);
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    top: 210px; }
+    @media only screen and (min-width: 768px) {
+      .headerSection .headerWrap {
+        top: 350px; } }
+    @media only screen and (min-width: 1170px) {
+      .headerSection .headerWrap {
+        top: 450px; } }
+
+/* -------------------------------- 
+
+Animated Title
+
+-------------------------------- */
+div.main-content.container-lg {
+  top: 30%; }
+  @media only screen and (min-width: 1170px) {
+    div.main-content.container-lg {
+      top: -30px; } }
+
+h6 {
+  position: relative;
+  text-align: left;
+  z-index: 999;
+  margin-left: 16px;
+  display: block;
+  font-size: 3rem;
+  font-family: "Oswald", sans-serif;
+  color: #FFF5F5;
+  text-shadow: 2px 2px 8px #000; }
+  @media only screen and (min-width: 768px) {
+    h6 {
+      font-size: 4rem; } }
+  @media only screen and (min-width: 1170px) {
+    h6 {
+      font-size: 5rem; } }
+
+h6 > span {
+  display: block;
+  margin-right: 0.3em;
+  float: left; }
+
+span span {
+  opacity: 0;
+  backface-visibility: visible;
+  transition-property: all;
+  transition-duration: 660ms;
+  transition-timing-function: ease-in-out;
+  transform-origin: 50% 50% 0px;
+  transform: perspective(1050px) rotateY(0deg) scale(0.5);
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 660ms;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transform-origin: 50% 50% 0px;
+  -webkit-transform: perspective(1050px) rotateY(0deg) scale(0.5);
+  display: inline-block; }
 
 /* -------------------------------- 
 
@@ -1083,6 +1056,37 @@ Scroll down arrow icon
       background: #757575; }
     100% {
       background: #BDBDBD; } } }
+/* -------------------------------- 
+
+Main Content
+
+-------------------------------- */
+.main-content {
+  margin: 0 auto 5em auto;
+  padding-bottom: 1em; }
+  .main-content h2 {
+    font-size: 2.2rem;
+    font-family: "Droid Serif", serif;
+    line-height: 1.8;
+    color: #2a3138;
+    margin: .8em 16px;
+    font-weight: 800; }
+  .main-content p {
+    font-size: 1.8rem;
+    font-family: "Droid Serif", serif;
+    line-height: 1.8;
+    color: #2a3138;
+    margin: .8em 16px; }
+  @media only screen and (min-width: 1170px) {
+    .main-content {
+      padding: 3em 0; }
+      .main-content p {
+        font-size: 2.1rem; } }
+
+#instaFeed li {
+  list-style: none;
+  display: inline-block; }
+
 /* -------------------------------- 
 
 Footer

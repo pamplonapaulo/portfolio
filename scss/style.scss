@@ -29,14 +29,13 @@
 
 @import '../partials/layout'; // breakpoints and media queries
 
-@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i|Maven+Pro:400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i|Maven+Pro:400,500,700,900|Oswald:400');
 
+//@font-face {
+//    font-family: IntroInline;
+//    src: url("../fonts/intro/Intro-Inline.otf") format("opentype");
+//}
 
-@font-face {
-    font-family: IntroInline;
-    src: url("../fonts/intro/Intro-Inline.otf") format("opentype");
-    
-}
 
 
 
@@ -199,47 +198,6 @@ img {
 Header Components 
 
 -------------------------------- */
-
-#heroImage {
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    height: $intro-height-S;
-    
-    @include MQ(M) {
-        height: $intro-height-M;
-    }
-    
-    @include MQ(L) {
-        height: $intro-height-L;
-    }
-}
-.headerSection  {
-    position: absolute;
-    top:25px;
-    width: 100%;
-    color:#fff;
-    text-align: center;
-    transform: translate(0%,-50%);
-    
-    .headerWrap {
-        background: linear-gradient(to right, rgba($color-green, 1), rgba($color-green, .75), transparent, transparent);
-        position: absolute;
-        height: 100px;
-        width: 100%;
-        top: 210px;
-        padding-top: 10px;
-        
-        @include MQ(M) {
-            top: 350px;
-        }
-        
-        @include MQ(L) {
-            top: 450px;
-        }
-    }
-}
-
 .header {
 	position: fixed;
 	z-index: 2;
@@ -289,109 +247,9 @@ Header Components
 
 /* -------------------------------- 
 
-Main Content
-
--------------------------------- */
-
-.main-content {
-	margin: 0 auto 5em auto;
-	padding-bottom: 1em;
-    
-    h2 {
-		font-size: 2.2rem;
-        font-family: $font-4;
-		line-height: 1.8;
-		color: darken($color-black, 1);
-		margin: .8em 16px;
-        font-weight: 800;
-
-    }
-
-	p {
-		font-size: 1.8rem;
-        font-family: $font-4;
-		line-height: 1.8;
-		color: darken($color-black, 1);
-		margin: .8em 16px;
-	}
-
-	@include MQ(L) {
-		padding: 3em 0;
-		
-		p {
-			font-size: 2.1rem;
-		}
-	}
-}
-
-/* -------------------------------- 
-
-Animated Title
-
--------------------------------- */
-
-@import url(https://fonts.googleapis.com/css?family=Oswald:400);
-
-div.main-content.container-lg {
-    top: 30%;
-    
-    @include MQ(L) {
-        top: -30px;
-    }
-}
-
-
-h6 {
-    position: relative;
-    text-align: left;
-    z-index: 999;
-    margin-left: 16px;
-	display: block;
-    font-size: 3rem;
-    font-family: 'Oswald', sans-serif;
-    color: $color-white;
-    text-shadow: 2px 2px 8px #000;
-
-    
-    @include MQ(M) {
-        font-size: 4rem;
-        //font-size: 400%/130%;
-    }
-    
-    @include MQ(L) {
-        font-size: 5rem;
-    }
-    //font:400%/130% 'Oswald', sans-serif;
-}
-
-h6 > span {
-	display: block;
-	margin-right: 0.3em;
-	float: left;
-}
-
-span span {
-	opacity: 0;
-	backface-visibility: visible;
-	transition-property: all;
-	transition-duration: 660ms;
-	transition-timing-function: ease-in-out;
-	transform-origin: 50% 50% 0px;
-	transform: perspective(1050px) rotateY(0deg) scale(0.5);
-	-webkit-transition-property: all;
-	-webkit-transition-duration: 660ms;
-	-webkit-transition-timing-function: ease-in-out;
-	-webkit-transform-origin: 50% 50% 0px;
-	-webkit-transform: perspective(1050px) rotateY(0deg) scale(0.5);
-	display: inline-block;
-}
-
-/* -------------------------------- 
-
 Animated Hamburguer Icon
 
 -------------------------------- */
-
 .nav-hamb div {
     position: relative;
 	line-height: 1.2;
@@ -498,7 +356,7 @@ Responsive Top Menu
     z-index: 90;
     position: fixed;
     letter-spacing: .1em;
-    font-family: $font-2;
+    font-family: $font-1;
     width: 100%;
     height: 100%;
     font-weight: 800;
@@ -510,7 +368,6 @@ Responsive Top Menu
     }
     
     > ul {
-        //display: block;
         display: table-cell;
         vertical-align: middle;
         
@@ -540,7 +397,6 @@ Responsive Top Menu
             width: 100%;
             display: block;
             text-shadow: 2px 2px 8px #000;
-
         }
     }
     
@@ -708,10 +564,111 @@ Responsive Top Menu
 
 /* -------------------------------- 
 
+Hero Image 
+
+-------------------------------- */
+#heroImage {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: $intro-height-S;
+    
+    @include MQ(M) {
+        height: $intro-height-M;
+    }
+    
+    @include MQ(L) {
+        height: $intro-height-L;
+    }
+}
+.headerSection  {
+    position: absolute;
+    top:25px;
+    width: 100%;
+    color:#fff;
+    text-align: center;
+    transform: translate(0%,-50%);
+    
+    .headerWrap {
+        background: linear-gradient(to right, rgba($color-green, 1), rgba($color-green, .75), transparent, transparent);
+        position: absolute;
+        height: 100px;
+        width: 100%;
+        top: 210px;
+        
+        @include MQ(M) {
+            top: 350px;
+        }
+        
+        @include MQ(L) {
+            top: 450px;
+        }
+    }
+}
+
+/* -------------------------------- 
+
+Animated Title
+
+-------------------------------- */
+div.main-content.container-lg {
+    top: 30%;
+    
+    @include MQ(L) {
+        top: -30px;
+    }
+}
+
+h6 {
+    position: relative;
+    text-align: left;
+    z-index: 999;
+    margin-left: 16px;
+	display: block;
+    font-size: 3rem;
+    font-family: $font-0;
+    color: $color-white;
+    text-shadow: 2px 2px 8px #000;
+
+    
+    @include MQ(M) {
+        font-size: 4rem;
+        //font-size: 400%/130%;
+    }
+    
+    @include MQ(L) {
+        font-size: 5rem;
+    }
+    //font:400%/130% 'Oswald', sans-serif;
+}
+
+h6 > span {
+	display: block;
+	margin-right: 0.3em;
+	float: left;
+}
+
+span span {
+	opacity: 0;
+	backface-visibility: visible;
+	transition-property: all;
+	transition-duration: 660ms;
+	transition-timing-function: ease-in-out;
+	transform-origin: 50% 50% 0px;
+	transform: perspective(1050px) rotateY(0deg) scale(0.5);
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 660ms;
+	-webkit-transition-timing-function: ease-in-out;
+	-webkit-transform-origin: 50% 50% 0px;
+	-webkit-transform: perspective(1050px) rotateY(0deg) scale(0.5);
+	display: inline-block;
+}
+
+/* -------------------------------- 
+
 Slider
 
 -------------------------------- */
-
 .hero {
 	position: relative;
 	@include font-smoothing;
@@ -1263,6 +1220,48 @@ Scroll down arrow icon
             }
         }     
     }
+}
+
+/* -------------------------------- 
+
+Main Content
+
+-------------------------------- */
+
+.main-content {
+	margin: 0 auto 5em auto;
+	padding-bottom: 1em;
+    
+    h2 {
+		font-size: 2.2rem;
+        font-family: $font-2;
+		line-height: 1.8;
+		color: darken($color-black, 1);
+		margin: .8em 16px;
+        font-weight: 800;
+
+    }
+
+	p {
+		font-size: 1.8rem;
+        font-family: $font-2;
+		line-height: 1.8;
+		color: darken($color-black, 1);
+		margin: .8em 16px;
+	}
+
+	@include MQ(L) {
+		padding: 3em 0;
+		
+		p {
+			font-size: 2.1rem;
+		}
+	}
+}
+
+#instaFeed li {
+    list-style: none;
+    display: inline-block;
 }
 
 /* -------------------------------- 

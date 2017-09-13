@@ -218,13 +218,12 @@ Header Components
     position: absolute;
     top:25px;
     width: 100%;
-    //height: $header-S;
     color:#fff;
     text-align: center;
     transform: translate(0%,-50%);
     
     .headerWrap {
-        background: linear-gradient(to right, rgba($color-green, 1), transparent, transparent);
+        background: linear-gradient(to right, rgba($color-green, 1), rgba($color-green, .75), transparent, transparent);
         position: absolute;
         height: 100px;
         width: 100%;
@@ -305,6 +304,7 @@ Main Content
 		color: darken($color-black, 1);
 		margin: .8em 16px;
         font-weight: 800;
+
     }
 
 	p {
@@ -340,22 +340,18 @@ div.main-content.container-lg {
     }
 }
 
+
 h6 {
     position: relative;
-    //font-family: $font-3;
-    //font-size: 4rem;
     text-align: left;
-    font-weight: 800;
     z-index: 999;
     margin-left: 16px;
-    
-    
-    
-    
 	display: block;
     font-size: 3rem;
     font-family: 'Oswald', sans-serif;
     color: $color-white;
+    text-shadow: 2px 2px 8px #000;
+
     
     @include MQ(M) {
         font-size: 4rem;
@@ -507,19 +503,28 @@ Responsive Top Menu
     height: 100%;
     font-weight: 800;
     background-color: rgba($color-black, .9);
+    display: table;
     
-    > ul {
+    @include MQ(L) {
         display: block;
-        text-align: center;
     }
     
     > ul {
+        //display: block;
+        display: table-cell;
+        vertical-align: middle;
+        
+        text-align: center;
         margin-top: 40px;
         text-shadow: 2px 2px 8px $color-black;
 
+        @include MQ(M) {
+            margin-top: 70px;            
+        }
         
         @include MQ(L) {
-        margin-top: 0;
+            margin-top: 0;
+            display: block;
         }
 
     }
@@ -538,6 +543,7 @@ Responsive Top Menu
 
         }
     }
+    
     
     li:hover {
         background: $color-green;

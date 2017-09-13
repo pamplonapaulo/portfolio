@@ -595,6 +595,7 @@ Hero Image
         height: 100px;
         width: 100%;
         top: 210px;
+        display: table;
         
         @include MQ(M) {
             top: 350px;
@@ -606,13 +607,19 @@ Hero Image
     }
 }
 
+
+
 /* -------------------------------- 
 
 Animated Title
 
 -------------------------------- */
 div.main-content.container-lg {
-    top: 30%;
+	margin: auto;
+	padding-bottom: 0;
+    top: 0;
+    display: table-cell;
+    vertical-align: middle;
     
     @include MQ(L) {
         top: -30px;
@@ -662,6 +669,98 @@ span span {
 	-webkit-transform-origin: 50% 50% 0px;
 	-webkit-transform: perspective(1050px) rotateY(0deg) scale(0.5);
 	display: inline-block;
+}
+
+/* -------------------------------- 
+
+Scroll down arrow icon
+
+-------------------------------- */
+@include MQ(L) {
+    .arrow-wrapper {
+        position: absolute;
+        top: -140px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 100%;
+        height: 55px;
+        padding-top: 10px;
+        z-index: 99;
+                
+        .arrow {
+            position: absolute;
+            display: inline-block;
+            width: 30px;
+            height: 6px;        
+        }
+        
+        .right {
+            transform: rotate(-35deg);
+            border-radius: 0px 3px 3px 1.5px;
+            margin-left: 21.5px;
+        }
+        
+        .left {
+            transform: rotate(35deg);
+            border-radius: 3px 0 1px 3px;
+        }
+        
+        .top {
+            background: transparent;
+            -webkit-animation: arrow 1.3s infinite;
+            -webkit-animation-delay: 0s;
+            animation: arrow 1.3s infinite;
+            animation-delay: 0s;
+        }
+        
+        .middle {
+            background: transparent;
+            margin-top: 15px;
+            -webkit-animation: arrow 1.3s infinite; 
+            -webkit-animation-delay: 0.2s; 
+            animation: arrow 1.3s infinite; 
+            animation-delay: 0.2s;
+        }
+        
+        .bottom {
+            background: transparent;
+            margin-top: 30px;
+            -webkit-animation: arrow 1.3s infinite; 
+            -webkit-animation-delay: 0.3s; 
+            animation: arrow 1.3s infinite; 
+            animation-delay: 0.3s;
+        }
+    
+        @-webkit-keyframes arrow {
+            0%, 50% { 
+            //opacity: 0;
+            background: transparent;    
+            }
+            75% {
+            background: #757575;    
+            }
+            100% {
+            //opacity: 1;
+            background: #BDBDBD;
+            }
+        }
+
+        @keyframes arrow {
+            0%, 50% { 
+            //opacity: 0;
+            background: transparent;    
+            }
+            75% {
+            background: #757575;    
+            }
+            100% {
+            //opacity: 1;
+            background: #BDBDBD;
+            }
+        }     
+    }
 }
 
 /* -------------------------------- 
@@ -1128,99 +1227,7 @@ Slider Navigation
 	}
 }
 
-/* -------------------------------- 
 
-Scroll down arrow icon
-
--------------------------------- */
-
-
-@include MQ(L) {
-    .arrow-wrapper {
-        position: absolute;
-        top: -140px;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        width: 100%;
-        height: 55px;
-        padding-top: 10px;
-        z-index: 99;
-                
-        .arrow {
-            position: absolute;
-            display: inline-block;
-            width: 30px;
-            height: 6px;        
-        }
-        
-        .right {
-            transform: rotate(-35deg);
-            border-radius: 0px 3px 3px 1.5px;
-            margin-left: 21.5px;
-        }
-        
-        .left {
-            transform: rotate(35deg);
-            border-radius: 3px 0 1px 3px;
-        }
-        
-        .top {
-            background: transparent;
-            -webkit-animation: arrow 1.3s infinite;
-            -webkit-animation-delay: 0s;
-            animation: arrow 1.3s infinite;
-            animation-delay: 0s;
-        }
-        
-        .middle {
-            background: transparent;
-            margin-top: 15px;
-            -webkit-animation: arrow 1.3s infinite; 
-            -webkit-animation-delay: 0.2s; 
-            animation: arrow 1.3s infinite; 
-            animation-delay: 0.2s;
-        }
-        
-        .bottom {
-            background: transparent;
-            margin-top: 30px;
-            -webkit-animation: arrow 1.3s infinite; 
-            -webkit-animation-delay: 0.3s; 
-            animation: arrow 1.3s infinite; 
-            animation-delay: 0.3s;
-        }
-    
-        @-webkit-keyframes arrow {
-            0%, 50% { 
-            //opacity: 0;
-            background: transparent;    
-            }
-            75% {
-            background: #757575;    
-            }
-            100% {
-            //opacity: 1;
-            background: #BDBDBD;
-            }
-        }
-
-        @keyframes arrow {
-            0%, 50% { 
-            //opacity: 0;
-            background: transparent;    
-            }
-            75% {
-            background: #757575;    
-            }
-            100% {
-            //opacity: 1;
-            background: #BDBDBD;
-            }
-        }     
-    }
-}
 
 /* -------------------------------- 
 
@@ -1239,7 +1246,6 @@ Main Content
 		color: darken($color-black, 1);
 		margin: .8em 16px;
         font-weight: 800;
-
     }
 
 	p {

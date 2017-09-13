@@ -44,7 +44,7 @@ Grid
   position: relative;
   top: 6rem; }
 
-/* ------------------------ MOBILE GRID SYSTEM------------------------- */
+/* ---- MOBILE GRID SYSTEM---------- */
 /*Currently this grid system is for the desktop view. need to work on mobile view*/
 /*Creates row for columns to be centered within and not overflow*/
 .row {
@@ -104,7 +104,7 @@ Grid
 .row > [class^="col"]:last-child {
   margin-right: 0; }
 
-/* ------------------------ TABLET GRID SYSTEM------------------------- */
+/* ------- TABLET GRID SYSTEM----------- */
 @media screen and (min-width: 600px) {
   [class^="col-md"], [class^="col-lg"], [class^="col-xl"] {
     margin: 0 1.9%; }
@@ -144,7 +144,7 @@ Grid
 
   .col-md-12 {
     width: 100%; } }
-/* ------------------------ LAPTOP GRID SYSTEM------------------------- */
+/* -------- LAPTOP GRID SYSTEM--------- */
 @media screen and (min-width: 992px) {
   .col-lg-1 {
     width: 3.93%; }
@@ -181,7 +181,7 @@ Grid
 
   .col-lg-12 {
     width: 100%; } }
-/* ------------------------ DESKTOP GRID SYSTEM------------------------- */
+/* --------- DESKTOP GRID SYSTEM-------- */
 @media screen and (min-width: 1200px) {
   /*SPECIFIES THAT ALL COLUMN SIZES EXCEPT SM(MOBILE) HAS A 0 2.4% MARGIN ON THEM*/
   .col-xl-1 {
@@ -1090,7 +1090,11 @@ Main Content
 
 #instaFeed li {
   list-style: none;
-  display: inline-block; }
+  display: inline-block;
+  width: 50%; }
+  @media only screen and (min-width: 640px) {
+    #instaFeed li {
+      width: auto; } }
 
 /* -------------------------------- 
 

@@ -44,9 +44,7 @@
 Grid
 
 -------------------------------- */
-
 /*CONTENT CONTAINER BASED ON 960PX*/
-
 .container {
   width: 100%;
   max-width: 960px;
@@ -57,7 +55,6 @@ Grid
 }
 
 /*LARGER SIZED CONTAINER TO GIVE USERS OPTION OF 960 STANDARD OR A LARGER 1280PX VIEW*/
-
 .container-lg {
   width: 100%;
   max-width: 1280px;
@@ -67,12 +64,9 @@ Grid
   top: 6rem;
 }
 
-/* ------------------------ MOBILE GRID SYSTEM------------------------- */
-
+/* ---- MOBILE GRID SYSTEM---------- */
 /*Currently this grid system is for the desktop view. need to work on mobile view*/
-
 /*Creates row for columns to be centered within and not overflow*/
-
 .row {
   padding: 10px 15px 20px 15px;
   width: 100%;
@@ -90,7 +84,6 @@ Grid
 }
 
 /*UNLESS THESE COLUMN CLASSES ARE SPECIFIED COLUMNS AT MOBILE VIEW WILL BE 100%*/
-
 .col-sm-1 { width: 3.93%; }
 .col-sm-2 { width: 12.66%; }
 .col-sm-3 { width: 21.4%; }
@@ -106,8 +99,7 @@ Grid
 .row>[class^="col"]:first-child { margin-left: 0; }
 .row>[class^="col"]:last-child { margin-right: 0; }
 
-/* ------------------------ TABLET GRID SYSTEM------------------------- */
-
+/* ------- TABLET GRID SYSTEM----------- */
 @media screen and (min-width: 600px) {
   [class^="col-md"], [class^="col-lg"], [class^="col-xl"]{
     margin: 0 1.9%;
@@ -126,8 +118,7 @@ Grid
   .col-md-12 { width: 100%; }
 }
 
-/* ------------------------ LAPTOP GRID SYSTEM------------------------- */
-
+/* -------- LAPTOP GRID SYSTEM--------- */
 @media screen and (min-width: 992px) {
   .col-lg-1 { width: 3.93%; }
   .col-lg-2 { width: 12.66%; }
@@ -143,8 +134,7 @@ Grid
   .col-lg-12 { width: 100%; }
 }
 
-/* ------------------------ DESKTOP GRID SYSTEM------------------------- */
-
+/* --------- DESKTOP GRID SYSTEM-------- */
 @media screen and (min-width: 1200px) {
   /*SPECIFIES THAT ALL COLUMN SIZES EXCEPT SM(MOBILE) HAS A 0 2.4% MARGIN ON THEM*/
   .col-xl-1 { width: 3.93%; }
@@ -166,7 +156,6 @@ Grid
 Primary style
 
 -------------------------------- */
-
 *, *::after, *::before {
 	@include box-sizing(border-box);
 }
@@ -351,7 +340,6 @@ max-height:300px;
 Responsive Top Menu
 
 -------------------------------- */
-
 .menu {
     z-index: 90;
     position: fixed;
@@ -607,8 +595,6 @@ Hero Image
     }
 }
 
-
-
 /* -------------------------------- 
 
 Animated Title
@@ -646,7 +632,6 @@ h6 {
     @include MQ(L) {
         font-size: 5rem;
     }
-    //font:400%/130% 'Oswald', sans-serif;
 }
 
 h6 > span {
@@ -1268,6 +1253,11 @@ Main Content
 #instaFeed li {
     list-style: none;
     display: inline-block;
+    width: 50%;
+    
+    @include MQ(SM) {
+        width: auto;
+    }
 }
 
 /* -------------------------------- 

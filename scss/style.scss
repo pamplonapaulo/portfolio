@@ -9,7 +9,7 @@
 
 /* Table of Content
 ==================================================
-- Grid
+- Grid System
 - Primary Style
 - Header Components
 - Animated Hamburguer Icon
@@ -31,17 +31,11 @@
 
 @import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i|Maven+Pro:400,500,700,900|Oswald:400');
 
-//@font-face {
-//    font-family: IntroInline;
-//    src: url("../fonts/intro/Intro-Inline.otf") format("opentype");
-//}
-
-
-
-
 /* -------------------------------- 
 
-Grid
+Grid System
+
+Acknowledgement: Special thanks to it's author Alex Garcia, a classmate and one of my partners at our final project www.PlumageCSS.com, from which I took this grid. 
 
 -------------------------------- */
 /*CONTENT CONTAINER BASED ON 960PX*/
@@ -253,14 +247,12 @@ Hamburguer Icon
 	font-size: 18px;
 	font-weight: 200;
     display: inline; 
-    
 }
 .nav-hamb span {
 	display: block;
 	margin: 0;
 }
  #hamb-nav {
-
      margin: .75em 1em 0 0;
      float: right;
      width: 40px;
@@ -283,68 +275,72 @@ Hamburguer Icon
      }
      @include MQ(L) {
          display: none;
-         margin: .75em 16px 0 0;
-
      }
-}
-#hamb-nav span {
-  display: block;
-  position: absolute;
-  height: 3px;
-  width: 75%;
-  background: $color-white;
-  opacity: 1;
-  left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
-}
-#hamb-nav span:nth-child(1) {
-  top: 2px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-}
-#hamb-nav span:nth-child(2) {
-  top: 13px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-}
-#hamb-nav span:nth-child(3) {
-  top: 24px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-}
-#hamb-nav.open span:nth-child(1) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-#hamb-nav.open span:nth-child(2) {
-  width: 0%;
-  opacity: 0;
-}
-#hamb-nav.open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+
+     span {
+         display: block;
+         position: absolute;
+         height: 3px;
+         width: 75%;
+         background: $color-white;
+         opacity: 1;
+         left: 0;
+         -webkit-transform: rotate(0deg);
+         -moz-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+         transform: rotate(0deg);
+         -webkit-transition: .25s ease-in-out;
+         -moz-transition: .25s ease-in-out;
+         -o-transition: .25s ease-in-out;
+         transition: .25s ease-in-out;
+     }
+     span:nth-child(1) {
+         top: 2px;
+         -webkit-transform-origin: left center;
+         -moz-transform-origin: left center;
+         -o-transform-origin: left center;
+         transform-origin: left center;    
+     }
+     span:nth-child(2) {
+         top: 13px;
+         -webkit-transform-origin: left center;
+         -moz-transform-origin: left center;
+         -o-transform-origin: left center;
+         transform-origin: left center;
+     }
+     span:nth-child(3) {
+         top: 24px;
+         -webkit-transform-origin: left center;
+         -moz-transform-origin: left center;
+         -o-transform-origin: left center;
+         transform-origin: left center;
+     }     
 }
 
 .open {
-max-height:300px; 
+    max-height:300px; 
 }
+
+#hamb-nav.open {
+    
+    span:nth-child(1) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    span:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+    }
+    span:nth-child(3) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}
+
 
 /* -------------------------------- 
 
@@ -361,10 +357,6 @@ Responsive Top Menu
     font-weight: 800;
     background-color: rgba($color-black, .9);
     display: table;
-    
-    @include MQ(L) {
-        display: block;        
-    }
     
     > ul {
         display: table-cell;
@@ -480,7 +472,7 @@ Responsive Top Menu
 }
 
 .subMenu > ul {
-    background-color: $color-black;
+    background-color: rgba($color-green, .3);
     font-size: .35em;
     height: 0;
     list-style-type: none;
@@ -512,10 +504,6 @@ Responsive Top Menu
             margin-top:90px;
         }
     }
-}
-
-.subMenu > ul {
-    background-color: rgba($color-green, .3);
 }
 
 .touchDropDown {
@@ -765,16 +753,11 @@ Slider
 .hero {
 	position: relative;
 	@include font-smoothing;
-    
-    
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     clear: both;
-
-
-
 }
 
 .hero-slider {
@@ -1309,7 +1292,7 @@ footer {
         margin: auto;
         
         @include MQ(L) {
-            padding-left: 5em;
+            padding-left: 16px;
             float: left;
         }
     }
@@ -1331,12 +1314,12 @@ footer {
         clear: both;
         width: 70px;
         height: auto;
-        margin: 2.2em auto;
-        padding-top: 5em;
+        margin: 0 auto 3em auto;
+        padding-top: 1.5em;
         
         @include MQ(L) {
             float: left;
-            margin: 0 0 0 5em;
+            margin: 0 0 0 16px;
             display: inline-block;
         }
     }
@@ -1362,7 +1345,7 @@ footer {
             display: inline-block;
             top: -50px;
             float: left;
-            margin-left: 10em;
+            margin-left: 6em;
 
         }
     }
@@ -1372,7 +1355,7 @@ footer {
         
         @include MQ(L) {
             float: right;
-            margin-right: 5em;
+            margin-right: 16px;
         }
     }
 }

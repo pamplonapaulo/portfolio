@@ -1270,6 +1270,19 @@ main.main-content {
     }
 }
 
+.parallax {
+    height: 700px; 
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include MQ(L) {
+        background-attachment: fixed;
+        background-size: 70%;
+    }
+}
+
 /* -------------------------------- 
 
 Footer

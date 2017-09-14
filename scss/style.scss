@@ -188,7 +188,7 @@ Header Components
 
 -------------------------------- */
 .header {
-	position: fixed;
+	position: relative;    
 	z-index: 2;
 	top: 0;
 	left: 0;
@@ -202,13 +202,21 @@ Header Components
 		height: $header-M;
 		background-color: transparent;
 	}
+
+    @include MQ(L) {
+        max-width: 1280px;
+        min-width: 320px;
+        margin: -70px auto 0 auto;
+        padding-top: 70px;
+        position: relative;
+    }
 }
 
 #logo {
     width: 40px;
     height: auto;
 	float: left;
-	margin: 13px 0 0 5%;
+	margin: 13px 0 0 16px;
     z-index: 95;
 
 	> a > img {
@@ -225,7 +233,7 @@ Header Components
 	@include MQ(M) {
         position: relative;
         width: 60px;
-		margin: 15px 0 0 5%;
+		margin: 15px 0 0 16px;
 	}
 }
 
@@ -236,7 +244,7 @@ Header Components
 
 /* -------------------------------- 
 
-Animated Hamburguer Icon
+Hamburguer Icon
 
 -------------------------------- */
 .nav-hamb div {
@@ -252,6 +260,7 @@ Animated Hamburguer Icon
 	margin: 0;
 }
  #hamb-nav {
+
      margin: .75em 1em 0 0;
      float: right;
      width: 40px;
@@ -274,6 +283,8 @@ Animated Hamburguer Icon
      }
      @include MQ(L) {
          display: none;
+         margin: .75em 16px 0 0;
+
      }
 }
 #hamb-nav span {
@@ -352,7 +363,7 @@ Responsive Top Menu
     display: table;
     
     @include MQ(L) {
-        display: block;
+        display: block;        
     }
     
     > ul {
@@ -371,7 +382,6 @@ Responsive Top Menu
             margin-top: 0;
             display: block;
         }
-
     }
     
     li {
@@ -388,7 +398,6 @@ Responsive Top Menu
         }
     }
     
-    
     li:hover {
         background: $color-green;
     }
@@ -396,7 +405,6 @@ Responsive Top Menu
     @include MQ(M) {
         margin-top: 0;
     }
-    
     
     @include MQ(L) {
         position: absolute;
@@ -416,7 +424,6 @@ Responsive Top Menu
             width: auto;
             clear: right;
             float: right;
-            margin-right: 2em;
             line-height: $header-M;
         }    
         
@@ -469,7 +476,6 @@ Responsive Top Menu
     @include MQ(L) {
         font-weight: 800;
         cursor:auto;
-
     }
 }
 
@@ -498,18 +504,12 @@ Responsive Top Menu
         top: -30px;
         
         li {
+            display: block;            
             margin: 0 auto;    
             padding: 10px 15px;
         }
         li:first-child {
             margin-top:90px;
-        }
-    }
-    
-    li {
-        
-        @include MQ(L) {
-            display: block;            
         }
     }
 }
@@ -539,14 +539,12 @@ Responsive Top Menu
     }  
 }
 
-
 .subMenu ul li:hover {
     color: $color-white;
     background-color: $color-black;
     
     @include MQ(L) {
         background-color: rgba($color-green, 1);
-
     }
 }
 
@@ -558,8 +556,10 @@ Hero Image
 #heroImage {
     background-size: cover;
     background-position: center;
-    position: relative;
+    position: absolute;
     height: $intro-height-S;
+    width: 100%;
+    top: 0;
     
     @include MQ(M) {
         height: $intro-height-M;
@@ -569,17 +569,29 @@ Hero Image
         height: $intro-height-L;
     }
 }
+
+
+/* -------------------------------- 
+
+Animated Title
+
+-------------------------------- */
 .headerSection  {
-    position: absolute;
+    position: relative;
     top:25px;
     width: 100%;
     color:#fff;
     text-align: center;
     transform: translate(0%,-50%);
     
+    @include MQ(L) {
+        position: absolute;
+        transform: translate(0%,-85%);
+    }
+    
     .headerWrap {
         background: linear-gradient(to right, rgba($color-green, 1), rgba($color-green, .75), transparent, transparent);
-        position: absolute;
+        position: relative;
         height: 100px;
         width: 100%;
         top: 210px;
@@ -591,69 +603,65 @@ Hero Image
         
         @include MQ(L) {
             top: 450px;
+            display: block;
+        }
+        
+        div.main-content.container-lg {
+            padding-bottom: 0;
+            top: 0;
+            display: table-cell;
+            vertical-align: middle;
+
+            @include MQ(L) {
+                top: 20px;
+                display: block;
+
+            }
+            
+            h6 {
+                text-align: left;
+                z-index: 999;
+                padding-left: 16px;
+                vertical-align: middle;
+                font-size: 3rem;
+                font-family: $font-0;
+                color: $color-white;
+                text-shadow: 2px 2px 8px #000;
+
+                @include MQ(M) {
+                    font-size: 4rem;
+                    //font-size: 400%/130%;
+                }
+
+                @include MQ(L) {
+                    font-size: 5rem;
+                    display: block;
+                }
+                
+                > span {
+                    display: block;
+                    margin-right: 0.3em;
+                    float: left;
+                        
+                    span {
+                        opacity: 0;
+                        backface-visibility: visible;
+                        transition-property: all;
+                        transition-duration: 660ms;
+                        transition-timing-function: ease-in-out;
+                        transform-origin: 50% 50% 0px;
+                        transform: perspective(1050px) rotateY(0deg) scale(0.5);
+                        -webkit-transition-property: all;
+                        -webkit-transition-duration: 660ms;
+                        -webkit-transition-timing-function: ease-in-out;
+                        -webkit-transform-origin: 50% 50% 0px;
+                        -webkit-transform: perspective(1050px) rotateY(0deg) scale(0.5);
+                        display: inline-block;
+                    }
+                }
+            }
         }
     }
-}
-
-/* -------------------------------- 
-
-Animated Title
-
--------------------------------- */
-div.main-content.container-lg {
-	margin: auto;
-	padding-bottom: 0;
-    top: 0;
-    display: table-cell;
-    vertical-align: middle;
-    
-    @include MQ(L) {
-        top: -30px;
-    }
-}
-
-h6 {
-    position: relative;
-    text-align: left;
-    z-index: 999;
-    margin-left: 16px;
-	display: block;
-    font-size: 3rem;
-    font-family: $font-0;
-    color: $color-white;
-    text-shadow: 2px 2px 8px #000;
-
-    
-    @include MQ(M) {
-        font-size: 4rem;
-        //font-size: 400%/130%;
-    }
-    
-    @include MQ(L) {
-        font-size: 5rem;
-    }
-}
-
-h6 > span {
-	display: block;
-	margin-right: 0.3em;
-	float: left;
-}
-
-span span {
-	opacity: 0;
-	backface-visibility: visible;
-	transition-property: all;
-	transition-duration: 660ms;
-	transition-timing-function: ease-in-out;
-	transform-origin: 50% 50% 0px;
-	transform: perspective(1050px) rotateY(0deg) scale(0.5);
-	-webkit-transition-property: all;
-	-webkit-transition-duration: 660ms;
-	-webkit-transition-timing-function: ease-in-out;
-	-webkit-transform-origin: 50% 50% 0px;
-	-webkit-transform: perspective(1050px) rotateY(0deg) scale(0.5);
-	display: inline-block;
 }
 
 /* -------------------------------- 
@@ -665,13 +673,14 @@ Scroll down arrow icon
     .arrow-wrapper {
         position: absolute;
         top: -140px;
-        text-align: center;
+        text-align: right;
         margin-left: auto;
         margin-right: auto;
         display: block;
         width: 100%;
         height: 55px;
         padding-top: 10px;
+        padding-right: 70px;
         z-index: 99;
                 
         .arrow {
@@ -756,13 +765,24 @@ Slider
 .hero {
 	position: relative;
 	@include font-smoothing;
+    
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    clear: both;
+
+
+
 }
 
 .hero-slider {
 	position: relative;
 	height: $intro-height-S;
-	overflow: hidden;
-	
+    overflow: hidden;
+
+    
 	li {
 		position: absolute;
 		top: 0;
@@ -1220,9 +1240,10 @@ Main Content
 
 -------------------------------- */
 
-.main-content {
+main.main-content {
 	margin: 0 auto 5em auto;
 	padding-bottom: 1em;
+    margin-top: 300px;
     
     h2 {
 		font-size: 2.2rem;
@@ -1240,8 +1261,14 @@ Main Content
 		color: darken($color-black, 1);
 		margin: .8em 16px;
 	}
+    
+    @include MQ(M) {
+        margin-top: 470px;
+    }
 
 	@include MQ(L) {
+        top: 100px;
+        margin-top: 590px;
 		padding: 3em 0;
 		
 		p {

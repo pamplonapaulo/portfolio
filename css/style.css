@@ -252,7 +252,7 @@ Header Components
 
 -------------------------------- */
 .header {
-  position: fixed;
+  position: relative;
   z-index: 2;
   top: 0;
   left: 0;
@@ -266,12 +266,19 @@ Header Components
       position: absolute;
       height: 70px;
       background-color: transparent; } }
+  @media only screen and (min-width: 1170px) {
+    .header {
+      max-width: 1280px;
+      min-width: 320px;
+      margin: -70px auto 0 auto;
+      padding-top: 70px;
+      position: relative; } }
 
 #logo {
   width: 40px;
   height: auto;
   float: left;
-  margin: 13px 0 0 5%;
+  margin: 13px 0 0 16px;
   z-index: 95; }
   #logo > a > img {
     display: block;
@@ -284,7 +291,7 @@ Header Components
     #logo {
       position: relative;
       width: 60px;
-      margin: 15px 0 0 5%; } }
+      margin: 15px 0 0 16px; } }
 
 .shadow {
   -webkit-filter: drop-shadow(-3px 3px 1px #2C343B);
@@ -292,7 +299,7 @@ Header Components
 
 /* -------------------------------- 
 
-Animated Hamburguer Icon
+Hamburguer Icon
 
 -------------------------------- */
 .nav-hamb div {
@@ -328,7 +335,8 @@ Animated Hamburguer Icon
       margin: 1.5em 1em 0 0; } }
   @media only screen and (min-width: 1170px) {
     #hamb-nav {
-      display: none; } }
+      display: none;
+      margin: .75em 16px 0 0; } }
 
 #hamb-nav span {
   display: block;
@@ -451,7 +459,6 @@ Responsive Top Menu
         width: auto;
         clear: right;
         float: right;
-        margin-right: 2em;
         line-height: 70px; }
       .menu li {
         line-height: 1em;
@@ -513,13 +520,11 @@ Responsive Top Menu
       padding: auto auto;
       top: -30px; }
       .subMenu > ul li {
+        display: block;
         margin: 0 auto;
         padding: 10px 15px; }
       .subMenu > ul li:first-child {
         margin-top: 90px; } }
-  @media only screen and (min-width: 1170px) {
-    .subMenu > ul li {
-      display: block; } }
 
 .subMenu > ul {
   background-color: rgba(178, 212, 48, 0.3); }
@@ -554,8 +559,10 @@ Hero Image
 #heroImage {
   background-size: cover;
   background-position: center;
-  position: relative;
-  height: 360px; }
+  position: absolute;
+  height: 360px;
+  width: 100%;
+  top: 0; }
   @media only screen and (min-width: 768px) {
     #heroImage {
       height: 500px; } }
@@ -563,16 +570,25 @@ Hero Image
     #heroImage {
       height: 680px; } }
 
+/* -------------------------------- 
+
+Animated Title
+
+-------------------------------- */
 .headerSection {
-  position: absolute;
+  position: relative;
   top: 25px;
   width: 100%;
   color: #fff;
   text-align: center;
   transform: translate(0%, -50%); }
+  @media only screen and (min-width: 1170px) {
+    .headerSection {
+      position: absolute;
+      transform: translate(0%, -85%); } }
   .headerSection .headerWrap {
     background: linear-gradient(to right, #b2d430, rgba(178, 212, 48, 0.75), transparent, transparent);
-    position: absolute;
+    position: relative;
     height: 100px;
     width: 100%;
     top: 210px;
@@ -582,59 +598,51 @@ Hero Image
         top: 350px; } }
     @media only screen and (min-width: 1170px) {
       .headerSection .headerWrap {
-        top: 450px; } }
-
-/* -------------------------------- 
-
-Animated Title
-
--------------------------------- */
-div.main-content.container-lg {
-  margin: auto;
-  padding-bottom: 0;
-  top: 0;
-  display: table-cell;
-  vertical-align: middle; }
-  @media only screen and (min-width: 1170px) {
-    div.main-content.container-lg {
-      top: -30px; } }
-
-h6 {
-  position: relative;
-  text-align: left;
-  z-index: 999;
-  margin-left: 16px;
-  display: block;
-  font-size: 3rem;
-  font-family: "Oswald", sans-serif;
-  color: #FFF5F5;
-  text-shadow: 2px 2px 8px #000; }
-  @media only screen and (min-width: 768px) {
-    h6 {
-      font-size: 4rem; } }
-  @media only screen and (min-width: 1170px) {
-    h6 {
-      font-size: 5rem; } }
-
-h6 > span {
-  display: block;
-  margin-right: 0.3em;
-  float: left; }
-
-span span {
-  opacity: 0;
-  backface-visibility: visible;
-  transition-property: all;
-  transition-duration: 660ms;
-  transition-timing-function: ease-in-out;
-  transform-origin: 50% 50% 0px;
-  transform: perspective(1050px) rotateY(0deg) scale(0.5);
-  -webkit-transition-property: all;
-  -webkit-transition-duration: 660ms;
-  -webkit-transition-timing-function: ease-in-out;
-  -webkit-transform-origin: 50% 50% 0px;
-  -webkit-transform: perspective(1050px) rotateY(0deg) scale(0.5);
-  display: inline-block; }
+        top: 450px;
+        display: block; } }
+    .headerSection .headerWrap div.main-content.container-lg {
+      padding-bottom: 0;
+      top: 0;
+      display: table-cell;
+      vertical-align: middle; }
+      @media only screen and (min-width: 1170px) {
+        .headerSection .headerWrap div.main-content.container-lg {
+          top: 20px;
+          display: block; } }
+      .headerSection .headerWrap div.main-content.container-lg h6 {
+        text-align: left;
+        z-index: 999;
+        padding-left: 16px;
+        vertical-align: middle;
+        font-size: 3rem;
+        font-family: "Oswald", sans-serif;
+        color: #FFF5F5;
+        text-shadow: 2px 2px 8px #000; }
+        @media only screen and (min-width: 768px) {
+          .headerSection .headerWrap div.main-content.container-lg h6 {
+            font-size: 4rem; } }
+        @media only screen and (min-width: 1170px) {
+          .headerSection .headerWrap div.main-content.container-lg h6 {
+            font-size: 5rem;
+            display: block; } }
+        .headerSection .headerWrap div.main-content.container-lg h6 > span {
+          display: block;
+          margin-right: 0.3em;
+          float: left; }
+          .headerSection .headerWrap div.main-content.container-lg h6 > span span {
+            opacity: 0;
+            backface-visibility: visible;
+            transition-property: all;
+            transition-duration: 660ms;
+            transition-timing-function: ease-in-out;
+            transform-origin: 50% 50% 0px;
+            transform: perspective(1050px) rotateY(0deg) scale(0.5);
+            -webkit-transition-property: all;
+            -webkit-transition-duration: 660ms;
+            -webkit-transition-timing-function: ease-in-out;
+            -webkit-transform-origin: 50% 50% 0px;
+            -webkit-transform: perspective(1050px) rotateY(0deg) scale(0.5);
+            display: inline-block; }
 
 /* -------------------------------- 
 
@@ -645,13 +653,14 @@ Scroll down arrow icon
   .arrow-wrapper {
     position: absolute;
     top: -140px;
-    text-align: center;
+    text-align: right;
     margin-left: auto;
     margin-right: auto;
     display: block;
     width: 100%;
     height: 55px;
     padding-top: 10px;
+    padding-right: 70px;
     z-index: 99; }
     .arrow-wrapper .arrow {
       position: absolute;
@@ -707,7 +716,12 @@ Slider
 .hero {
   position: relative;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  clear: both; }
 
 .hero-slider {
   position: relative;
@@ -1066,26 +1080,32 @@ Slider Navigation
 Main Content
 
 -------------------------------- */
-.main-content {
+main.main-content {
   margin: 0 auto 5em auto;
-  padding-bottom: 1em; }
-  .main-content h2 {
+  padding-bottom: 1em;
+  margin-top: 300px; }
+  main.main-content h2 {
     font-size: 2.2rem;
     font-family: "Droid Serif", serif;
     line-height: 1.8;
     color: #2a3138;
     margin: .8em 16px;
     font-weight: 800; }
-  .main-content p {
+  main.main-content p {
     font-size: 1.8rem;
     font-family: "Droid Serif", serif;
     line-height: 1.8;
     color: #2a3138;
     margin: .8em 16px; }
+  @media only screen and (min-width: 768px) {
+    main.main-content {
+      margin-top: 470px; } }
   @media only screen and (min-width: 1170px) {
-    .main-content {
+    main.main-content {
+      top: 100px;
+      margin-top: 590px;
       padding: 3em 0; }
-      .main-content p {
+      main.main-content p {
         font-size: 2.1rem; } }
 
 #instaFeed li {

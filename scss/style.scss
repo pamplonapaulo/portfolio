@@ -1237,7 +1237,7 @@ main.main-content {
         font-weight: 800;
     }
 
-	p {
+	> p {
 		font-size: 1.8rem;
         font-family: $font-2;
 		line-height: 1.8;
@@ -1282,6 +1282,43 @@ main.main-content {
         background-size: 70%;
     }
 }
+
+// Skills Bars
+
+.skillsWrapper {
+    margin: 0 auto;
+    
+    > p {
+        font-family: $font-2;
+        width: 85%;
+        margin: 20px auto 3px auto;
+        padding-left: 16px;
+    }
+}
+
+.skillsContainer {
+    margin: 0 auto;
+    width: 85%;
+    background-color: #ddd;
+    border-radius: 25px;
+    
+    .skills {
+        text-align: right;
+        padding-right: 20px;
+        line-height: 30px; 
+        color: $color-white;
+        border-radius: 25px 0 0 25px;
+    }
+
+    .html {width: 85%; background-color: $color-green;}
+    .css {width: 85%; background-color: $color-blue;}
+    .scss {width: 75%; background-color: #2196F3;}
+    .jquery {width: 60%; background-color: $color-black;}
+    .j-s {width: 40%; background-color: #f44336;}
+}
+
+
+
 
 /* -------------------------------- 
 

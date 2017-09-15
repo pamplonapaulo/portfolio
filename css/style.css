@@ -1080,7 +1080,7 @@ main.main-content {
     color: #2a3138;
     margin: .8em 16px;
     font-weight: 800; }
-  main.main-content p {
+  main.main-content > p {
     font-size: 1.8rem;
     font-family: "Droid Serif", serif;
     line-height: 1.8;
@@ -1115,6 +1115,41 @@ main.main-content {
     .parallax {
       background-attachment: fixed;
       background-size: 70%; } }
+
+.skillsWrapper {
+  margin: 0 auto; }
+  .skillsWrapper > p {
+    font-family: "Droid Serif", serif;
+    width: 85%;
+    margin: 20px auto 3px auto;
+    padding-left: 16px; }
+
+.skillsContainer {
+  margin: 0 auto;
+  width: 85%;
+  background-color: #ddd;
+  border-radius: 25px; }
+  .skillsContainer .skills {
+    text-align: right;
+    padding-right: 20px;
+    line-height: 30px;
+    color: #FFF5F5;
+    border-radius: 25px 0 0 25px; }
+  .skillsContainer .html {
+    width: 85%;
+    background-color: #B2D430; }
+  .skillsContainer .css {
+    width: 85%;
+    background-color: #1A8B9D; }
+  .skillsContainer .scss {
+    width: 75%;
+    background-color: #2196F3; }
+  .skillsContainer .jquery {
+    width: 60%;
+    background-color: #2C343B; }
+  .skillsContainer .j-s {
+    width: 40%;
+    background-color: #f44336; }
 
 /* -------------------------------- 
 

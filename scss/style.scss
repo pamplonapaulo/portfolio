@@ -182,7 +182,7 @@ Header Components
 
 -------------------------------- */
 .header {
-	position: relative;    
+	position: fixed;    
 	z-index: 2;
 	top: 0;
 	left: 0;
@@ -1260,13 +1260,42 @@ main.main-content {
 	}
 }
 
-#instaFeed li {
+#instaFeed > li {
     list-style: none;
     display: inline-block;
     width: 50%;
+    text-align: center;
+    
+    img {
+        width: auto;
+        
+    }
     
     @include MQ(SM) {
         width: auto;
+    }
+}
+
+#blogGallery > li {
+    list-style: none;
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    margin: 0 -2px;
+    
+    @include MQ(M) {
+        margin: 0 -3px;
+    }
+    
+    img {
+        width: 320px;
+        vertical-align: middle;
+    }
+        
+    @include MQ(SM) {
+        width: auto;
+        margin: 0 -3px;
+
     }
 }
 

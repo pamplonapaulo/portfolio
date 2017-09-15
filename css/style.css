@@ -254,7 +254,7 @@ Header Components
 
 -------------------------------- */
 .header {
-  position: relative;
+  position: fixed;
   z-index: 2;
   top: 0;
   left: 0;
@@ -1097,13 +1097,33 @@ main.main-content {
       main.main-content p {
         font-size: 2.1rem; } }
 
-#instaFeed li {
+#instaFeed > li {
   list-style: none;
   display: inline-block;
-  width: 50%; }
+  width: 50%;
+  text-align: center; }
+  #instaFeed > li img {
+    width: auto; }
   @media only screen and (min-width: 640px) {
-    #instaFeed li {
+    #instaFeed > li {
       width: auto; } }
+
+#blogGallery > li {
+  list-style: none;
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  margin: 0 -2px; }
+  @media only screen and (min-width: 768px) {
+    #blogGallery > li {
+      margin: 0 -3px; } }
+  #blogGallery > li img {
+    width: 320px;
+    vertical-align: middle; }
+  @media only screen and (min-width: 640px) {
+    #blogGallery > li {
+      width: auto;
+      margin: 0 -3px; } }
 
 .parallax {
   height: 700px;

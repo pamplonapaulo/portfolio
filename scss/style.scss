@@ -1288,6 +1288,10 @@ main.main-content {
 .skillsWrapper {
     margin: 0 auto;
     
+    @include MQ(M) {
+        width: 70%;
+    }
+    
     > p {
         font-family: $font-2;
         width: 85%;
@@ -1315,10 +1319,12 @@ main.main-content {
     .scss {width: 75%; background-color: #2196F3;}
     .jquery {width: 60%; background-color: $color-black;}
     .j-s {width: 40%; background-color: #f44336;}
+    .cms {width: 60%; background-color: #2196F3;}
+    .bootstrap {width: 40%; background-color: #f44336;}
+    .api {width: 25%; background-color: $color-blue;}
+    .json {width: 30%; background-color: #2196F3;}
+    .ajax {width: 15%; background-color: $color-black;}
 }
-
-
-
 
 /* -------------------------------- 
 

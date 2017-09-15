@@ -1118,6 +1118,9 @@ main.main-content {
 
 .skillsWrapper {
   margin: 0 auto; }
+  @media only screen and (min-width: 768px) {
+    .skillsWrapper {
+      width: 70%; } }
   .skillsWrapper > p {
     font-family: "Droid Serif", serif;
     width: 85%;
@@ -1150,6 +1153,21 @@ main.main-content {
   .skillsContainer .j-s {
     width: 40%;
     background-color: #f44336; }
+  .skillsContainer .cms {
+    width: 60%;
+    background-color: #2196F3; }
+  .skillsContainer .bootstrap {
+    width: 40%;
+    background-color: #f44336; }
+  .skillsContainer .api {
+    width: 25%;
+    background-color: #1A8B9D; }
+  .skillsContainer .json {
+    width: 30%;
+    background-color: #2196F3; }
+  .skillsContainer .ajax {
+    width: 15%;
+    background-color: #2C343B; }
 
 /* -------------------------------- 
 

@@ -4,7 +4,7 @@
 * Author: Paulo da Silva Pamplona
 * www.paulopamplona.com
 * Version 1.0
-* Last Update: 9/1/2017
+* Last Update: 9/16/2017
 */
 
 /* Table of Content
@@ -805,7 +805,7 @@ Slider
 
 /* -------------------------------- 
 
-Single Slide Style
+Single Slide Style + Mobile Images
 
 -------------------------------- */
 
@@ -1258,6 +1258,11 @@ main.main-content {
 			font-size: 2.1rem;
 		}
 	}
+}
+
+main > p > a {
+    text-decoration: underline;
+    color: $color-blue;
 }
 
 #instaFeed > li {

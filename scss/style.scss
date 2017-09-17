@@ -207,6 +207,7 @@ Header Components
 }
 
 #logo {
+    position: relative;
     width: 40px;
     height: auto;
 	float: left;
@@ -225,7 +226,6 @@ Header Components
     }
     
 	@include MQ(M) {
-        position: relative;
         width: 60px;
 		margin: 15px 0 0 16px;
 	}
@@ -524,6 +524,11 @@ Responsive Top Menu
         a {
             color: $color-white;
         }
+        
+        a.subCurrent {
+            color: $color-green;
+
+        }
     }  
 }
 
@@ -535,6 +540,7 @@ Responsive Top Menu
         background-color: rgba($color-green, 1);
     }
 }
+
 
 /* -------------------------------- 
 
@@ -1236,6 +1242,15 @@ main.main-content {
 		margin: .8em 16px;
         font-weight: 800;
     }
+    
+    h2:first-of-type  {
+        padding-top: 1.5em;
+        
+        @include MQ(M) {
+            padding-top: 1em;
+            
+        }
+    }
 
 	> p {
 		font-size: 1.8rem;
@@ -1265,6 +1280,9 @@ main > p > a {
     color: $color-blue;
 }
 
+
+
+
 #instaFeed > li {
     list-style: none;
     display: inline-block;
@@ -1273,7 +1291,6 @@ main > p > a {
     
     img {
         width: auto;
-        
     }
     
     @include MQ(SM) {
@@ -1363,7 +1380,7 @@ main > p > a {
 
 /* -------------------------------- 
 
-New Portfolio Gallery
+Portfolio Gallery
 
 -------------------------------- */
 

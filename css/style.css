@@ -277,6 +277,7 @@ Header Components
       position: relative; } }
 
 #logo {
+  position: relative;
   width: 40px;
   height: auto;
   float: left;
@@ -291,7 +292,6 @@ Header Components
     transform: scale3d(1.2, 1.2, 1); }
   @media only screen and (min-width: 768px) {
     #logo {
-      position: relative;
       width: 60px;
       margin: 15px 0 0 16px; } }
 
@@ -531,7 +531,9 @@ Responsive Top Menu
     display: block;
     height: 205px; }
     .subMenu:hover > ul a {
-      color: #FFF5F5; } }
+      color: #FFF5F5; }
+    .subMenu:hover > ul a.subCurrent {
+      color: #B2D430; } }
 
 .subMenu ul li:hover {
   color: #FFF5F5;
@@ -1080,6 +1082,11 @@ main.main-content {
     color: #2a3138;
     margin: .8em 16px;
     font-weight: 800; }
+  main.main-content h2:first-of-type {
+    padding-top: 1.5em; }
+    @media only screen and (min-width: 768px) {
+      main.main-content h2:first-of-type {
+        padding-top: 1em; } }
   main.main-content > p {
     font-size: 1.8rem;
     font-family: "Droid Serif", serif;
@@ -1195,7 +1202,7 @@ main > p > a {
 
 /* -------------------------------- 
 
-New Portfolio Gallery
+Portfolio Gallery
 
 -------------------------------- */
 .gallery {

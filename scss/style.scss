@@ -1360,6 +1360,178 @@ main > p > a {
     .ajax {width: 15%; background-color: $color-black;}
 }
 
+
+/* -------------------------------- 
+
+New Portfolio Gallery
+
+-------------------------------- */
+
+.gallery {
+    display: table;
+    max-width: 100%;
+    margin: auto;
+    
+    @include MQ(SM) {
+        max-width: 93.5%;
+    }
+
+    .galleryItem {
+        display: inline-block;
+        width: 50%;
+        
+        @include MQ(SM) {
+            width: 33.33%
+        }
+        
+        figure {
+            display: block; 
+            position: relative;
+            overflow: hidden;
+            
+            img {
+                -webkit-filter: grayscale(40%);
+                filter: grayscale(40%);
+                position: relative;
+                width: 100%;
+                margin: 0;
+                -webkit-transition: all 1s ease 0s;
+                -moz-transition: all 1s ease 0s;
+                -o-transition: all 1s ease 0s;
+                transition: all 1s ease 0s;
+
+                @include MQ(SM) {
+                    -webkit-filter: none;
+                    filter: none;
+                    -webkit-transition: all 1s ease 0s;
+                    -moz-transition: all 1s ease 0s;
+                    -o-transition: all 1s ease 0s;
+                    transition: all 1s ease 0s;
+                    width: 70%;
+                    margin: calc(30% / 2);
+            }
+        }
+            figcaption {
+                color: black;
+                text-shadow: -2px 2px 3px white;
+                opacity: 0;
+                -webkit-transition: all 1s ease 0s;
+                -moz-transition: all 1s ease 0s;
+                -o-transition: all 1s ease 0s;
+                transition: all 1s ease 0s;
+
+                @include MQ(SM) {
+                    opacity: 1;
+                    display: block;
+                    text-shadow: none;
+                    font-weight: 100;
+                }
+                
+                @include MQ(L) {
+
+                }
+            }   
+        }
+        figure:hover {
+            
+            img {
+                -webkit-filter: grayscale(0%);
+                filter: grayscale(0%);
+                
+                -webkit-transform: scale(1.4235);
+                -moz-transform: scale(1.4235);
+                -o-transform: scale(1.4235);
+                -ms-transform: scale(1.4235);
+                transform: scale(1.4235);
+                box-shadow: inset 0 0 10px #000000;
+
+                
+                @include MQ(SM) {
+                    -webkit-filter: none;
+                    filter: none;
+                    
+                    
+                    -webkit-transform: scale(1.4235);
+                    -moz-transform: scale(1.4235);
+                    -o-transform: scale(1.4235);
+                    -ms-transform: scale(1.4235);
+                    transform: scale(1.4235);
+                }
+            }
+                figcaption {
+                    opacity: 1;
+                    font-weight: 800;
+                    text-shadow: -2px 2px 3px white;
+                    font-size: 20px;
+                    
+                    @include MQ(SM) {
+                        font-weight: 100;
+                        text-shadow: none;
+                        font-size: 15px;
+                    }
+                    
+                    @include MQ(M) {
+                        font-size: 18px;
+                    }
+                }
+        }
+        .captionTop, .captionBottom {
+            text-align: center;
+            width: 100%;
+            text-transform: uppercase;
+            z-index: 2;
+            font-size: 15px;
+            position: absolute;
+            padding: 6.5% 0;
+            
+            @include MQ(SM) {
+                padding: 4% 0;
+                font-size: 15px;
+            }
+            
+            @include MQ(M) {
+                font-size: 18px;
+                padding: 6.5% 0;
+            }
+        }
+
+        .captionTop {
+            top: 55px;
+            
+            @include MQ(SM) {
+                top:0;
+            }
+        }
+
+        .captionBottom {
+            bottom: 55px;
+            
+            @include MQ(SM) {
+                bottom:0;
+            }
+        }
+    }
+    
+    @include MQ(SM) {
+        
+        .galleryItem:nth-child(odd) {
+            background: black;
+
+            figcaption {
+                color: $color-white;
+            }
+        }
+
+        .galleryItem:nth-child(even) {
+            background: $color-white;
+
+            figcaption {
+                color: black;
+            }
+        }    
+    }
+}
+
 /* -------------------------------- 
 
 Footer

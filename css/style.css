@@ -1227,6 +1227,23 @@ Portfolio Gallery
       display: block;
       position: relative;
       overflow: hidden; }
+      .gallery .galleryItem figure .galleryItem-overlay {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        background: #B2D430;
+        z-index: 2;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+        -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0; }
+        @media only screen and (min-width: 640px) {
+          .gallery .galleryItem figure .galleryItem-overlay {
+            display: none; } }
       .gallery .galleryItem figure img {
         -webkit-filter: grayscale(40%);
         filter: grayscale(40%);
@@ -1249,7 +1266,6 @@ Portfolio Gallery
             margin: calc(30% / 2); } }
       .gallery .galleryItem figure figcaption {
         color: black;
-        text-shadow: -2px 2px 3px white;
         opacity: 0;
         -webkit-transition: all 1s ease 0s;
         -moz-transition: all 1s ease 0s;
@@ -1261,9 +1277,11 @@ Portfolio Gallery
             display: block;
             text-shadow: none;
             font-weight: 100; } }
+    .gallery .galleryItem figure:hover .galleryItem-overlay {
+      -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=80)";
+      filter: alpha(opacity=80);
+      opacity: .5; }
     .gallery .galleryItem figure:hover img {
-      -webkit-filter: grayscale(0%);
-      filter: grayscale(0%);
       -webkit-transform: scale(1.4235);
       -moz-transform: scale(1.4235);
       -o-transform: scale(1.4235);
@@ -1281,8 +1299,7 @@ Portfolio Gallery
           transform: scale(1.4235); } }
     .gallery .galleryItem figure:hover figcaption {
       opacity: 1;
-      font-weight: 800;
-      text-shadow: -2px 2px 3px white;
+      font-weight: 500;
       font-size: 20px; }
       @media only screen and (min-width: 640px) {
         .gallery .galleryItem figure:hover figcaption {

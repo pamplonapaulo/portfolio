@@ -1083,7 +1083,7 @@ main.main-content {
     margin: .8em 16px;
     font-weight: 800; }
   main.main-content h2:first-of-type {
-    padding-top: 1.5em; }
+    padding-top: 1.8em; }
     @media only screen and (min-width: 768px) {
       main.main-content h2:first-of-type {
         padding-top: 1em; } }
@@ -1093,6 +1093,11 @@ main.main-content {
     line-height: 1.8;
     color: #2a3138;
     margin: .8em 16px; }
+  main.main-content p:first-of-type {
+    padding-top: 1.5em; }
+    @media only screen and (min-width: 768px) {
+      main.main-content p:first-of-type {
+        padding-top: 1em; } }
   @media only screen and (min-width: 768px) {
     main.main-content {
       margin-top: 470px; } }

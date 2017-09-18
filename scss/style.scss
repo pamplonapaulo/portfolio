@@ -1244,11 +1244,10 @@ main.main-content {
     }
     
     h2:first-of-type  {
-        padding-top: 1.5em;
+        padding-top: 1.8em;
         
         @include MQ(M) {
             padding-top: 1em;
-            
         }
     }
 
@@ -1259,6 +1258,14 @@ main.main-content {
 		color: darken($color-black, 1);
 		margin: .8em 16px;
 	}
+    
+    p:first-of-type {
+        padding-top: 1.5em;
+        
+        @include MQ(M) {
+            padding-top: 1em;
+        }
+    }
     
     @include MQ(M) {
         margin-top: 470px;

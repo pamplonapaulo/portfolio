@@ -1231,7 +1231,7 @@ Portfolio Gallery
         height: 100%;
         position: absolute;
         width: 100%;
-        background: #B2D430;
+        background: #2C343B;
         z-index: 2;
         -webkit-transition: all 0.3s ease-out;
         -moz-transition: all 0.3s ease-out;
@@ -1250,22 +1250,18 @@ Portfolio Gallery
         position: relative;
         width: 100%;
         margin: 0;
-        -webkit-transition: all 1s ease 0s;
-        -moz-transition: all 1s ease 0s;
-        -o-transition: all 1s ease 0s;
-        transition: all 1s ease 0s; }
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s; }
         @media only screen and (min-width: 640px) {
           .gallery .galleryItem figure img {
             -webkit-filter: none;
             filter: none;
-            -webkit-transition: all 1s ease 0s;
-            -moz-transition: all 1s ease 0s;
-            -o-transition: all 1s ease 0s;
-            transition: all 1s ease 0s;
             width: 70%;
             margin: calc(30% / 2); } }
       .gallery .galleryItem figure figcaption {
-        color: black;
+        color: white;
         opacity: 0;
         -webkit-transition: all 1s ease 0s;
         -moz-transition: all 1s ease 0s;
@@ -1273,6 +1269,7 @@ Portfolio Gallery
         transition: all 1s ease 0s; }
         @media only screen and (min-width: 640px) {
           .gallery .galleryItem figure figcaption {
+            color: black;
             opacity: 1;
             display: block;
             text-shadow: none;
@@ -1280,7 +1277,7 @@ Portfolio Gallery
     .gallery .galleryItem figure:hover .galleryItem-overlay {
       -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=80)";
       filter: alpha(opacity=80);
-      opacity: .5; }
+      opacity: .75; }
     .gallery .galleryItem figure:hover img {
       -webkit-transform: scale(1.4235);
       -moz-transform: scale(1.4235);
@@ -1299,8 +1296,8 @@ Portfolio Gallery
           transform: scale(1.4235); } }
     .gallery .galleryItem figure:hover figcaption {
       opacity: 1;
-      font-weight: 500;
-      font-size: 20px; }
+      font-weight: 100;
+      font-size: .8em; }
       @media only screen and (min-width: 640px) {
         .gallery .galleryItem figure:hover figcaption {
           font-weight: 100;

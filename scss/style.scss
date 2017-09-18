@@ -1417,7 +1417,7 @@ Portfolio Gallery
                 height: 100%;
                 position: absolute;
                 width: 100%;
-                background: $color-green;
+                background: $color-black;
                 z-index: 2;
                 -webkit-transition: all 0.3s ease-out;
                 -moz-transition: all 0.3s ease-out;
@@ -1433,31 +1433,30 @@ Portfolio Gallery
                 }
             }
             
-            
             img {
                 -webkit-filter: grayscale(40%);
                 filter: grayscale(40%);
                 position: relative;
                 width: 100%;
                 margin: 0;
-                -webkit-transition: all 1s ease 0s;
-                -moz-transition: all 1s ease 0s;
-                -o-transition: all 1s ease 0s;
-                transition: all 1s ease 0s;
+                -webkit-transition: all 0.3s ease 0s;
+                -moz-transition: all 0.3s ease 0s;
+                -o-transition: all 0.3s ease 0s;
+                transition: all 0.3s ease 0s;
 
                 @include MQ(SM) {
                     -webkit-filter: none;
                     filter: none;
-                    -webkit-transition: all 1s ease 0s;
-                    -moz-transition: all 1s ease 0s;
-                    -o-transition: all 1s ease 0s;
-                    transition: all 1s ease 0s;
+//                    -webkit-transition: all 1s ease 0s;
+//                    -moz-transition: all 1s ease 0s;
+//                    -o-transition: all 1s ease 0s;
+//                    transition: all 1s ease 0s;
                     width: 70%;
                     margin: calc(30% / 2);
                 }
             }
             figcaption {
-                color: black;
+                color: white;
                 //text-shadow: -2px 2px 3px white;
                 opacity: 0;
                 -webkit-transition: all 1s ease 0s;
@@ -1466,6 +1465,7 @@ Portfolio Gallery
                 transition: all 1s ease 0s;
 
                 @include MQ(SM) {
+                    color: black;
                     opacity: 1;
                     display: block;
                     text-shadow: none;
@@ -1478,7 +1478,7 @@ Portfolio Gallery
             .galleryItem-overlay {
                 -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=80)";
                 filter: alpha(opacity=80);
-                opacity: .5;
+                opacity: .75;
             }
             
             img {
@@ -1504,9 +1504,9 @@ Portfolio Gallery
             }
                 figcaption {
                     opacity: 1;
-                    font-weight: 500;
+                    font-weight: 100;
                     //text-shadow: -2px 2px 3px white;
-                    font-size: 20px;
+                    font-size: .8em;
                     
                     @include MQ(SM) {
                         font-weight: 100;

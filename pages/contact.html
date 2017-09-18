@@ -89,10 +89,59 @@
     
     <p>You may decide email me the details of your project. But also I don't mind if you don't have too much information yet and just want to have a coffee and talk with me in person.</p>
           
-    <p>Please email me at <a href="mailto:pamplonapaulo@gmail.com">pamplonapaulo@gmail.com</a> and let me know what do you want, ok?</p>
+    <p>Please email me at <a href="mailto:pamplonapaulo@gmail.com">pamplonapaulo@gmail.com</a> or just fill the form bellow and let me know more about you and your business, ok?</p>
     
-    <p>I’m looking forward to hearing from you.</p>           
+    <p>I’m looking forward to hearing from you!</p>
+    
+    <form action="mailto:pamplonapaulo@gmail.com?subject=Paulo%20Developer%20Website" method="post" enctype="text/plain" id="contactForm">
+        <fieldset id="getInTouch" title="Contact Information">
+            <legend>Contact Information</legend>
+            <ol>
+                <li>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" title="Please enter your name" placeholder="Bernie Sanders" autofocus required/>*
+                </li>
+                <li>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" title="Please enter your email address" placeholder="your.name@yourdomain.com" required />*
+                </li>
+                <li>
+                    <label for="phone">Phone</label>
+                    <input type="phone" id="phone" title="Please enter your phone number" placeholder="+00 000 000 0000" required />*
+                </li>
+                <li>
+                    <label for="website">Website</label>
+                    <input type="url" id="url" placeholder="http://www.yourwebsite.com" title="Please enter your website address"/>
+                </li>
+            </ol>
+        </fieldset>
+        <fieldset id="comments" title="Comments">
+                <legend>Message</legend>
+                <ol>
+                    <li>
+                        <div class="groupHeadline">Request Type</div>
+                        <ol class="altLabel radioSet">
+                            <li>
+                                <input type="radio" value="quotation" id="quotationItem" name="requestType" />
+                                <label for="quotationItem" class="rBtnLabels">Website quotation</label>
+                            </li>
+                            <li>
+                                <input type="radio" value="comment" id="commentItem" name="requestType" />
+                                <label for="commentItem" class="rBtnLabels">Just a question</label>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <label for="inquiry"></label>
+                        <textarea id="inquiry" placeholder="Please type here your message"></textarea>
+                    </li>
+                </ol>
+            </fieldset>  
+            <button type="submit" class="btn">Send</button>
+    </form>
 
+    
+             
 	</main><!-- .main-content -->
 
 	<footer>

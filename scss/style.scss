@@ -1578,6 +1578,89 @@ Portfolio Gallery
 
 /* -------------------------------- 
 
+Forms
+
+-------------------------------- */
+fieldset {
+    border: none;
+    padding: 1em;
+}
+legend {
+    display: block;
+    padding: 1em;
+    font-weight: 300;
+    font-size: 1.25em;
+    color:$color-black;
+    border-bottom: solid 1px $color-blue;
+    text-align: center;
+    width: 100%;
+}
+input, textarea {
+    padding: 5px;
+    width: 55%;
+    border:solid 1px #999;
+}
+input[type=checkbox], input[type=radio] {
+    width: auto;
+}
+.altLabel label {
+    text-align: left;
+    width: auto;
+}
+#contactForm ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#contactForm li {
+    padding-bottom: .75em;
+}
+#comments .radioSet li {
+    display: inline-block;
+    margin-right: 10px;
+}
+.groupHeadline {
+    font-weight: 300;
+    border-bottom: solid 1px #999;
+    margin-bottom: .4em;
+}
+
+textarea {
+    width: 95%;
+    font-family: $font-1;
+    font-size: 1em;
+    min-height: 6em;
+    margin-top: -2em;
+}
+
+label {
+    width: 30%;
+    text-align: right;
+    display: inline-block;
+}
+
+button[type=submit] {
+        cursor:pointer;
+		display: block;
+		padding: 1.2em 1.4em;
+        margin: 1em auto 0;
+        background-color: rgba(#ccc, .4);
+        border: solid 2px rgba($color-green, 1);
+        color: rgba(#000, .9);
+		font-size: 1.5rem;
+		font-weight: 700;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+        transition: all 1.3s;
+        
+		&:hover, &:focus {
+            box-shadow: inset 20em 0 .25px 0 rgba($color-green, 1);
+		}
+	}
+
+
+/* -------------------------------- 
+
 Footer
 
 -------------------------------- */

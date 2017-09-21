@@ -1447,8 +1447,6 @@ article[id^="galleryItemContent"] {
         margin: 0 2.5% auto 5%;
         float: left;
         font-size: 1.1em; } }
-  article[id^="galleryItemContent"] p:first-of-type {
-    padding-top: 0; }
   @media only screen and (min-width: 768px) {
     article[id^="galleryItemContent"] p:last-of-type {
       margin: 0 5% auto 2.5%;

@@ -1596,7 +1596,12 @@ Gallery
       .gallery .galleryItem:nth-child(even) figcaption {
         color: black; } }
 
-/* line 1578, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* -------------------------------- 
+
+Highlight Box
+
+-------------------------------- */
+/* line 1581, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 #overlay {
   width: 100%;
   height: 100%;
@@ -1607,7 +1612,7 @@ Gallery
   z-index: 900;
   display: none; }
 
-/* line 1589, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 1592, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 article[id^="galleryItemContent"] {
   background-color: #2C343B;
   position: fixed;
@@ -1618,12 +1623,12 @@ article[id^="galleryItemContent"] {
   display: none;
   margin: auto 0; }
   @media only screen and (min-width: 640px) {
-    /* line 1589, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+    /* line 1592, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
     article[id^="galleryItemContent"] {
       width: 90%;
       margin: auto auto auto 5%; } }
   @media only screen and (min-width: 768px) {
-    /* line 1589, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+    /* line 1592, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
     article[id^="galleryItemContent"] {
       margin: auto;
       top: 0;
@@ -1631,7 +1636,7 @@ article[id^="galleryItemContent"] {
       width: 700px;
       clear: both;
       right: calc(50% - 350px); } }
-  /* line 1613, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 1616, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   article[id^="galleryItemContent"] .close {
     cursor: pointer;
     position: absolute;
@@ -1649,25 +1654,25 @@ article[id^="galleryItemContent"] {
     line-height: 1;
     z-index: 902; }
     @media only screen and (min-width: 768px) {
-      /* line 1613, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 1616, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       article[id^="galleryItemContent"] .close {
         clear: right;
         position: relative;
         float: right; } }
-  /* line 1638, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 1641, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   article[id^="galleryItemContent"] figure {
     width: 100%;
     margin-bottom: 0; }
     @media only screen and (min-width: 768px) {
-      /* line 1638, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 1641, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       article[id^="galleryItemContent"] figure {
         background: green;
         width: 100%; } }
-    /* line 1647, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+    /* line 1650, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
     article[id^="galleryItemContent"] figure img {
       border-bottom: 1px solid black; }
       @media only screen and (min-width: 768px) {
-        /* line 1647, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+        /* line 1650, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
         article[id^="galleryItemContent"] figure img {
           width: 100%;
           float: right;
@@ -1675,7 +1680,7 @@ article[id^="galleryItemContent"] {
           margin-top: 4em;
           right: 0;
           margin-bottom: 2em; } }
-    /* line 1658, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+    /* line 1661, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
     article[id^="galleryItemContent"] figure figcaption {
       color: #FFF5F5;
       margin: 1.5em;
@@ -1683,7 +1688,7 @@ article[id^="galleryItemContent"] {
       font-weight: 600;
       letter-spacing: 1px; }
       @media only screen and (min-width: 768px) {
-        /* line 1658, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+        /* line 1661, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
         article[id^="galleryItemContent"] figure figcaption {
           margin: 0;
           width: 100%;
@@ -1693,7 +1698,7 @@ article[id^="galleryItemContent"] {
           margin-top: 1em;
           top: 0;
           text-align: center; } }
-  /* line 1678, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 1681, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   article[id^="galleryItemContent"] p {
     color: #FFF5F5;
     margin: 1.5em;
@@ -1702,7 +1707,7 @@ article[id^="galleryItemContent"] {
     letter-spacing: 1px;
     line-height: 115%; }
     @media only screen and (min-width: 768px) {
-      /* line 1678, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 1681, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       article[id^="galleryItemContent"] p {
         padding: 0;
         line-height: 140%;
@@ -1710,16 +1715,16 @@ article[id^="galleryItemContent"] {
         margin: 0 2.5% auto 5%;
         float: left;
         font-size: 1.1em; } }
-  /* line 1696, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 1699, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   article[id^="galleryItemContent"] p:first-of-type {
     padding-top: 0; }
   @media only screen and (min-width: 768px) {
-    /* line 1700, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+    /* line 1703, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
     article[id^="galleryItemContent"] p:last-of-type {
       margin: 0 5% auto 2.5%;
       clear: right;
       float: right; } }
-  /* line 1708, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 1711, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   article[id^="galleryItemContent"] a[href^="http"] {
     text-decoration: none;
     text-align: center;
@@ -1736,11 +1741,11 @@ article[id^="galleryItemContent"] {
     text-transform: uppercase;
     transition: all 2s;
     line-height: 50%; }
-    /* line 1725, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+    /* line 1728, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
     .no-touch article[id^="galleryItemContent"] a[href^="http"]:hover, .no-touch article[id^="galleryItemContent"] a[href^="http"]:focus {
       box-shadow: inset 20em 0 0.25px 0 #1a8b9d; }
     @media only screen and (min-width: 768px) {
-      /* line 1708, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 1711, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       article[id^="galleryItemContent"] a[href^="http"] {
         clear: right;
         float: left;
@@ -1752,12 +1757,12 @@ article[id^="galleryItemContent"] {
 Forms
 
 -------------------------------- */
-/* line 1780, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 1783, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 fieldset {
   border: none;
   padding: 1em; }
 
-/* line 1784, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 1787, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 legend {
   display: block;
   padding: 1em;
@@ -1768,43 +1773,43 @@ legend {
   text-align: center;
   width: 100%; }
 
-/* line 1794, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 1797, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 input, textarea {
   padding: 5px;
   width: 55%;
   border: solid 1px #999; }
 
-/* line 1799, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 1802, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 input[type=checkbox], input[type=radio] {
   width: auto; }
 
-/* line 1802, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 1805, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 .altLabel label {
   text-align: left;
   width: auto; }
 
-/* line 1806, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 1809, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 #contactForm ol {
   list-style-type: none;
   margin: 0;
   padding: 0; }
 
-/* line 1811, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 1814, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 #contactForm li {
   padding-bottom: .75em; }
 
-/* line 1814, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 1817, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 #comments .radioSet li {
   display: inline-block;
   margin-right: 10px; }
 
-/* line 1818, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 1821, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 .groupHeadline {
   font-weight: 300;
   border-bottom: solid 1px #999;
   margin-bottom: .4em; }
 
-/* line 1824, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 1827, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 textarea {
   width: 95%;
   font-family: "Maven Pro", sans-serif;
@@ -1812,13 +1817,13 @@ textarea {
   min-height: 6em;
   margin-top: -2em; }
 
-/* line 1832, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 1835, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 label {
   width: 30%;
   text-align: right;
   display: inline-block; }
 
-/* line 1838, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 1841, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 button[type=submit] {
   cursor: pointer;
   display: block;
@@ -1832,7 +1837,7 @@ button[type=submit] {
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: all 1.3s; }
-  /* line 1852, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 1855, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   button[type=submit]:hover, button[type=submit]:focus {
     box-shadow: inset 20em 0 0.25px 0 #b2d430; }
 
@@ -1841,7 +1846,7 @@ button[type=submit] {
 Footer
 
 -------------------------------- */
-/* line 1864, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 1867, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 footer {
   background: #2C343B;
   height: 20em;
@@ -1849,30 +1854,30 @@ footer {
   text-align: center;
   float: none; }
   @media only screen and (min-width: 1170px) {
-    /* line 1864, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+    /* line 1867, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
     footer {
       text-align: none; } }
-  /* line 1875, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 1878, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   footer .social {
     width: 100%;
     margin: auto; }
     @media only screen and (min-width: 1170px) {
-      /* line 1875, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 1878, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       footer .social {
         padding-left: 16px;
         float: left; } }
-  /* line 1885, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 1888, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   footer .linkedin, footer .github, footer .codepen {
     display: inline-block; }
     @media only screen and (min-width: 1170px) {
-      /* line 1885, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 1888, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       footer .linkedin, footer .github, footer .codepen {
         float: left; } }
-  /* line 1893, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 1896, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   footer div.linkedin, footer div.github, footer div.codepen {
     width: 30px;
     margin: 0 5px; }
-  /* line 1898, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 1901, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   footer div#logo-bottom {
     clear: both;
     width: 70px;
@@ -1880,20 +1885,20 @@ footer {
     margin: 0 auto 3em auto;
     padding-top: 1.5em; }
     @media only screen and (min-width: 1170px) {
-      /* line 1898, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 1901, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       footer div#logo-bottom {
         float: left;
         margin: 0 0 0 16px;
         display: inline-block; } }
-  /* line 1912, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 1915, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   footer en {
     font-style: italic; }
-  /* line 1916, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 1919, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   footer p {
     color: #FFF5F5;
     line-height: 1.4;
     clear: both; }
-  /* line 1921, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 1924, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   footer p en {
     position: relative;
     font-size: 1em;
@@ -1901,19 +1906,19 @@ footer {
     line-height: 1.6;
     top: -30px; }
     @media only screen and (min-width: 1170px) {
-      /* line 1921, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 1924, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       footer p en {
         text-align: left;
         display: inline-block;
         top: -50px;
         float: left;
         margin-left: 6em; } }
-  /* line 1937, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 1940, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   footer p:last-child {
     font-size: .9em;
     margin-top: 1.2em; }
     @media only screen and (min-width: 1170px) {
-      /* line 1937, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 1940, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       footer p:last-child {
         float: right;
         margin-right: 16px; } }
@@ -1923,14 +1928,14 @@ footer {
 Javascript disabled
 
 -------------------------------- */
-/* line 1954, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 1957, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 .no-js .hero-slider li {
   display: none; }
-  /* line 1957, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 1960, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   .no-js .hero-slider li.selected {
     display: block; }
 
-/* line 1962, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 1965, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 .no-js .slider-nav {
   display: none; }
 

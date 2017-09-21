@@ -4,7 +4,7 @@ $(document).ready(function (){
     $('.galleryItem').on('click',function (e) {
         e.preventDefault();
         var numero = $(this).attr("name");
-        $("#overlay").fadeTo(300, .7);
+        $("#overlay").fadeTo(300, .85);
         $('#galleryItemContent' + numero).delay(300).fadeIn(300);
 
         $("#overlay, #close").click(function(event){

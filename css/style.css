@@ -1342,6 +1342,11 @@ Gallery
       .gallery .galleryItem:nth-child(even) figcaption {
         color: black; } }
 
+/* -------------------------------- 
+
+Highlight Box
+
+-------------------------------- */
 #overlay {
   width: 100%;
   height: 100%;

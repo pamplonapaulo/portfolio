@@ -1,5 +1,19 @@
 $(document).ready(function (){
 
+// Light Box
+    $('.galleryItem').on('click',function (e) {
+        e.preventDefault();
+        var numero = $(this).attr("name");
+        $("#overlay").fadeTo(300, .7);
+        $('#galleryItemContent' + numero).delay(300).fadeIn(300);
+
+        $("#overlay, #close").click(function(event){
+            event.preventDefault();
+            $("#overlay").hide();
+            $('#galleryItemContent' + numero).hide();
+        });
+    });
+
 // Scroll Down on Click
     
    $('a[href^="#"]').on('click',function (e) {
@@ -34,14 +48,11 @@ $(document).ready(function (){
        });
    } 
     fullScreen();
-
     $(window).resize(function(){
         fullScreen();
     });
     
-    
 //    Hamburguer Menu Icon Animation
-    
     $('#hamb-nav').click(function(){
         $(this).toggleClass('open');
         $('.menu').fadeToggle('400');
@@ -50,19 +61,16 @@ $(document).ready(function (){
         $('.menu').hide();
     } else {
         $('.menu').show();
-    }
-    
+    }   
+
 //    SubMenu DropDown for Touch Screen
-    
     $('.subMenu').click(function(){
         $('.touchDropDown').toggleClass('expand');
     });
-  
 });
 
-
 //    Resize Hamburguer Menu Icon Animation
-//    Problem: I need make it DRY
+//    Challenge: I need make it DRY
 $(window).resize(function() {
     if ($(window).width() < 1170){
         $('#hamb-nav').removeClass('open');

@@ -6,6 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
+<!--
+    <link href="../css/lightbox.css" rel="stylesheet" type="text/css" />
+    
+    <link href="../css/menu.css" rel="stylesheet" type="text/css" />
+--> 
     <!-- CSS reset -->
 	<link rel="stylesheet" href="../css/reset.css">
       
@@ -92,109 +97,189 @@
         <p>My goal here, while I don't get hired by you, is to publish one new website evey month. If you don't have money but has some amazing idea, contact me and let me know about your project. I might decide to include it at this portfolio.</p>
           
         <section class="gallery">
-           
-           
-<!--           Figures must be 640x640px-->
-           <div class="galleryItem">
+        
+        <!-------------- Images must be 640x640px------------->
+        <div id="overlay"></div>
+           <div class="galleryItem" name="1">
              <a href="#">
                 <figure>
                  <div class="galleryItem-overlay"></div>
-                  <img src="../assets/blog-assets/appleWatch-640x640.jpg" alt="Apple Watch"/>
-                  <figcaption class="captionTop">Caption Top 1</figcaption>
-                  <figcaption class="captionBottom">Caption Bottom 1</figcaption>
-                </figure>
-               </a>
-           </div>
-           
-           <div class="galleryItem">
-             <a href="http://plumagecss.com/index.html" target="_blank">
-                <figure>
-                 <div class="galleryItem-overlay"></div>
-                  <img src="../assets/plumageCSS.png" alt="Apple Watch"/>
-                   <figcaption class="captionTop">Plumage CSS</figcaption>
+                  <img src="../assets/portfolio-assets/plumageCSS.png" alt="Apple Watch"/>
+                  <figcaption class="captionTop">Plumage CSS</figcaption>
                    <figcaption class="captionBottom">[ Group Project ]</figcaption>
                 </figure>
                </a>
            </div>
-           
-           <div class="galleryItem">
+           <div class="galleryItem" name="2">
              <a href="#">
                 <figure>
                  <div class="galleryItem-overlay"></div>
-                  <img src="../assets/blog-assets/appleWatch-640x640.jpg" alt="Apple Watch"/>
+                  <img src="../assets/portfolio-assets/appleWatch-640x640.jpg" alt="Apple Watch"/>
+                   <figcaption class="captionTop">Caption Top 2</figcaption>
+                   <figcaption class="captionBottom">Caption Bottom 2</figcaption>
+                </figure>
+               </a>
+           </div>
+           <div class="galleryItem" name="3">
+             <a href="#">
+                <figure>
+                 <div class="galleryItem-overlay"></div>
+                  <img src="../assets/portfolio-assets/appleWatch-640x640.jpg" alt="Apple Watch"/>
                    <figcaption class="captionTop">Caption Top 3</figcaption>
                    <figcaption class="captionBottom">Caption Bottom 3</figcaption>
                 </figure>
                </a>
            </div>
-           
-           <div class="galleryItem">
+           <div class="galleryItem" name="4">
              <a href="#">
                 <figure>
                  <div class="galleryItem-overlay"></div>
-                  <img src="../assets/blog-assets/appleWatch-640x640.jpg" alt="Apple Watch"/>
+                  <img src="../assets/portfolio-assets/appleWatch-640x640.jpg" alt="Apple Watch"/>
                    <figcaption class="captionTop">Caption Top 4</figcaption>
                    <figcaption class="captionBottom">Caption Bottom 4</figcaption>
                 </figure>
                </a>
            </div>
-           
-           <div class="galleryItem">
+           <div class="galleryItem" name="5">
              <a href="#">
                 <figure>
                  <div class="galleryItem-overlay"></div>
-                  <img src="../assets/blog-assets/appleWatch-640x640.jpg" alt="Apple Watch"/>
+                  <img src="../assets/portfolio-assets/appleWatch-640x640.jpg" alt="Apple Watch"/>
                    <figcaption class="captionTop">Caption Top 5</figcaption>
                    <figcaption class="captionBottom">Caption Bottom 5</figcaption>
                 </figure>
                </a>
            </div>
-           
-           <div class="galleryItem">
+           <div class="galleryItem" name="6">
              <a href="#">
                 <figure>
                  <div class="galleryItem-overlay"></div>
-                  <img src="../assets/blog-assets/appleWatch-640x640.jpg" alt="Apple Watch"/>
+                  <img src="../assets/portfolio-assets/appleWatch-640x640.jpg" alt="Apple Watch"/>
                    <figcaption class="captionTop">Caption Top 6</figcaption>
                    <figcaption class="captionBottom">Caption Bottom 6</figcaption>
                 </figure>
                </a>
            </div>
-           
-           <div class="galleryItem">
+           <div class="galleryItem" name="7">
              <a href="#">
                 <figure>
                  <div class="galleryItem-overlay"></div>
-                  <img src="../assets/blog-assets/appleWatch-640x640.jpg" alt="Apple Watch"/>
+                  <img src="../assets/portfolio-assets/appleWatch-640x640.jpg" alt="Apple Watch"/>
                    <figcaption class="captionTop">Caption Top 7</figcaption>
                    <figcaption class="captionBottom">Caption Bottom 7</figcaption>
                 </figure>
                </a>
            </div>
-           
-           <div class="galleryItem">
+           <div class="galleryItem" name="8">
              <a href="#">
                 <figure>
                  <div class="galleryItem-overlay"></div>
-                  <img src="../assets/blog-assets/appleWatch-640x640.jpg" alt="Apple Watch"/>
+                  <img src="../assets/portfolio-assets/appleWatch-640x640.jpg" alt="Apple Watch"/>
                    <figcaption class="captionTop">Caption Top 8</figcaption>
                    <figcaption class="captionBottom">Caption Bottom 8</figcaption>
                 </figure>
                </a>
            </div>
- 
-           <div class="galleryItem">
+           <div class="galleryItem" name="9">
              <a href="#">
                 <figure>
                  <div class="galleryItem-overlay"></div>
-                  <img src="../assets/blog-assets/appleWatch-640x640.jpg" alt="Apple Watch"/>
+                  <img src="../assets/portfolio-assets/appleWatch-640x640.jpg" alt="Apple Watch"/>
                    <figcaption class="captionTop">Caption Top 9</figcaption>
                    <figcaption class="captionBottom">Caption Bottom 9</figcaption>
                 </figure>
                </a>
-           </div>      
-              
+           </div>
+  
         </section>
+        <article id="galleryItemContent1">
+            <a class="close" id="close">x</a>
+            <figure>
+                <img src="../assets/portfolio-assets/plumage-print.png" alt="Plumage Website" />
+                <figcaption>Plumage CSS Framework</figcaption>
+            </figure>
+            <p>Plumage is a CSS framework built by me and three classmates as our final project at the Front-End Web Development Certification Programm from San Diego Continuing Education, in California. The project took about three weeks and we got 279 points in a total of 300.</p>
+            
+            <p>My special thanks to Alex Garcia, Natalia Lipovskaia, and Tracey Olson, a lovable and very professional team who taught me that we can do beuatiful things if we have passion and discipline together.</p>
+            <a href="http://plumagecss.com/" target="_blank">Visit</a>
+<!--            <a href="http://plumagecss.com/" target="_blank">Visit</a>-->
+         
+        </article>
+        
+        <article id="galleryItemContent2">
+            <a href="#" class="close">x</a>
+            <figure>
+            <img src="../assets/portfolio-assets/plumage-print.png" alt="Plumage Website" />
+            <figcaption>Website 2</figcaption>
+            </figure>
+            <p>Lorem ipsum dolor sit amet!</p>
+            <p><a href="http://plumagecss.com/index.html">Visit the website</a></p>
+            
+            
+            
+            
+<!--
+         <div class="nutritionFacts"><p>Nutrition Facts </br>(1 portion)</br> </br>
+370 cals.<br />
+10 grams vegetable fat.<br />
+43 grams sugar. <br /> <br />
+</p></div>
+         <div class="ingredients"><p>Ingredients<br /> <br />
+Blended: acai, banana, mango, pineapple, coconut milk. <br /> <br /> Toppings :granola, banana, strawberries, mango, coconut shreds, honey
+        </p>
+         </div>
+-->
+        </article>
+        
+        <article id="galleryItemContent3">
+            <a href="#" class="close">x</a>
+            <figure>
+            <img src="../assets/portfolio-assets/plumage-print.png" alt="Plumage Website" />
+            <figcaption>Website 3</figcaption>
+            </figure>
+            <p>Lorem ipsum dolor sit amet!</p>
+<!--
+         <div class="nutritionFacts"><p>Nutrition Facts <br />(1 portion)<br /> <br />
+370 cals.<br />
+10 grams vegetable fat.<br />
+43 grams sugar. <br /> <br />
+</p></div>
+         <div class="ingredients"><p>Ingredients<br /> <br />
+Blended: acai,banana,pineapple,kale,spirulina,lemon, ginger. <br /> <br /> Toppings: granola, banana, and honey.
+        </p>
+         </div>
+-->
+        </article>
+        
+        <article id="galleryItemContent4">
+            <a href="#" class="close">x</a>
+            <figure>
+            <img src="../assets/portfolio-assets/plumage-print.png" alt="Plumage Website" />
+            <figcaption>Website 4</figcaption>
+            </figure>
+            <p>Lorem ipsum dolor sit amet!</p>
+<!--
+         <div class="nutritionFacts"><p>Nutrition Facts </br>(1 portion)<br /> <br />
+370 cals.<br />
+10 grams vegetable fat.<br />
+43 grams sugar. <br /> <br />
+</p></div>
+         <div class="ingredients"><p>Ingredients<br /> <br />
+Blended: açaí, banana, and almond milk. <br /> <br /> Toppings: granola, banana, and honey.
+        </p>
+         </div>
+-->
+        </article>
+         
+
+         
+  
+          
+          
+          
+          
+        
+        
            
 
 
@@ -232,7 +317,7 @@
 
 <script src="../js/jquery.lettering-0.6.1.min.js" type="text/javascript"></script>
 
-<script src="../js/title-animation.js" type="text/javascript"></script>            
+<script src="../js/title-animation.js" type="text/javascript"></script>       
                     
 </body>
 </html>

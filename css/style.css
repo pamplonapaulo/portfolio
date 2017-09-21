@@ -1207,7 +1207,7 @@ main > p > a {
 
 /* -------------------------------- 
 
-Portfolio Gallery
+Gallery
 
 -------------------------------- */
 .gallery {
@@ -1341,6 +1341,138 @@ Portfolio Gallery
       background: #FFF5F5; }
       .gallery .galleryItem:nth-child(even) figcaption {
         color: black; } }
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  z-index: 900;
+  display: none; }
+
+article[id^="galleryItemContent"] {
+  background-color: #2C343B;
+  position: fixed;
+  top: 10%;
+  width: 100%;
+  height: auto;
+  z-index: 901;
+  display: none;
+  margin: auto 0; }
+  @media only screen and (min-width: 640px) {
+    article[id^="galleryItemContent"] {
+      width: 90%;
+      margin: auto auto auto 5%; } }
+  @media only screen and (min-width: 768px) {
+    article[id^="galleryItemContent"] {
+      margin: auto;
+      top: 0;
+      height: 100%;
+      width: 700px;
+      clear: both;
+      right: calc(50% - 350px); } }
+  article[id^="galleryItemContent"] .close {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+    background-color: black;
+    padding: 1.5px 8px;
+    width: 1.5em;
+    height: 1.5em;
+    display: block;
+    font-weight: 400;
+    color: white;
+    opacity: .8;
+    line-height: 1;
+    z-index: 902; }
+    @media only screen and (min-width: 768px) {
+      article[id^="galleryItemContent"] .close {
+        clear: right;
+        position: relative;
+        float: right; } }
+  article[id^="galleryItemContent"] figure {
+    width: 100%;
+    margin-bottom: 0; }
+    @media only screen and (min-width: 768px) {
+      article[id^="galleryItemContent"] figure {
+        background: green;
+        width: 100%; } }
+    article[id^="galleryItemContent"] figure img {
+      border-bottom: 1px solid black; }
+      @media only screen and (min-width: 768px) {
+        article[id^="galleryItemContent"] figure img {
+          width: 100%;
+          float: right;
+          border: none;
+          margin-top: 4em;
+          right: 0;
+          margin-bottom: 2em; } }
+    article[id^="galleryItemContent"] figure figcaption {
+      color: #FFF5F5;
+      margin: 1.5em;
+      margin-bottom: 0;
+      font-weight: 600;
+      letter-spacing: 1px; }
+      @media only screen and (min-width: 768px) {
+        article[id^="galleryItemContent"] figure figcaption {
+          margin: 0;
+          width: 100%;
+          font-size: 2em;
+          z-index: 995;
+          position: absolute;
+          margin-top: 1em;
+          top: 0;
+          text-align: center; } }
+  article[id^="galleryItemContent"] p {
+    color: #FFF5F5;
+    margin: 1.5em;
+    margin-top: 0;
+    padding: 0;
+    letter-spacing: 1px;
+    line-height: 115%; }
+    @media only screen and (min-width: 768px) {
+      article[id^="galleryItemContent"] p {
+        padding: 0;
+        line-height: 140%;
+        width: 42.5%;
+        margin: 0 2.5% auto 5%;
+        float: left;
+        font-size: 1.1em; } }
+  article[id^="galleryItemContent"] p:first-of-type {
+    padding-top: 0; }
+  @media only screen and (min-width: 768px) {
+    article[id^="galleryItemContent"] p:last-of-type {
+      margin: 0 5% auto 2.5%;
+      clear: right;
+      float: right; } }
+  article[id^="galleryItemContent"] a[href^="http"] {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    width: 25%;
+    color: #FFF5F5;
+    padding: 1em .3em;
+    margin: 0 auto 1.5em auto;
+    background-color: rgba(204, 204, 204, 0.3);
+    border: solid 2px #1a8b9d;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    transition: all 2s;
+    line-height: 50%; }
+    .no-touch article[id^="galleryItemContent"] a[href^="http"]:hover, .no-touch article[id^="galleryItemContent"] a[href^="http"]:focus {
+      box-shadow: inset 20em 0 0.25px 0 #1a8b9d; }
+    @media only screen and (min-width: 768px) {
+      article[id^="galleryItemContent"] a[href^="http"] {
+        clear: right;
+        float: left;
+        transition: all .5s;
+        margin: 2.5% 12.5%; } }
 
 /* -------------------------------- 
 

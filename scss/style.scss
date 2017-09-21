@@ -1561,7 +1561,7 @@ Highlight Box
 article[id^="galleryItemContent"] {
     background-color: $color-black;
     position: fixed;
-    top:10%;
+    top:0;
     width:100%;
     height: auto;
     z-index: 901;
@@ -1569,6 +1569,7 @@ article[id^="galleryItemContent"] {
     margin: auto 0;
     
     @include MQ(SM) {
+        top:10%;
         width: 90%;
         margin: auto auto auto 5%;
     }
@@ -1589,15 +1590,24 @@ article[id^="galleryItemContent"] {
         right: 0;
         text-decoration: none;
         background-color: black;
-        padding: 1.5px 8px;
-        width: 1.5em;
-        height: 1.5em;
+        padding: 4.5px 12.5px;
+        width: 1.75em;
+        height: 1.75em;
+        font-size: 1.25em;
         display: block;
         font-weight: 400;
         color:white;
         opacity: .8;
         line-height: 1;  
         z-index: 902;
+        
+        @include MQ(SM) {
+            width: 1.5em;
+            height: 1.5em;
+            padding: 1.5px 8px;
+            font-size: 1em;
+
+        }
         
         @include MQ(M) {
             clear: right;
@@ -1665,14 +1675,22 @@ article[id^="galleryItemContent"] {
         }
     }
     
-    
     p:first-of-type{
         //padding-top: 0;
         //top:0;
         //margin-top: 0em;
+        
+        @include MQ(M) {
+            padding-top: 0em;
+        }
     }
     
     p:last-of-type {
+        display: none;
+        
+        @include MQ(SM) {
+            display: block;
+        }
         @include MQ(M) {
             margin: 0 5% auto 2.5%;
             clear: right;

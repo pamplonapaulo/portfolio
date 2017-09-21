@@ -1376,6 +1376,7 @@ Gallery
         width: 50%;
         z-index: 1;
         position: relative;
+        cursor: pointer;
         
         @include MQ(SM) {
             width: 33.33%

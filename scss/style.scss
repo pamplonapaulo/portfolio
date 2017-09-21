@@ -32,11 +32,8 @@
 @import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i|Maven+Pro:400,500,700,900|Oswald:400');
 
 /* -------------------------------- 
-
 Grid System
-
 Acknowledgement: Special thanks to it's author Alex Garcia, a classmate and one of my partners at our final project www.PlumageCSS.com, from which I took this grid. 
-
 -------------------------------- */
 /*CONTENT CONTAINER BASED ON 960PX*/
 .container {
@@ -146,9 +143,7 @@ Acknowledgement: Special thanks to it's author Alex Garcia, a classmate and one 
 }
 
 /* -------------------------------- 
-
 Primary style
-
 -------------------------------- */
 *, *::after, *::before {
 	@include box-sizing(border-box);
@@ -177,9 +172,7 @@ img {
 }
 
 /* -------------------------------- 
-
 Header Components 
-
 -------------------------------- */
 .header {
 	position: fixed;    
@@ -237,9 +230,7 @@ Header Components
 }
 
 /* -------------------------------- 
-
 Hamburguer Icon
-
 -------------------------------- */
 .nav-hamb div {
     position: relative;
@@ -343,9 +334,7 @@ Hamburguer Icon
 
 
 /* -------------------------------- 
-
 Responsive Top Menu
-
 -------------------------------- */
 .menu {
     z-index: 90;
@@ -543,9 +532,7 @@ Responsive Top Menu
 
 
 /* -------------------------------- 
-
 Hero Image 
-
 -------------------------------- */
 #heroImage {
     background-size: cover;
@@ -566,9 +553,7 @@ Hero Image
 
 
 /* -------------------------------- 
-
 Animated Title
-
 -------------------------------- */
 .headerSection  {
     position: relative;
@@ -659,9 +644,7 @@ Animated Title
 }
 
 /* -------------------------------- 
-
 Scroll down arrow icon
-
 -------------------------------- */
 @include MQ(L) {
     .arrow-wrapper {
@@ -752,9 +735,7 @@ Scroll down arrow icon
 }
 
 /* -------------------------------- 
-
 Slider
-
 -------------------------------- */
 .hero {
 	position: relative;
@@ -810,9 +791,7 @@ Slider
 }
 
 /* -------------------------------- 
-
 Single Slide Style + Mobile Images
-
 -------------------------------- */
 
 .hero-slider {
@@ -1036,9 +1015,7 @@ Single Slide Style + Mobile Images
 }
 
 /* -------------------------------- 
-
 Single Slide Animation
-
 -------------------------------- */
 
 @include MQ(M) {
@@ -1130,9 +1107,7 @@ Single Slide Animation
 }
 
 /* -------------------------------- 
-
 Slider Navigation
-
 -------------------------------- */
 
 .slider-nav {
@@ -1224,9 +1199,7 @@ Slider Navigation
 
 
 /* -------------------------------- 
-
 Main Content
-
 -------------------------------- */
 
 main.main-content {
@@ -1386,9 +1359,7 @@ main > p > a {
 
 
 /* -------------------------------- 
-
 Gallery
-
 -------------------------------- */
 
 .gallery {
@@ -1403,6 +1374,8 @@ Gallery
     .galleryItem {
         display: inline-block;
         width: 50%;
+        z-index: 1;
+        position: relative;
         
         @include MQ(SM) {
             width: 33.33%
@@ -1453,7 +1426,6 @@ Gallery
             }
             figcaption {
                 color: white;
-                //text-shadow: -2px 2px 3px white;
                 opacity: 0;
                 -webkit-transition: all 1s ease 0s;
                 -moz-transition: all 1s ease 0s;
@@ -1501,7 +1473,6 @@ Gallery
                 figcaption {
                     opacity: 1;
                     font-weight: 100;
-                    //text-shadow: -2px 2px 3px white;
                     font-size: .8em;
                     
                     @include MQ(SM) {
@@ -1573,9 +1544,7 @@ Gallery
 }
 
 /* -------------------------------- 
-
 Highlight Box
-
 -------------------------------- */
 
 #overlay {
@@ -1779,9 +1748,7 @@ article[id^="galleryItemContent"] {
 
 
 /* -------------------------------- 
-
 Forms
-
 -------------------------------- */
 fieldset {
     border: none;
@@ -1862,9 +1829,7 @@ button[type=submit] {
 
 
 /* -------------------------------- 
-
 Footer
-
 -------------------------------- */
 
 footer {
@@ -1952,9 +1917,7 @@ footer {
 }
 
 /* -------------------------------- 
-
 Javascript disabled
-
 -------------------------------- */
 
 .no-js .hero-slider li {
@@ -1968,5 +1931,3 @@ Javascript disabled
 .no-js .slider-nav {
 	display: none;
 }
-
-

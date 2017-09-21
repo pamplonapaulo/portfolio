@@ -22,11 +22,8 @@
 */
 @import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i|Maven+Pro:400,500,700,900|Oswald:400");
 /* -------------------------------- 
-
 Grid System
-
 Acknowledgement: Special thanks to it's author Alex Garcia, a classmate and one of my partners at our final project www.PlumageCSS.com, from which I took this grid. 
-
 -------------------------------- */
 /*CONTENT CONTAINER BASED ON 960PX*/
 .container {
@@ -222,9 +219,7 @@ Acknowledgement: Special thanks to it's author Alex Garcia, a classmate and one 
   .col-xl-12 {
     width: 100%; } }
 /* -------------------------------- 
-
 Primary style
-
 -------------------------------- */
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
@@ -249,9 +244,7 @@ img {
   max-width: 100%; }
 
 /* -------------------------------- 
-
 Header Components 
-
 -------------------------------- */
 .header {
   position: fixed;
@@ -300,9 +293,7 @@ Header Components
   filter: drop-shadow(-3px 3px 1px #2C343B); }
 
 /* -------------------------------- 
-
 Hamburguer Icon
-
 -------------------------------- */
 .nav-hamb div {
   position: relative;
@@ -391,9 +382,7 @@ Hamburguer Icon
   transform: rotate(-45deg); }
 
 /* -------------------------------- 
-
 Responsive Top Menu
-
 -------------------------------- */
 .menu {
   z-index: 90;
@@ -543,9 +532,7 @@ Responsive Top Menu
       background-color: #b2d430; } }
 
 /* -------------------------------- 
-
 Hero Image 
-
 -------------------------------- */
 #heroImage {
   background-size: cover;
@@ -562,9 +549,7 @@ Hero Image
       height: 680px; } }
 
 /* -------------------------------- 
-
 Animated Title
-
 -------------------------------- */
 .headerSection {
   position: relative;
@@ -636,9 +621,7 @@ Animated Title
             display: inline-block; }
 
 /* -------------------------------- 
-
 Scroll down arrow icon
-
 -------------------------------- */
 @media only screen and (min-width: 1170px) {
   .arrow-wrapper {
@@ -700,9 +683,7 @@ Scroll down arrow icon
     100% {
       background: #BDBDBD; } } }
 /* -------------------------------- 
-
 Slider
-
 -------------------------------- */
 .hero {
   position: relative;
@@ -754,9 +735,7 @@ Slider
       height: 680px; } }
 
 /* -------------------------------- 
-
 Single Slide Style + Mobile Images
-
 -------------------------------- */
 .hero-slider li {
   background-position: center center;
@@ -909,9 +888,7 @@ Single Slide Style + Mobile Images
     font-size: 1.6rem; } }
 
 /* -------------------------------- 
-
 Single Slide Animation
-
 -------------------------------- */
 @media only screen and (min-width: 768px) {
   .hero-slider .half-width {
@@ -992,9 +969,7 @@ Single Slide Animation
     -moz-transition: opacity 0.4s 0.3s, -moz-transform 0.5s 0.3s;
     transition: opacity 0.4s 0.3s, transform 0.5s 0.3s; } }
 /* -------------------------------- 
-
 Slider Navigation
-
 -------------------------------- */
 .slider-nav {
   position: absolute;
@@ -1067,9 +1042,7 @@ Slider Navigation
       background-color: rgba(0, 0, 0, 0.5); }
 
 /* -------------------------------- 
-
 Main Content
-
 -------------------------------- */
 main.main-content {
   margin: 0 auto 5em auto;
@@ -1206,9 +1179,7 @@ main > p > a {
     background-color: #2C343B; }
 
 /* -------------------------------- 
-
 Gallery
-
 -------------------------------- */
 .gallery {
   display: table;
@@ -1219,7 +1190,9 @@ Gallery
       max-width: 93.5%; } }
   .gallery .galleryItem {
     display: inline-block;
-    width: 50%; }
+    width: 50%;
+    z-index: 1;
+    position: relative; }
     @media only screen and (min-width: 640px) {
       .gallery .galleryItem {
         width: 33.33%; } }
@@ -1343,9 +1316,7 @@ Gallery
         color: black; } }
 
 /* -------------------------------- 
-
 Highlight Box
-
 -------------------------------- */
 #overlay {
   width: 100%;
@@ -1478,9 +1449,7 @@ article[id^="galleryItemContent"] {
         margin: 2.5% 12.5%; } }
 
 /* -------------------------------- 
-
 Forms
-
 -------------------------------- */
 fieldset {
   border: none;
@@ -1554,9 +1523,7 @@ button[type=submit] {
     box-shadow: inset 20em 0 0.25px 0 #b2d430; }
 
 /* -------------------------------- 
-
 Footer
-
 -------------------------------- */
 footer {
   background: #2C343B;
@@ -1621,9 +1588,7 @@ footer {
         margin-right: 16px; } }
 
 /* -------------------------------- 
-
 Javascript disabled
-
 -------------------------------- */
 .no-js .hero-slider li {
   display: none; }

@@ -8,9 +8,15 @@ $color-softGray: #ACA49C;
 
 // fonts 
 
-$font-0: 'Oswald', sans-serif;
-$font-1: 'Maven Pro', sans-serif;
-$font-2: 'Droid Serif', serif;
+$font-0: 'Oswald', sans-serif; // Animated Title
+
+//$font-1: 'Maven Pro', sans-serif; // Slider Title
+$font-1: 'Lato', sans-serif; 
+
+$font-2: 'Droid Serif', serif; // Traditional Paragraphs
+
+$font-3: 'Lato', sans-serif; // Forms
+
 
 // header height 
 

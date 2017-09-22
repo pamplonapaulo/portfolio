@@ -20,13 +20,12 @@
 - Main Content
 - Animated Title
 */
-@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i|Maven+Pro:400,500,700,900|Oswald:400");
+@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i|Maven+Pro:400,500,700,900|Oswald:400|Lato:400");
 /* -------------------------------- 
 Grid System
 Acknowledgement: Special thanks to it's author Alex Garcia, a classmate and one of my partners at our final project www.PlumageCSS.com, from which I took this grid. 
 -------------------------------- */
 /*CONTENT CONTAINER BASED ON 960PX*/
-@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
 .container {
   width: 100%;
   max-width: 960px;
@@ -233,7 +232,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Lato", sans-serif;
   color: #2C343B;
   background-color: #FFF5F5; }
 
@@ -290,8 +289,8 @@ Header Components
       margin: 15px 0 0 16px; } }
 
 .shadow {
-  -webkit-filter: drop-shadow(-3px 3px 1px #2C343B);
-  filter: drop-shadow(-3px 3px 1px #2C343B); }
+  -webkit-filter: drop-shadow(-2px 2px 1px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(-2px 2px 1px rgba(0, 0, 0, 0.5)); }
 
 /* -------------------------------- 
 Hamburguer Icon
@@ -305,7 +304,8 @@ Hamburguer Icon
 
 .nav-hamb span {
   display: block;
-  margin: 0; }
+  margin: 0;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); }
 
 #hamb-nav {
   margin: .75em 1em 0 0;
@@ -372,7 +372,8 @@ Hamburguer Icon
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
-  transform: rotate(45deg); }
+  transform: rotate(45deg);
+  box-shadow: none; }
 #hamb-nav.open span:nth-child(2) {
   width: 0%;
   opacity: 0; }
@@ -380,7 +381,8 @@ Hamburguer Icon
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
-  transform: rotate(-45deg); }
+  transform: rotate(-45deg);
+  box-shadow: none; }
 
 /* -------------------------------- 
 Responsive Top Menu
@@ -389,7 +391,7 @@ Responsive Top Menu
   z-index: 90;
   position: fixed;
   letter-spacing: .1em;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Lato", sans-serif;
   width: 100%;
   height: 100%;
   font-weight: 800;
@@ -432,7 +434,7 @@ Responsive Top Menu
       background: none;
       clear: right;
       float: right;
-      font-family: "Maven Pro", sans-serif;
+      font-family: "Lato", sans-serif;
       font-weight: 100;
       margin-top: 0; }
       .menu ul {
@@ -497,7 +499,7 @@ Responsive Top Menu
       background-color: rgba(178, 212, 48, 0.3);
       display: block;
       font-size: 1em;
-      margin-left: 135px;
+      margin-left: 127px;
       text-align: center;
       padding: auto auto;
       top: -30px; }
@@ -592,7 +594,7 @@ Animated Title
         padding-left: 16px;
         vertical-align: middle;
         font-size: 3rem;
-        font-family: "Oswald", sans-serif;
+        font-family: "Lato", sans-serif;
         color: #FFF5F5;
         text-shadow: 2px 2px 8px #000; }
         @media only screen and (min-width: 768px) {
@@ -822,7 +824,8 @@ Single Slide Style + Mobile Images
   width: 90%;
   max-width: 400px; }
 .hero-slider h2 {
-  font-size: 2.4rem; }
+  font-size: 2.4rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
 .hero-slider p {
   font-size: 1.4rem;
   line-height: 1.4; }
@@ -1469,22 +1472,44 @@ article[id^="galleryItemContent"] {
 /* -------------------------------- 
 Old Forms
 -------------------------------- */
+.altLabel label {
+  text-align: left;
+  width: auto; }
+
+#form ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+#form li {
+  padding-bottom: .75em; }
+
+.radioSet li {
+  display: inline-block;
+  margin-right: 10px; }
+
 /* -------------------------------- 
 New Forms
 -------------------------------- */
 .formWrapper {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   background: #FFF5F5;
   color: #b3aca7;
-  font-size: 25px; }
+  font-size: 25px;
+  text-transform: uppercase; }
   .formWrapper div.formHeader {
     font-size: 1.3em;
     position: relative;
     margin: 75px 0 75px 0;
     text-align: center;
-    letter-spacing: 7px; }
+    letter-spacing: 7px;
+    line-height: 2em;
+    padding: 0 1em; }
+    @media only screen and (min-width: 480px) {
+      .formWrapper div.formHeader {
+        padding: 0; } }
   .formWrapper #form {
-    font-size: 1.5em;
+    font-size: 37.5px;
     position: relative;
     width: 95%;
     margin: 50px auto 100px auto; }
@@ -1494,6 +1519,14 @@ New Forms
     @media only screen and (min-width: 768px) {
       .formWrapper #form {
         width: 75%; } }
+    .formWrapper #form div.formSubHeader {
+      margin: 1.5em auto 0 auto;
+      font-size: 0.6em;
+      letter-spacing: 7px;
+      line-height: 2em; }
+      @media only screen and (min-width: 768px) {
+        .formWrapper #form div.formSubHeader {
+          font-size: 0.7em; } }
     .formWrapper #form button[type=submit] {
       cursor: pointer;
       display: block;
@@ -1503,28 +1536,39 @@ New Forms
       border: 1px solid #ACA49C;
       color: #aca49c;
       font-size: 1.5rem;
-      font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
       transition: all 1.3s; }
       .formWrapper #form button[type=submit]:hover, .formWrapper #form button[type=submit]:focus {
         box-shadow: inset 20em 0 0.25px 0 #aca49c;
         color: #FFF5F5; }
-    .formWrapper #form input {
+    .formWrapper #form label {
+      width: 90%;
+      text-align: left;
+      display: inline-block;
+      font-size: 0.35em;
+      padding: 0 1em 0 2em;
+      margin: .5em auto .5em 0; }
+      @media only screen and (min-width: 768px) {
+        .formWrapper #form label {
+          font-size: 0.45em; } }
+    .formWrapper #form input[type^="text"] {
       border: solid 1px #b3aca7;
-      border-bottom: none;
+      border-top: none;
       height: 50px;
       padding: 0 15px 0 15px; }
+    .formWrapper #form input[type^="text"]:first-of-type {
+      border-top: solid 1px #b3aca7; }
     .formWrapper #form textarea {
       border: solid 1px #b3aca7;
       height: 160px;
       max-height: 160px;
       padding: 15px; }
-    .formWrapper #form input, .formWrapper #form textarea {
+    .formWrapper #form input[type="text"], .formWrapper #form textarea {
       -webkit-appearance: none;
       -webkit-border-radius: 0px;
       border-radius: 0;
-      font-family: 'Lato', sans-serif;
+      font-family: "Lato", sans-serif;
       font-size: 0.6em;
       width: 100%;
       background: transparent;
@@ -1538,77 +1582,202 @@ New Forms
       /*    F O C U S   >   P L A C E H O L D E R   */
       /*    P L A C E H O L D E R   */ }
       @media only screen and (min-width: 480px) {
-        .formWrapper #form input, .formWrapper #form textarea {
+        .formWrapper #form input[type="text"], .formWrapper #form textarea {
           width: 95%; } }
       @media only screen and (min-width: 768px) {
-        .formWrapper #form input, .formWrapper #form textarea {
+        .formWrapper #form input[type="text"], .formWrapper #form textarea {
           font-size: .7em;
           width: 100%; } }
-      .formWrapper #form input:hover, .formWrapper #form textarea:hover {
+      .formWrapper #form input[type="text"]:hover, .formWrapper #form textarea:hover {
         background: #b3aca7;
         color: #FFF5F5;
         /*    H O V E R   >   P L A C E H O L D E R   */
         /*    H O V E R   >   F O C U S   >   P L A C E H O L D E R   */ }
-        .formWrapper #form input:hover::-webkit-input-placeholder, .formWrapper #form textarea:hover::-webkit-input-placeholder {
+        .formWrapper #form input[type="text"]:hover::-webkit-input-placeholder, .formWrapper #form textarea:hover::-webkit-input-placeholder {
           color: #FFF5F5; }
           @media only screen and (min-width: 768px) {
-            .formWrapper #form input:hover::-webkit-input-placeholder, .formWrapper #form textarea:hover::-webkit-input-placeholder {
+            .formWrapper #form input[type="text"]:hover::-webkit-input-placeholder, .formWrapper #form textarea:hover::-webkit-input-placeholder {
               font-size: .7em; } }
-        .formWrapper #form input:hover::-moz-placeholder, .formWrapper #form textarea:hover::-moz-placeholder {
+        .formWrapper #form input[type="text"]:hover::-moz-placeholder, .formWrapper #form textarea:hover::-moz-placeholder {
           color: #FFF5F5; }
           @media only screen and (min-width: 768px) {
-            .formWrapper #form input:hover::-moz-placeholder, .formWrapper #form textarea:hover::-moz-placeholder {
+            .formWrapper #form input[type="text"]:hover::-moz-placeholder, .formWrapper #form textarea:hover::-moz-placeholder {
               font-size: .7em; } }
-        .formWrapper #form input:hover::-ms-placeholder, .formWrapper #form textarea:hover::-ms-placeholder {
+        .formWrapper #form input[type="text"]:hover::-ms-placeholder, .formWrapper #form textarea:hover::-ms-placeholder {
           color: #FFF5F5; }
           @media only screen and (min-width: 768px) {
-            .formWrapper #form input:hover::-ms-placeholder, .formWrapper #form textarea:hover::-ms-placeholder {
+            .formWrapper #form input[type="text"]:hover::-ms-placeholder, .formWrapper #form textarea:hover::-ms-placeholder {
               font-size: .7em; } }
-        .formWrapper #form input:hover::placeholder, .formWrapper #form textarea:hover::placeholder {
+        .formWrapper #form input[type="text"]:hover::placeholder, .formWrapper #form textarea:hover::placeholder {
           color: #FFF5F5; }
           @media only screen and (min-width: 768px) {
-            .formWrapper #form input:hover::placeholder, .formWrapper #form textarea:hover::placeholder {
+            .formWrapper #form input[type="text"]:hover::placeholder, .formWrapper #form textarea:hover::placeholder {
               font-size: .7em; } }
-        .formWrapper #form input:hover:focus::-webkit-input-placeholder, .formWrapper #form textarea:hover:focus::-webkit-input-placeholder {
+        .formWrapper #form input[type="text"]:hover:focus::-webkit-input-placeholder, .formWrapper #form textarea:hover:focus::-webkit-input-placeholder {
           color: black; }
-        .formWrapper #form input:hover:focus::-moz-placeholder, .formWrapper #form textarea:hover:focus::-moz-placeholder {
+        .formWrapper #form input[type="text"]:hover:focus::-moz-placeholder, .formWrapper #form textarea:hover:focus::-moz-placeholder {
           color: black; }
-        .formWrapper #form input:hover:focus::-ms-placeholder, .formWrapper #form textarea:hover:focus::-ms-placeholder {
+        .formWrapper #form input[type="text"]:hover:focus::-ms-placeholder, .formWrapper #form textarea:hover:focus::-ms-placeholder {
           color: black; }
-        .formWrapper #form input:hover:focus::placeholder, .formWrapper #form textarea:hover:focus::placeholder {
+        .formWrapper #form input[type="text"]:hover:focus::placeholder, .formWrapper #form textarea:hover:focus::placeholder {
           color: black; }
-      .formWrapper #form input:focus::-webkit-input-placeholder, .formWrapper #form textarea:focus::-webkit-input-placeholder {
+      .formWrapper #form input[type="text"]:focus::-webkit-input-placeholder, .formWrapper #form textarea:focus::-webkit-input-placeholder {
         color: black; }
-      .formWrapper #form input:focus::-moz-placeholder, .formWrapper #form textarea:focus::-moz-placeholder {
+      .formWrapper #form input[type="text"]:focus::-moz-placeholder, .formWrapper #form textarea:focus::-moz-placeholder {
         color: black; }
-      .formWrapper #form input:focus::-ms-placeholder, .formWrapper #form textarea:focus::-ms-placeholder {
+      .formWrapper #form input[type="text"]:focus::-ms-placeholder, .formWrapper #form textarea:focus::-ms-placeholder {
         color: black; }
-      .formWrapper #form input:focus::placeholder, .formWrapper #form textarea:focus::placeholder {
+      .formWrapper #form input[type="text"]:focus::placeholder, .formWrapper #form textarea:focus::placeholder {
         color: black; }
-      .formWrapper #form input::-webkit-input-placeholder, .formWrapper #form textarea::-webkit-input-placeholder {
+      .formWrapper #form input[type="text"]::-webkit-input-placeholder, .formWrapper #form textarea::-webkit-input-placeholder {
         color: #ACA49C;
         font-size: .6em; }
         @media only screen and (min-width: 768px) {
-          .formWrapper #form input::-webkit-input-placeholder, .formWrapper #form textarea::-webkit-input-placeholder {
+          .formWrapper #form input[type="text"]::-webkit-input-placeholder, .formWrapper #form textarea::-webkit-input-placeholder {
             font-size: .7em; } }
-      .formWrapper #form input::-moz-placeholder, .formWrapper #form textarea::-moz-placeholder {
+      .formWrapper #form input[type="text"]::-moz-placeholder, .formWrapper #form textarea::-moz-placeholder {
         color: #ACA49C;
         font-size: .6em; }
         @media only screen and (min-width: 768px) {
-          .formWrapper #form input::-moz-placeholder, .formWrapper #form textarea::-moz-placeholder {
+          .formWrapper #form input[type="text"]::-moz-placeholder, .formWrapper #form textarea::-moz-placeholder {
             font-size: .7em; } }
-      .formWrapper #form input::-ms-placeholder, .formWrapper #form textarea::-ms-placeholder {
+      .formWrapper #form input[type="text"]::-ms-placeholder, .formWrapper #form textarea::-ms-placeholder {
         color: #ACA49C;
         font-size: .6em; }
         @media only screen and (min-width: 768px) {
-          .formWrapper #form input::-ms-placeholder, .formWrapper #form textarea::-ms-placeholder {
+          .formWrapper #form input[type="text"]::-ms-placeholder, .formWrapper #form textarea::-ms-placeholder {
             font-size: .7em; } }
-      .formWrapper #form input::placeholder, .formWrapper #form textarea::placeholder {
+      .formWrapper #form input[type="text"]::placeholder, .formWrapper #form textarea::placeholder {
         color: #ACA49C;
         font-size: .6em; }
         @media only screen and (min-width: 768px) {
-          .formWrapper #form input::placeholder, .formWrapper #form textarea::placeholder {
+          .formWrapper #form input[type="text"]::placeholder, .formWrapper #form textarea::placeholder {
             font-size: .7em; } }
+
+/* R A D I O     B U T T O N S    P L U M A G E
+======================================== */
+[type="radio"]:not(:checked), [type="radio"]:checked {
+  position: absolute;
+  left: -9999px;
+  opacity: 0; }
+
+[type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  font-size: 16px;
+  transition: .28s ease; }
+
+[type="radio"] + label:before, [type="radio"] + label:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 4px;
+  width: 16px;
+  height: 16px;
+  z-index: 0;
+  transition: .25s; }
+
+/* Unchecked  */
+[type="radio"]:not(:checked) + label:before, [type="radio"]:not(:checked) + label:after, [type="radio"]:checked + label:before, [type="radio"]:checked + label:after {
+  border-radius: 50%; }
+
+[type="radio"]:not(:checked) + label:before, [type="radio"]:not(:checked) + label:after {
+  border: 1.5px solid #ACA49C; }
+
+[type="radio"]:not(:checked) + label:after {
+  transform: scale(0); }
+
+/* Checked  */
+[type="radio"]:checked + label:before {
+  border: 2px solid transparent; }
+
+[type="radio"]:checked + label:after {
+  background-color: #ACA49C;
+  border: 1px solid #818181;
+  transform: scale(1.02); }
+
+/* Focused  */
+[type="radio"].tabbed:focus + label:before {
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1); }
+
+/* Disabled  */
+[type="radio"]:disabled:not(:checked) + label:before, [type="radio"]:disabled:checked + label:before {
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, 0.26); }
+
+[type="radio"]:disabled + label {
+  color: rgba(0, 0, 0, 0.26); }
+
+[type="radio"]:disabled:not(:checked) + label:before {
+  border-color: rgba(0, 0, 0, 0.26); }
+
+[type="radio"]:disabled:checked + label:after {
+  background-color: rgba(0, 0, 0, 0.26);
+  border-color: #BDBDBD; }
+
+/* C H E C K B O X E S    P L U M A G E
+================================ */
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+  opacity: 0; }
+
+[type="checkbox"] + label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  font-size: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none; }
+
+[type="checkbox"] + label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  z-index: 0;
+  border: 1px solid #ACA49C;
+  margin-top: 2px; }
+
+[type="checkbox"]:not(:checked):disabled + label:before {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.26); }
+
+[type="checkbox"].tabbed:focus + label:after {
+  transform: scale(1);
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1); }
+
+[type="checkbox"]:checked + label:before {
+  top: -4px;
+  left: -5px;
+  width: 6px;
+  height: 17px;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid #ACA49C;
+  border-bottom: 2px solid #ACA49C;
+  transform: rotate(50deg);
+  backface-visibility: hidden;
+  transform-origin: 100% 100%; }
+
+[type="checkbox"]:checked:disabled + label:before {
+  border-right: 3px solid rgba(0, 0, 0, 0.26);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.26); }
 
 /* -------------------------------- 
 Footer

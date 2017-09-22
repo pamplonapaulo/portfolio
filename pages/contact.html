@@ -93,70 +93,38 @@
     
     <p>I’m looking forward to hearing from you!</p>
     
+    
+    <!----------------    CONTACT FORM   ---------------->
+    
     <div class="formWrapper">
         <div class="formHeader">CONTACT PAULO</div>
 
-        <form id="form">
-            <input id="name" type="text" placeholder="NAME" />
+        <form id="form" action="mailto:pamplonapaulo@gmail.com?subject=Paulo%20Developer%20Website" method="post" enctype="text/plain">
 
-            <input id="email" type="text" placeholder="E-MAIL" />
-
-            <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
+            <input id="name" name="name" type="text" placeholder="NAME" title="Please enter your full name." required/>
             
-            <button type="submit" class="btn">Send</button>
+            <input id="phone" type="text" placeholder="PHONE" title="Please enter your phone number." required/>
+
+            <input id="email" type="text" placeholder="E-MAIL" title="Please enter your email address." required/>
+            
+            <input id="url" type="text" placeholder="WEBSITE" title="Please enter your website address." />
+                           
+            <div class="formSubHeader">REQUEST TYPE</div>
+
+            <input type="radio" value="quotation" id="quotation" name="requestType" />
+            <label for="quotation">Website quotation</label>
+
+            <input type="radio" value="comment" id="question" name="requestType" />
+            <label for="question">Just a question</label>
+
+            <textarea id="message" type="text" placeholder="MESSAGE" title="Please enter your question or message." required></textarea>
+
+            <input type="checkbox" value="yes" id="subscribe" />
+            <label for="subscribe">Subscribe to the newsletter</label>                               
+            <button type="submit">Send</button>
+
         </form>
     </div>
-        
-<!--
-    <form action="mailto:pamplonapaulo@gmail.com?subject=Paulo%20Developer%20Website" method="post" enctype="text/plain" id="contactForm">
-        <fieldset id="getInTouch" title="Contact Information">
-            <legend>Contact Information</legend>
-            <ol>
-                <li>
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" title="Please enter your name" placeholder="Bernie Sanders" required/>*
-                </li>
-                <li>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" title="Please enter your email address" placeholder="your.name@yourdomain.com" required />*
-                </li>
-                <li>
-                    <label for="phone">Phone</label>
-                    <input type="phone" id="phone" title="Please enter your phone number" placeholder="+00 000 000 0000" required />*
-                </li>
-                <li>
-                    <label for="website">Website</label>
-                    <input type="url" id="url" placeholder="http://www.yourwebsite.com" title="Please enter your website address"/>
-                </li>
-            </ol>
-        </fieldset>
-        <fieldset id="comments" title="Comments">
-                <legend>Message</legend>
-                <ol>
-                    <li>
-                        <div class="groupHeadline">Request Type</div>
-                        <ol class="altLabel radioSet">
-                            <li>
-                                <input type="radio" value="quotation" id="quotationItem" name="requestType" />
-                                <label for="quotationItem" class="rBtnLabels">Website quotation</label>
-                            </li>
-                            <li>
-                                <input type="radio" value="comment" id="commentItem" name="requestType" />
-                                <label for="commentItem" class="rBtnLabels">Just a question</label>
-                            </li>
-                        </ol>
-                    </li>
-                    <li>
-                        <label for="inquiry"></label>
-                        <textarea id="inquiry" placeholder="Please type here your message"></textarea>
-                    </li>
-                </ol>
-            </fieldset>  
-            <button type="submit" class="btn">Send</button>
-    </form>
--->
-
-    
              
 	</main><!-- .main-content -->
 

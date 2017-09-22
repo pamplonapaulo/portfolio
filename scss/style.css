@@ -1793,20 +1793,23 @@ New Forms
       .formWrapper #form button[type=submit]:hover, .formWrapper #form button[type=submit]:focus {
         box-shadow: inset 20em 0 0.25px 0 #aca49c;
         color: #FFF5F5; }
-    /* line 1845, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+    /* line 1846, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
     .formWrapper #form input {
       border: solid 1px #b3aca7;
       border-bottom: none;
       height: 50px;
-      padding: 0px 15px 0px 15px; }
-    /* line 1851, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      padding: 0 15px 0 15px; }
+    /* line 1853, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
     .formWrapper #form textarea {
       border: solid 1px #b3aca7;
       height: 160px;
       max-height: 160px;
       padding: 15px; }
-    /* line 1857, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+    /* line 1859, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
     .formWrapper #form input, .formWrapper #form textarea {
+      -webkit-appearance: none;
+      -webkit-border-radius: 0px;
+      border-radius: 0;
       font-family: 'Lato', sans-serif;
       font-size: 0.6em;
       width: 100%;
@@ -1821,109 +1824,109 @@ New Forms
       /*    F O C U S   >   P L A C E H O L D E R   */
       /*    P L A C E H O L D E R   */ }
       @media only screen and (min-width: 480px) {
-        /* line 1857, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+        /* line 1859, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
         .formWrapper #form input, .formWrapper #form textarea {
           width: 95%; } }
       @media only screen and (min-width: 768px) {
-        /* line 1857, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+        /* line 1859, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
         .formWrapper #form input, .formWrapper #form textarea {
           font-size: .7em;
           width: 100%; } }
-      /* line 1878, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 1883, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       .formWrapper #form input:hover, .formWrapper #form textarea:hover {
         background: #b3aca7;
         color: #FFF5F5;
         /*    H O V E R   >   P L A C E H O L D E R   */
         /*    H O V E R   >   F O C U S   >   P L A C E H O L D E R   */ }
-        /* line 1883, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+        /* line 1888, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
         .formWrapper #form input:hover::-webkit-input-placeholder, .formWrapper #form textarea:hover::-webkit-input-placeholder {
           color: #FFF5F5; }
           @media only screen and (min-width: 768px) {
-            /* line 1883, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+            /* line 1888, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
             .formWrapper #form input:hover::-webkit-input-placeholder, .formWrapper #form textarea:hover::-webkit-input-placeholder {
               font-size: .7em; } }
-        /* line 1889, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+        /* line 1894, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
         .formWrapper #form input:hover::-moz-placeholder, .formWrapper #form textarea:hover::-moz-placeholder {
           color: #FFF5F5; }
           @media only screen and (min-width: 768px) {
-            /* line 1889, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+            /* line 1894, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
             .formWrapper #form input:hover::-moz-placeholder, .formWrapper #form textarea:hover::-moz-placeholder {
               font-size: .7em; } }
-        /* line 1895, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+        /* line 1900, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
         .formWrapper #form input:hover::-ms-placeholder, .formWrapper #form textarea:hover::-ms-placeholder {
           color: #FFF5F5; }
           @media only screen and (min-width: 768px) {
-            /* line 1895, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+            /* line 1900, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
             .formWrapper #form input:hover::-ms-placeholder, .formWrapper #form textarea:hover::-ms-placeholder {
               font-size: .7em; } }
-        /* line 1901, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+        /* line 1906, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
         .formWrapper #form input:hover::placeholder, .formWrapper #form textarea:hover::placeholder {
           color: #FFF5F5; }
           @media only screen and (min-width: 768px) {
-            /* line 1901, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+            /* line 1906, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
             .formWrapper #form input:hover::placeholder, .formWrapper #form textarea:hover::placeholder {
               font-size: .7em; } }
-        /* line 1909, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+        /* line 1914, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
         .formWrapper #form input:hover:focus::-webkit-input-placeholder, .formWrapper #form textarea:hover:focus::-webkit-input-placeholder {
           color: black; }
-        /* line 1912, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+        /* line 1917, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
         .formWrapper #form input:hover:focus::-moz-placeholder, .formWrapper #form textarea:hover:focus::-moz-placeholder {
           color: black; }
-        /* line 1915, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+        /* line 1920, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
         .formWrapper #form input:hover:focus::-ms-placeholder, .formWrapper #form textarea:hover:focus::-ms-placeholder {
           color: black; }
-        /* line 1918, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+        /* line 1923, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
         .formWrapper #form input:hover:focus::placeholder, .formWrapper #form textarea:hover:focus::placeholder {
           color: black; }
-      /* line 1924, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 1929, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       .formWrapper #form input:focus::-webkit-input-placeholder, .formWrapper #form textarea:focus::-webkit-input-placeholder {
         color: black; }
-      /* line 1927, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 1932, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       .formWrapper #form input:focus::-moz-placeholder, .formWrapper #form textarea:focus::-moz-placeholder {
         color: black; }
-      /* line 1930, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 1935, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       .formWrapper #form input:focus::-ms-placeholder, .formWrapper #form textarea:focus::-ms-placeholder {
         color: black; }
-      /* line 1933, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 1938, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       .formWrapper #form input:focus::placeholder, .formWrapper #form textarea:focus::placeholder {
         color: black; }
-      /* line 1938, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 1943, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       .formWrapper #form input::-webkit-input-placeholder, .formWrapper #form textarea::-webkit-input-placeholder {
         color: #ACA49C;
         font-size: .6em; }
         @media only screen and (min-width: 768px) {
-          /* line 1938, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+          /* line 1943, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
           .formWrapper #form input::-webkit-input-placeholder, .formWrapper #form textarea::-webkit-input-placeholder {
             font-size: .7em; } }
-      /* line 1945, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 1950, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       .formWrapper #form input::-moz-placeholder, .formWrapper #form textarea::-moz-placeholder {
         color: #ACA49C;
         font-size: .6em; }
         @media only screen and (min-width: 768px) {
-          /* line 1945, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+          /* line 1950, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
           .formWrapper #form input::-moz-placeholder, .formWrapper #form textarea::-moz-placeholder {
             font-size: .7em; } }
-      /* line 1952, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 1957, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       .formWrapper #form input::-ms-placeholder, .formWrapper #form textarea::-ms-placeholder {
         color: #ACA49C;
         font-size: .6em; }
         @media only screen and (min-width: 768px) {
-          /* line 1952, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+          /* line 1957, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
           .formWrapper #form input::-ms-placeholder, .formWrapper #form textarea::-ms-placeholder {
             font-size: .7em; } }
-      /* line 1959, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 1964, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       .formWrapper #form input::placeholder, .formWrapper #form textarea::placeholder {
         color: #ACA49C;
         font-size: .6em; }
         @media only screen and (min-width: 768px) {
-          /* line 1959, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+          /* line 1964, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
           .formWrapper #form input::placeholder, .formWrapper #form textarea::placeholder {
             font-size: .7em; } }
 
 /* -------------------------------- 
 Footer
 -------------------------------- */
-/* line 1975, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 1980, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 footer {
   background: #2C343B;
   height: 20em;
@@ -1931,30 +1934,30 @@ footer {
   text-align: center;
   float: none; }
   @media only screen and (min-width: 1170px) {
-    /* line 1975, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+    /* line 1980, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
     footer {
       text-align: none; } }
-  /* line 1986, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 1991, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   footer .social {
     width: 100%;
     margin: auto; }
     @media only screen and (min-width: 1170px) {
-      /* line 1986, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 1991, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       footer .social {
         padding-left: 16px;
         float: left; } }
-  /* line 1996, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 2001, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   footer .linkedin, footer .github, footer .codepen {
     display: inline-block; }
     @media only screen and (min-width: 1170px) {
-      /* line 1996, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 2001, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       footer .linkedin, footer .github, footer .codepen {
         float: left; } }
-  /* line 2004, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 2009, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   footer div.linkedin, footer div.github, footer div.codepen {
     width: 30px;
     margin: 0 5px; }
-  /* line 2009, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 2014, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   footer div#logo-bottom {
     clear: both;
     width: 70px;
@@ -1962,20 +1965,20 @@ footer {
     margin: 0 auto 3em auto;
     padding-top: 1.5em; }
     @media only screen and (min-width: 1170px) {
-      /* line 2009, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 2014, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       footer div#logo-bottom {
         float: left;
         margin: 0 0 0 16px;
         display: inline-block; } }
-  /* line 2023, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 2028, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   footer en {
     font-style: italic; }
-  /* line 2027, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 2032, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   footer p {
     color: #FFF5F5;
     line-height: 1.4;
     clear: both; }
-  /* line 2032, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 2037, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   footer p en {
     position: relative;
     font-size: 1em;
@@ -1983,19 +1986,19 @@ footer {
     line-height: 1.6;
     top: -30px; }
     @media only screen and (min-width: 1170px) {
-      /* line 2032, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 2037, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       footer p en {
         text-align: left;
         display: inline-block;
         top: -50px;
         float: left;
         margin-left: 6em; } }
-  /* line 2048, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 2053, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   footer p:last-child {
     font-size: .9em;
     margin-top: 1.2em; }
     @media only screen and (min-width: 1170px) {
-      /* line 2048, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+      /* line 2053, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
       footer p:last-child {
         float: right;
         margin-right: 16px; } }
@@ -2003,14 +2006,14 @@ footer {
 /* -------------------------------- 
 Javascript disabled
 -------------------------------- */
-/* line 2063, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 2068, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 .no-js .hero-slider li {
   display: none; }
-  /* line 2066, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+  /* line 2071, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
   .no-js .hero-slider li.selected {
     display: block; }
 
-/* line 2071, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
+/* line 2076, /Users/paulopamplona/Desktop/00_websites/pepe_ROOT/scss/style.scss */
 .no-js .slider-nav {
   display: none; }
 

@@ -1514,13 +1514,16 @@ New Forms
       border: solid 1px #b3aca7;
       border-bottom: none;
       height: 50px;
-      padding: 0px 15px 0px 15px; }
+      padding: 0 15px 0 15px; }
     .formWrapper #form textarea {
       border: solid 1px #b3aca7;
       height: 160px;
       max-height: 160px;
       padding: 15px; }
     .formWrapper #form input, .formWrapper #form textarea {
+      -webkit-appearance: none;
+      -webkit-border-radius: 0px;
+      border-radius: 0;
       font-family: 'Lato', sans-serif;
       font-size: 0.6em;
       width: 100%;

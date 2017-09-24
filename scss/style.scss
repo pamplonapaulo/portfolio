@@ -1739,33 +1739,41 @@ article[id^="galleryItemContent"] {
 /* -------------------------------- 
 Old Forms
 -------------------------------- */
-
-.altLabel label {
-        text-align: left;
-        width: auto;
-    }
-#form ol {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-#form li {
-    padding-bottom: .75em;
-}
-.radioSet li {
-    display: inline-block;
-    margin-right: 10px;
-}
-label {
-
-}
-
+//
+//.altLabel label {
+//        text-align: left;
+//        width: auto;
+//    }
+//#form ol {
+//    list-style-type: none;
+//    margin: 0;
+//    padding: 0;
+//}
+//#form li {
+//    padding-bottom: .75em;
+//}
+//.radioSet li {
+//    display: inline-block;
+//    margin-right: 10px;
+//}
+//label {
+//
+//}
 
 /* -------------------------------- 
 New Forms
 -------------------------------- */
 
+.error {
+    color: red;
+}
 
+.success {
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+}
 
 .formWrapper {
     font-family: $font-3;

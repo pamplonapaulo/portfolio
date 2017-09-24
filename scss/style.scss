@@ -484,7 +484,7 @@ Responsive Top Menu
         background-color: rgba($color-green, .3);
         display: block;
         font-size: 1em;
-        margin-left: 138px;
+        margin-left: 132px;
         text-align: center;
         padding: auto auto;
         top: -30px;
@@ -1873,8 +1873,8 @@ New Forms
         }
         input[type="text"], textarea {
             -webkit-appearance: none;
-            -webkit-border-radius:0px;           border-radius: 0;
-            
+            -webkit-border-radius:0px;           
+            border-radius: 0;
             font-family: $font-3;
             font-size: 0.6em;
             width: 100%;

@@ -748,7 +748,7 @@ Single Slide Style + Mobile Images
   background-color: #2C343B;
   background-image: url("../assets/m_portfolio.jpg"); }
 .hero-slider li:nth-of-type(2) {
-  background-color: #202020;
+  background-color: #161616;
   background-image: url("../assets/m_jquery.jpg"); }
 .hero-slider li:nth-of-type(3) {
   background-color: #d4cfcb;

@@ -1,22 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php include('form_process.php'); ?>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    
     <!-- CSS reset -->
 	<link rel="stylesheet" href="../css/reset.css">
 
    	<!-- Main CSS style -->
     <link href="../css/style.css" rel="stylesheet" type="text/css" />
-   
-   	<!-- Modernizr Script -->
+    
+    <!-- Modernizr Script -->
    	<script src="../js/modernizr.js"></script>
    	<!-- I should study Modernizr and remove it's own SHIV content, so I could move it's embeded script to the bottom of my page, since I already have my own SHIV here coming next -->
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="scripts/html5shiv.min.js"></script>
     <script src="scripts/respond.js"></script>
@@ -30,7 +26,6 @@
     
     <link href="../assets/favicon.png" rel="icon" type="image/x-icon" />
 
-</head> 
 <body>
 	<header class="header">
         <div id="logo"><a href="../index.html"><img src="../assets/logo-white.svg" class="shadow" alt="Logo" /></a></div>
@@ -55,7 +50,7 @@
                 </li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html" class="current">Contact</a></li>
+                <li><a href="#" class="current">Contact</a></li>
             </ul>   
         </nav>
 	</header>
@@ -89,42 +84,47 @@
     
     <p>You may decide email me the details of your project. But also I don't mind if you don't have too much information yet and just want to have a coffee and talk with me in person.</p>
           
-    <p>Please email me at <a href="mailto:pamplonapaulo@gmail.com">pamplonapaulo@gmail.com</a> or just fill the form bellow and let me know more about you and your business, ok?</p>
+    <p>Please email me at <a href="mailto:paulo@paulopamplona.com">paulo@paulopamplona.com</a> or just fill the form bellow and let me know more about you and your business, ok?</p>
     
     <p>I’m looking forward to hearing from you!</p>
     
-    
-    <!----------------    CONTACT FORM   ---------------->
+    <!----------------   CONTACT FORM   ---------------->
     
     <div class="formWrapper">
-        <div class="formHeader">CONTACT PAULO</div>
+        <h3 class="formHeader">CONTACT PAULO</h3>
+        <form id="contact" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
+            <fieldset>
+                <input placeholder="NAME" type="text" name="name" value="<?= $name ?>" tabindex="1" />
+                <span class="error"><?= $name_error ?></span>
 
-        <form id="form" action="mailto:pamplonapaulo@gmail.com?subject=Paulo%20Developer%20Website" method="post" enctype="text/plain">
+                <input placeholder="EMAIL" type="text" name="email" value="<?= $email ?>" tabindex="2" />
+                <span class="error"><?= $email_error ?></span>
 
-            <input id="name" name="name" type="text" placeholder="NAME" title="Please enter your full name." required/>
-            
-            <input id="phone" type="text" placeholder="PHONE" title="Please enter your phone number." required/>
+                <input placeholder="PHONE" type="text" name="phone" value="<?= $phone ?>" tabindex="3" />
+                <span class="error"><?= $phone_error ?></span>
 
-            <input id="email" type="text" placeholder="E-MAIL" title="Please enter your email address." required/>
-            
-            <input id="url" type="text" placeholder="WEBSITE" title="Please enter your website address." />
-                           
-            <div class="formSubHeader">REQUEST TYPE</div>
+                <input placeholder="WEBSITE" type="text" name="url" value="<?= $url ?>" tabindex="4" />
+            <span class="error"><?= $url_error ?></span>
+            </fieldset>
 
-            <input type="radio" value="quotation" id="quotation" name="requestType" />
-            <label for="quotation">Website quotation</label>
+            <h4 class="formSubHeader">REQUEST TYPE</h4>
+            <fieldset>
+                <input type="radio" value="quotation" id="quotation" name="requestType" tabindex="5" />
+                <label for="quotation">Website quotation</label>
+                <input type="radio" value="comment" id="question" name="requestType" tabindex="6" />
+                <label for="question">Just a question</label>
 
-            <input type="radio" value="comment" id="question" name="requestType" />
-            <label for="question">Just a question</label>
+                <textarea placeholder="MESSAGE" name="message" value="<?= $message ?>" tabindex="7"></textarea>
 
-            <textarea id="message" type="text" placeholder="MESSAGE" title="Please enter your question or message." required></textarea>
-
-            <input type="checkbox" value="yes" id="subscribe" />
-            <label for="subscribe">Subscribe to the newsletter</label>                               
-            <button type="submit">Send</button>
-
-        </form>
-    </div>
+                <input type="checkbox" value="yesSubscribe" id="subscribe" name="blogSubscription" tabindex="8"/>
+                <label for="subscribe">Subscribe to my blog</label>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Send</button>
+            </fieldset>
+            <div class="success"><?= $success ?></div>
+      </form>
+    </div>    
              
 	</main><!-- .main-content -->
 
@@ -165,4 +165,3 @@
             
                     
 </body>
-</html>

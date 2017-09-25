@@ -813,7 +813,7 @@ Single Slide Style + Mobile Images
 	}
 
 	li:nth-of-type(2) {
-	 	background-color: #161616;
+	 	background-color: #202020;
 //        color before my changes: lighten($color-1, 8%);
 	 	background-image: url('../assets/m_jquery.jpg');
         //800px x 533px displayed only at mobile
@@ -1737,39 +1737,18 @@ article[id^="galleryItemContent"] {
 }
 
 /* -------------------------------- 
-Old Forms
--------------------------------- */
-//
-//.altLabel label {
-//        text-align: left;
-//        width: auto;
-//    }
-//#form ol {
-//    list-style-type: none;
-//    margin: 0;
-//    padding: 0;
-//}
-//#form li {
-//    padding-bottom: .75em;
-//}
-//.radioSet li {
-//    display: inline-block;
-//    margin-right: 10px;
-//}
-//label {
-//
-//}
-
-/* -------------------------------- 
 New Forms
 -------------------------------- */
 
 .error {
-    color: red;
+    position: absolute;
+    color: darkred;
+    margin-left: -80px;
+    font-size: 13px;
 }
 
 .success {
-    color: black;
+    color: $color-green;
     font-size: 14px;
     text-align: center;
     font-weight: 600;
@@ -1783,7 +1762,7 @@ New Forms
     //background: yellow;
     text-transform: uppercase;
     
-    div.formHeader {
+    h3.formHeader {
         font-size: 1.3em;
         position: relative;
         margin: 75px 0 75px 0;
@@ -1797,7 +1776,7 @@ New Forms
         }
     }
     
-    #form {
+    #contact {
         font-size: 37.5px;
         position: relative;
         width: 95%;
@@ -1810,7 +1789,7 @@ New Forms
             width: 75%;
         }
         
-        div.formSubHeader {
+        h4.formSubHeader {
             margin: 1.5em auto 0 auto;
             font-size: 0.6em;
             letter-spacing: 7px;

@@ -1,7 +1,5 @@
 <?php 
 
-print_r($_POST);
-
 // define variables and set to empty values
 $name_error = $email_error = $phone_error = $url_error = "";
 $name = $email = $phone = $message = $url = $success = "";
@@ -32,9 +30,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone_error = "Phone is required";
   } else {
     $phone = test_input($_POST["phone"]);
-    // check if e-mail address is well-formed
-    if (!preg_match("/^(\d[\s-]?)?[\(\[\s-]{0,2}?\d{3}[\)\]\s-]{0,2}?\d{3}[\s-]?\d{4}$/i",$phone)) {
-      $phone_error = "Invalid phone number"; 
+    // check if phone number is well-formed
+    if (!preg_match("/[^0-9]/",$phone)) {
+      $phone_error = "Please type a valid Brazilian phone number."; 
     }
   }
 
@@ -63,8 +61,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       
       $to = 'pamplonapaulo@gmail.com';
       $subject = 'Contact Form Submit';
-      if (mail($to, $subject, $message)){
-          $success = "Message sent, thank you for contacting me!";
+      if (mail($to, $subject, $message_body)){
+          $success = "Thank you for contacting me!";
           $name = $email = $phone = $message = $url = '';
       }
   }

@@ -1304,7 +1304,6 @@ main > p > a {
     @include MQ(SM) {
         width: auto;
         margin: 0 -3px;
-
     }
 }
 
@@ -1321,13 +1320,112 @@ main > p > a {
     }
 }
 
+.clear {
+    clear: both;
+}
+
+.noClear {
+    clear: none;
+}
+
+.circle {
+    position: relative;
+    
+    @include MQ(SM) {
+        width: 50%;
+        float: right;
+    }
+    
+    @include MQ(M) {
+        width: 50%;
+        float: right;
+    }
+
+    .textWrap {
+        text-align: center;
+        position: relative;
+        margin: 5em auto 0 auto;
+        padding: 0 auto;
+        width: 100%;
+        height: 50px;
+        
+    
+        h2.roundedText {
+            top: 60px;
+            margin-left: -350px;
+            position: relative;
+            transform: rotate(-46deg);
+            
+            @include MQ(M) {
+                margin-left: -340px;
+            }
+            
+            span {
+                height: 230px;
+                position: absolute;
+                width: 20px;
+                transform-origin: bottom center;
+            }
+
+            .letter01 { transform: rotate(6deg); }
+            .letter02 { transform: rotate(12deg); }
+            .letter03 { transform: rotate(18deg); }
+            .letter04 { transform: rotate(24deg); }
+            .letter05 { transform: rotate(30deg); }
+            .letter06 { transform: rotate(36deg); }
+            .letter07 { transform: rotate(42deg); }
+            .letter08 { transform: rotate(48deg); }
+            .letter09 { transform: rotate(54deg); }
+            .letter10 { transform: rotate(61deg); }
+            .letter11 { transform: rotate(66deg); }
+            .letter12 { transform: rotate(73deg); }
+            .letter13 { transform: rotate(79deg); }
+            .letter14 { transform: rotate(84deg); } 
+            .letter15 { transform: rotate(90deg); }        
+        } 
+    }
+    .frame {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: 2em auto;
+        background-size: 110%;    
+        background-position: center center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        -moz-box-shadow:    inset 0px 0px 0px 6px $color-green;
+        -webkit-box-shadow: inset 0px 0px 0px 6px $color-green;
+        box-shadow:         inset 0px 0px 0px 6px $color-green;
+        
+        @include MQ(M) {
+            width: 400px;
+            height: 400px;
+        }
+
+        @include MQ(L) {
+            width: 450px;
+            height: 450px;
+            -moz-box-shadow:    inset 0px 0px 0px 10px $color-green;
+            -webkit-box-shadow: inset 0px 0px 0px 10px $color-green;
+            box-shadow:         inset 0px 0px 0px 10px $color-green;
+        }
+    }
+}
+
 // Skills Bars
 
 .skillsWrapper {
     margin: 0 auto;
     
+    @include MQ(SM) {
+        width: 50%;
+        left: 0;
+        margin-left: 0;
+        float: left;
+    }
+    
     @include MQ(M) {
-        width: 70%;
+        float: left;
     }
     
     > p {
@@ -1338,30 +1436,47 @@ main > p > a {
     }
 }
 
-.skillsContainer {
+.skillContainer {
     margin: 0 auto;
     width: 85%;
-    background-color: #ddd;
+    background-color: rgba(#ddd,.5);
     border-radius: 25px;
     
     .skills {
         text-align: right;
-        padding-right: 20px;
+        padding-right: 6px;
         line-height: 30px; 
-        color: $color-white;
+        color: $color-blue;
         border-radius: 25px 0 0 25px;
+        font-size: .7em;
+        
+        @include MQ(M) {
+            font-size: .8em;
+        }
     }
 
-    .html {width: 85%; background-color: $color-green;}
-    .css {width: 85%; background-color: $color-blue;}
-    .scss {width: 75%; background-color: #2196F3;}
-    .jquery {width: 60%; background-color: $color-black;}
-    .j-s {width: 40%; background-color: #f44336;}
-    .cms {width: 60%; background-color: #2196F3;}
-    .bootstrap {width: 40%; background-color: #f44336;}
-    .api {width: 25%; background-color: $color-blue;}
-    .json {width: 30%; background-color: #2196F3;}
-    .ajax {width: 15%; background-color: $color-black;}
+    .fill-skill {
+        background-color: $color-green;
+        -moz-box-shadow:    inset 0px 0px 5px 3px $color-green;
+        -webkit-box-shadow: inset 0px 0px 5px 3px $color-green;
+        box-shadow:         inset 0px 0px 5px 3px $color-blue;
+    }
+    .css {
+        background-color: $color-blue;
+    }
+    .scss {
+        background-color: #2196F3;
+    }
+    .jquery {
+        background-color: $color-black;
+    }
+    .j-s {background-color: #f44336;}
+    .cms {background-color: #2196F3;}
+    .bootstrap {background-color: #f44336;}
+    .api {background-color: $color-blue;}
+    .json {background-color: #2196F3;}
+    .ajax {background-color: $color-black;}
+    .php {background-color: $color-black;}
 }
 
 

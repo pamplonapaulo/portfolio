@@ -80,11 +80,9 @@
         </div>
        </a>
        
-    <h2>I'm not busy yet. Let's talk about your business?</h2>
-    
-    <p>You may decide email me the details of your project. But also I don't mind if you don't have too much information yet and just want to have a coffee and talk with me in person.</p>
-          
-    <p>Please email me at <a href="mailto:paulo@paulopamplona.com">paulo@paulopamplona.com</a> or just fill the form bellow and let me know more about you and your business, ok?</p>
+    <h2>Let's talk about your business?</h2>
+              
+    <p>Please fill the form bellow and let me know more about you and your needs, ok?</p>
     
     <p>I’m looking forward to hearing from you!</p>
     

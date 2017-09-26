@@ -1129,57 +1129,152 @@ main > p > a {
       background-attachment: fixed;
       background-size: 70%; } }
 
+.clear {
+  clear: both; }
+
+.noClear {
+  clear: none; }
+
+.circle {
+  position: relative; }
+  @media only screen and (min-width: 640px) {
+    .circle {
+      width: 50%;
+      float: right; } }
+  @media only screen and (min-width: 768px) {
+    .circle {
+      width: 50%;
+      float: right; } }
+  .circle .textWrap {
+    text-align: center;
+    position: relative;
+    margin: 5em auto 0 auto;
+    padding: 0 auto;
+    width: 100%;
+    height: 50px; }
+    .circle .textWrap h2.roundedText {
+      top: 60px;
+      margin-left: -350px;
+      position: relative;
+      transform: rotate(-46deg); }
+      @media only screen and (min-width: 768px) {
+        .circle .textWrap h2.roundedText {
+          margin-left: -340px; } }
+      .circle .textWrap h2.roundedText span {
+        height: 230px;
+        position: absolute;
+        width: 20px;
+        transform-origin: bottom center; }
+      .circle .textWrap h2.roundedText .letter01 {
+        transform: rotate(6deg); }
+      .circle .textWrap h2.roundedText .letter02 {
+        transform: rotate(12deg); }
+      .circle .textWrap h2.roundedText .letter03 {
+        transform: rotate(18deg); }
+      .circle .textWrap h2.roundedText .letter04 {
+        transform: rotate(24deg); }
+      .circle .textWrap h2.roundedText .letter05 {
+        transform: rotate(30deg); }
+      .circle .textWrap h2.roundedText .letter06 {
+        transform: rotate(36deg); }
+      .circle .textWrap h2.roundedText .letter07 {
+        transform: rotate(42deg); }
+      .circle .textWrap h2.roundedText .letter08 {
+        transform: rotate(48deg); }
+      .circle .textWrap h2.roundedText .letter09 {
+        transform: rotate(54deg); }
+      .circle .textWrap h2.roundedText .letter10 {
+        transform: rotate(61deg); }
+      .circle .textWrap h2.roundedText .letter11 {
+        transform: rotate(66deg); }
+      .circle .textWrap h2.roundedText .letter12 {
+        transform: rotate(73deg); }
+      .circle .textWrap h2.roundedText .letter13 {
+        transform: rotate(79deg); }
+      .circle .textWrap h2.roundedText .letter14 {
+        transform: rotate(84deg); }
+      .circle .textWrap h2.roundedText .letter15 {
+        transform: rotate(90deg); }
+  .circle .frame {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 2em auto;
+    background-size: 110%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    -moz-box-shadow: inset 0px 0px 0px 6px #B2D430;
+    -webkit-box-shadow: inset 0px 0px 0px 6px #B2D430;
+    box-shadow: inset 0px 0px 0px 6px #B2D430; }
+    @media only screen and (min-width: 768px) {
+      .circle .frame {
+        width: 400px;
+        height: 400px; } }
+    @media only screen and (min-width: 1170px) {
+      .circle .frame {
+        width: 450px;
+        height: 450px;
+        -moz-box-shadow: inset 0px 0px 0px 10px #B2D430;
+        -webkit-box-shadow: inset 0px 0px 0px 10px #B2D430;
+        box-shadow: inset 0px 0px 0px 10px #B2D430; } }
+
 .skillsWrapper {
   margin: 0 auto; }
+  @media only screen and (min-width: 640px) {
+    .skillsWrapper {
+      width: 50%;
+      left: 0;
+      margin-left: 0;
+      float: left; } }
   @media only screen and (min-width: 768px) {
     .skillsWrapper {
-      width: 70%; } }
+      float: left; } }
   .skillsWrapper > p {
     font-family: "Droid Serif", serif;
     width: 85%;
     margin: 20px auto 3px auto;
     padding-left: 16px; }
 
-.skillsContainer {
+.skillContainer {
   margin: 0 auto;
   width: 85%;
-  background-color: #ddd;
+  background-color: rgba(221, 221, 221, 0.5);
   border-radius: 25px; }
-  .skillsContainer .skills {
+  .skillContainer .skills {
     text-align: right;
-    padding-right: 20px;
+    padding-right: 6px;
     line-height: 30px;
-    color: #FFF5F5;
-    border-radius: 25px 0 0 25px; }
-  .skillsContainer .html {
-    width: 85%;
-    background-color: #B2D430; }
-  .skillsContainer .css {
-    width: 85%;
+    color: #1A8B9D;
+    border-radius: 25px 0 0 25px;
+    font-size: .7em; }
+    @media only screen and (min-width: 768px) {
+      .skillContainer .skills {
+        font-size: .8em; } }
+  .skillContainer .fill-skill {
+    background-color: #B2D430;
+    -moz-box-shadow: inset 0px 0px 5px 3px #B2D430;
+    -webkit-box-shadow: inset 0px 0px 5px 3px #B2D430;
+    box-shadow: inset 0px 0px 5px 3px #1A8B9D; }
+  .skillContainer .css {
     background-color: #1A8B9D; }
-  .skillsContainer .scss {
-    width: 75%;
+  .skillContainer .scss {
     background-color: #2196F3; }
-  .skillsContainer .jquery {
-    width: 60%;
+  .skillContainer .jquery {
     background-color: #2C343B; }
-  .skillsContainer .j-s {
-    width: 40%;
+  .skillContainer .j-s {
     background-color: #f44336; }
-  .skillsContainer .cms {
-    width: 60%;
+  .skillContainer .cms {
     background-color: #2196F3; }
-  .skillsContainer .bootstrap {
-    width: 40%;
+  .skillContainer .bootstrap {
     background-color: #f44336; }
-  .skillsContainer .api {
-    width: 25%;
+  .skillContainer .api {
     background-color: #1A8B9D; }
-  .skillsContainer .json {
-    width: 30%;
+  .skillContainer .json {
     background-color: #2196F3; }
-  .skillsContainer .ajax {
-    width: 15%;
+  .skillContainer .ajax {
+    background-color: #2C343B; }
+  .skillContainer .php {
     background-color: #2C343B; }
 
 /* -------------------------------- 

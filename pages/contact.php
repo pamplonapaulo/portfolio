@@ -89,8 +89,18 @@
     <!----------------   CONTACT FORM   ---------------->
     
     <div class="formWrapper">
-        <h3 class="formHeader">CONTACT PAULO</h3>
+        <h3 class="formHeader"></h3>
         <form id="contact" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
+            <div class="fail">
+                <?= $name_error ?>
+                <br />
+                <?= $email_error ?>
+                <br />
+                <?= $phone_error ?>
+                <br />
+                <?= $url_error ?>            
+            </div>
+            <div class="success"><?= $success ?></div>
             <fieldset>
                 <input placeholder="NAME" type="text" name="name" value="<?= $name ?>" tabindex="1" />
                 <span class="error"><?= $name_error ?></span>
@@ -102,7 +112,7 @@
                 <span class="error"><?= $phone_error ?></span>
 
                 <input placeholder="WEBSITE" type="text" name="url" value="<?= $url ?>" tabindex="4" />
-            <span class="error"><?= $url_error ?></span>
+                <span class="error"><?= $url_error ?></span>
             </fieldset>
 
             <h4 class="formSubHeader">REQUEST TYPE</h4>
@@ -120,7 +130,6 @@
             <fieldset>
                 <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Send</button>
             </fieldset>
-            <div class="success"><?= $success ?></div>
       </form>
     </div>    
              

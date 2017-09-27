@@ -1852,14 +1852,26 @@ article[id^="galleryItemContent"] {
 }
 
 /* -------------------------------- 
-New Forms
+Forms
 -------------------------------- */
 
 .error {
     position: absolute;
     color: darkred;
-    margin-left: -80px;
+    margin-left: 120px;
     font-size: 13px;
+    text-align: center;
+    margin-top: -35px;
+    
+    @include MQ(S) {
+        margin-left: -350px;
+        margin-top: 20px;
+    }
+    
+    @include MQ(M) {
+        margin-left: 120px;
+        margin-top: -35px;    
+    }
 }
 
 .success {
@@ -1867,14 +1879,48 @@ New Forms
     font-size: 14px;
     text-align: center;
     font-weight: 600;
+    margin-top: -350px;
+    position: absolute;
+    
+    @include MQ(M) {
+        margin-top: -320px;
+    }
+    
+    @include MQ(SM) {
+        margin-top: -350px;
+    }
+    
+    @include MQ(MS) {
+        margin-top: -320px;
+    }
+    
+    @include MQ(L) {
+        margin-top: -440px;
+    }    
+    
+}
+.fail {
+    display: none;
+    
+    @include MQ(L) {
+        color: darkred;
+        display: block;
+        font-size: 24px;
+        text-align: left;
+        font-weight: 600;
+        position: absolute;
+        margin-top: -800px;
+        text-shadow: 1px 1px 3px lightgrey;
+        line-height: 1.5em;
+        letter-spacing: 1.8px;
+    }
 }
 
 .formWrapper {
     font-family: $font-3;
     background: $color-white;
-    color: #b3aca7;
+    color: $color-softGray;
     font-size: 25px;
-    //background: yellow;
     text-transform: uppercase;
     
     h3.formHeader {
@@ -1896,7 +1942,6 @@ New Forms
         position: relative;
         width: 95%;
         margin: 50px auto 100px auto;
-        //background: red;
         @include MQ(S) {
             width: 90%;
         }
@@ -1907,6 +1952,7 @@ New Forms
         h4.formSubHeader {
             margin: 1.5em auto 0 auto;
             font-size: 0.6em;
+            color: $color-softGray;
             letter-spacing: 7px;
             line-height: 2em;
             
@@ -1920,16 +1966,16 @@ New Forms
             display: block;
             padding: 1.2em 1.4em;
             margin: 1em auto 0;
-            background-color: rgba($color-softGray, .2);
-            border: 1px solid $color-softGray;
-            color: rgba($color-softGray, 1);
+            background-color: rgba($color-green, .2);
+            border: 1px solid $color-green;
+            color: rgba($color-green, 1);
             font-size: 1.5rem;
             //font-weight: 400;
             letter-spacing: 1px;
             text-transform: uppercase;
             transition: all 1.3s;
             &:hover, &:focus {
-                box-shadow: inset 20em 0 .25px 0 rgba($color-softGray, 1);
+                box-shadow: inset 20em 0 .25px 0 rgba($color-green, 1);
                 color: $color-white;
             }
         }
@@ -1948,19 +1994,22 @@ New Forms
         }
         
         input[type^="text"] {
-            border: solid 1px #b3aca7;
+            border: solid 1px $color-green;
+            //border: solid 1px #b3aca7;
             border-top: none;
             height: 50px;
             padding: 0 15px 0 15px;
         }
         
         input[type^="text"]:first-of-type {
-            border-top: solid 1px #b3aca7;
+            border-top: solid 1px $color-green;
+            //border-top: solid 1px #b3aca7;
         }        
 
         
         textarea {
-            border: solid 1px #b3aca7;
+            border: solid 1px $color-green;
+            //border: solid 1px #b3aca7;
             height: 160px;
             max-height: 160px;
             padding: 15px;
@@ -1975,7 +2024,8 @@ New Forms
             //max-width: 470px;
             background: transparent;
             outline: none;
-            color: #726659;
+            color: $color-green;
+            //color: #726659;
             transition: all 0.3s ease-in-out;
             -webkit-transition: all 0.3s ease-in-out;
             -moz-transition: all 0.3s ease-in-out;
@@ -1990,7 +2040,7 @@ New Forms
 
             /*    H O V E R     */
             &:hover {
-                background: #b3aca7;
+                background: $color-green;
                 color: $color-white;
 
                 /*    H O V E R   >   P L A C E H O L D E R   */
@@ -2120,7 +2170,7 @@ New Forms
 }
 
 [type="radio"]:not(:checked)+label:before, [type="radio"]:not(:checked)+label:after {
-  border: 1.5px solid $color-softGray;
+  border: 1.5px solid $color-green;
 }
 
 [type="radio"]:not(:checked)+label:after { transform: scale(0); }
@@ -2130,14 +2180,17 @@ New Forms
 [type="radio"]:checked+label:before { border: 2px solid transparent; }
 
 [type="radio"]:checked+label:after {
-  background-color: $color-softGray;
-  border: 1px solid #818181;
+  background-color: $color-green;
+  border: 1px solid $color-green;
   transform: scale(1.02);
 }
 
 /* Focused  */
 
-[type="radio"].tabbed:focus+label:before { box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1); }
+[type="radio"].tabbed:focus+label:before {
+    border: 1px solid $color-green;
+    box-shadow: 0 0 3px 3px rgba($color-green, 0.1); 
+}
 
 /* Disabled  */
 
@@ -2191,7 +2244,7 @@ New Forms
   width: 18px;
   height: 18px;
   z-index: 0;
-  border: 1px solid $color-softGray;
+  border: 1px solid $color-green;
   margin-top: 2px;
 }
 
@@ -2204,8 +2257,8 @@ New Forms
   transform: scale(1);
   border: 0;
   border-radius: 50%;
-  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 10px rgba($color-green, 0.5);
+  background-color: rgba($color-green, 0.4);
 }
 
 [type="checkbox"]:checked+label:before {
@@ -2215,8 +2268,8 @@ New Forms
   height: 17px;
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
-  border-right: 2px solid $color-softGray;
-  border-bottom: 2px solid $color-softGray;
+  border-right: 2px solid $color-green;
+  border-bottom: 2px solid $color-green;
   transform: rotate(50deg);
   backface-visibility: hidden;
   transform-origin: 100% 100%;

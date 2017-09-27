@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = test_input($_POST["name"]);
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-      $name_error = "Only letters and white space allowed"; 
+      $name_error = "Only letters and white space allowed";
     }
   }
 
@@ -22,17 +22,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = test_input($_POST["email"]);
     // check if e-mail address is well-formed
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $email_error = "Invalid email format"; 
+        $email_error = "Invalid email format"; 
     }
   }
   
   if (empty($_POST["phone"])) {
-    $phone_error = "Phone is required";
+    $phone_error = "";
   } else {
     $phone = test_input($_POST["phone"]);
     // check if phone number is well-formed
     if (!preg_match("/[^0-9]/",$phone)) {
-      $phone_error = "Please type a valid Brazilian phone number."; 
+        $phone_error = "Please type a valid Brazilian phone number.";
     }
   }
 
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $url = test_input($_POST["url"]);
     // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
     if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$url)) {
-      $url_error = "Invalid URL"; 
+        $url_error = "Invalid URL";
     }
   }
 

@@ -82,7 +82,7 @@
        
     <h2>Let's talk about your business?</h2>
               
-    <p>Please fill the form bellow and let me know more about you and your needs, ok?</p>
+    <p>Please fill out the form bellow and let me know more about you and your needs, ok?</p>
     
     <p>I’m looking forward to hearing from you!</p>
     

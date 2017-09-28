@@ -4,22 +4,29 @@
 * Author: Paulo da Silva Pamplona
 * www.paulopamplona.com
 * Version 1.0
-* Last Update: 9/16/2017
+* Last Update: 9/28/2017
 */
 
 /* Table of Content
 ==================================================
-- Grid System
-- Primary Style
-- Header Components
-- Animated Hamburguer Icon
-- Responsive Top Menu
-- Slider
-- Single Slide Style
-- Single Slide Animation
-- Slider Navigation
-- Main Content
-- Animated Title
+- Grid System 
+- Primary Style             (155)
+- Header Components         (187)
+- Hamburguer Icon           (247)
+- Top Menu                  (357)
+- Hero Image                (557)
+- Animated Title            (580)
+- Scroll down arrow icon    (673)
+- Slider                    (766)
+- Single Slide Style        (824)
+- Single Slide Animation    (1052)
+- Slider Navigation         (1146)
+- Main Content              (1238)
+- Skill Bars                (1462)
+- Light Box                 (1721)
+- Forms                     (1905)
+- Footer                    (2336)
+- Javascript disabled       (2426)
 */
 
 
@@ -32,8 +39,11 @@
 @import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i|Maven+Pro:400,500,700,900|Oswald:400|Lato:400');
 
 /* -------------------------------- 
+
 Grid System
+
 Acknowledgement: Special thanks to it's author Alex Garcia, a classmate and one of my partners at our final project www.PlumageCSS.com, from which I took this grid. 
+
 -------------------------------- */
 /*CONTENT CONTAINER BASED ON 960PX*/
 .container {
@@ -143,7 +153,9 @@ Acknowledgement: Special thanks to it's author Alex Garcia, a classmate and one 
 }
 
 /* -------------------------------- 
+
 Primary style
+
 -------------------------------- */
 *, *::after, *::before {
 	@include box-sizing(border-box);
@@ -173,7 +185,9 @@ img {
 }
 
 /* -------------------------------- 
+
 Header Components 
+
 -------------------------------- */
 .header {
 	position: fixed;    
@@ -231,7 +245,9 @@ Header Components
 }
 
 /* -------------------------------- 
+
 Hamburguer Icon
+
 -------------------------------- */
 .nav-hamb div {
     position: relative;
@@ -339,7 +355,9 @@ Hamburguer Icon
 
 
 /* -------------------------------- 
-Responsive Top Menu
+
+Top Menu
+
 -------------------------------- */
 .menu {
     z-index: 90;
@@ -537,7 +555,9 @@ Responsive Top Menu
 
 
 /* -------------------------------- 
+
 Hero Image 
+
 -------------------------------- */
 #heroImage {
     background-size: cover;
@@ -558,7 +578,9 @@ Hero Image
 
 
 /* -------------------------------- 
+
 Animated Title
+
 -------------------------------- */
 .headerSection  {
     position: relative;
@@ -649,7 +671,9 @@ Animated Title
 }
 
 /* -------------------------------- 
+
 Scroll down arrow icon
+
 -------------------------------- */
 @include MQ(L) {
     .arrow-wrapper {
@@ -740,7 +764,9 @@ Scroll down arrow icon
 }
 
 /* -------------------------------- 
+
 Slider
+
 -------------------------------- */
 .hero {
 	position: relative;
@@ -796,7 +822,9 @@ Slider
 }
 
 /* -------------------------------- 
+
 Single Slide Style + Mobile Images
+
 -------------------------------- */
 
 .hero-slider {
@@ -809,33 +837,33 @@ Single Slide Style + Mobile Images
 
 	li:first-of-type {
 		background-color: $color-black;
-        background-image: url('../assets/m_portfolio.jpg');
+        background-image: url('../assets/headers/m_portfolio.jpg');
 	}
 
 	li:nth-of-type(2) {
 	 	background-color: #202020;
 //        color before my changes: lighten($color-1, 8%);
-	 	background-image: url('../assets/m_jquery.jpg');
+	 	background-image: url('../assets/headers/m_jquery.jpg');
         //800px x 533px displayed only at mobile
 	}
 
 	li:nth-of-type(3) {
 	 	background-color: #d4cfcb;
 //        color before Paulo changes: lighten($color-1, 20%);
-	 	background-image: url('../assets/m_ia.jpg');
+	 	background-image: url('../assets/headers/m_ia.jpg');
         //800px x 533px displayed only at mobile
 	}
 
 	li:nth-of-type(4) {
 	 	background-color: $color-black;
-        background-image: url('../assets/m_blog.jpg');
+        background-image: url('../assets/headers/m_blog.jpg');
 	 	//background-image: url('../assets/video-replace-mobile.jpg');
         //800px x 533px displayed only at mobile
 	}
 
 	li:nth-of-type(5) {
 	 	background-color: $color-black;
-	 	background-image: url(../assets/m_contact.jpg);
+	 	background-image: url(../assets/headers/m_contact.jpg);
 	}
 
 	.full-width, 
@@ -1022,7 +1050,9 @@ Single Slide Style + Mobile Images
 }
 
 /* -------------------------------- 
+
 Single Slide Animation
+
 -------------------------------- */
 
 @include MQ(M) {
@@ -1114,7 +1144,9 @@ Single Slide Animation
 }
 
 /* -------------------------------- 
+
 Slider Navigation
+
 -------------------------------- */
 
 .slider-nav {
@@ -1203,10 +1235,10 @@ Slider Navigation
 	}
 }
 
-
-
 /* -------------------------------- 
+
 Main Content
+
 -------------------------------- */
 
 main.main-content {
@@ -1238,6 +1270,21 @@ main.main-content {
 		color: darken($color-black, 1);
 		margin: .8em 16px;
 	}
+    
+    .singleImg {
+        width: 80%;
+        margin: auto 10%;
+    }
+    
+    .twoImgWrapper {
+        img {
+            width: 30%;
+            margin: auto 10%;
+        }
+        img:last-child {
+            float: right;
+        }
+    }
     
     p:first-of-type {
         padding-top: 1.5em;
@@ -1412,7 +1459,11 @@ main > p > a {
     }
 }
 
-// Skills Bars
+/* -------------------------------- 
+
+Skills Bars
+
+-------------------------------- */
 
 .skillsWrapper {
     margin: 0 auto;
@@ -1479,9 +1530,10 @@ main > p > a {
     .php {background-color: $color-black;}
 }
 
-
 /* -------------------------------- 
+
 Gallery
+
 -------------------------------- */
 
 .gallery {
@@ -1667,7 +1719,9 @@ Gallery
 }
 
 /* -------------------------------- 
+
 Light Box
+
 -------------------------------- */
 
 #overlay {
@@ -1799,9 +1853,6 @@ article[id^="galleryItemContent"] {
     }
     
     p:first-of-type{
-        //padding-top: 0;
-        //top:0;
-        //margin-top: 0em;
         
         @include MQ(M) {
             padding-top: 0em;
@@ -1852,7 +1903,9 @@ article[id^="galleryItemContent"] {
 }
 
 /* -------------------------------- 
+
 Forms
+
 -------------------------------- */
 
 .error {
@@ -2281,7 +2334,9 @@ Forms
 }
 
 /* -------------------------------- 
+
 Footer
+
 -------------------------------- */
 
 footer {
@@ -2369,7 +2424,9 @@ footer {
 }
 
 /* -------------------------------- 
+
 Javascript disabled
+
 -------------------------------- */
 
 .no-js .hero-slider li {

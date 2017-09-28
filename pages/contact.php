@@ -3,6 +3,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
+<!--    Thumbnail for Facebook   -->
+    <link rel="canonical" href="http://www.paulopamplona.com/" /> 
+    <meta name="title" content="Paulo Pamplona Developer" />
+	<meta name="description" content="Paulo Pamplona is a Brazilian-Portuguese Front-End Web Developer. This website was coded from the scratch using HTML5, CSS3, SCSS, JavaScript, jQuery, AJAX, and PHP." />
+	<meta property="og:locale" content="en_US"/>
+	<meta property="og:url" content="http://www.paulopamplona.com/index.html/" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Paulo Pamplona Developer" />
+    <meta property="og:description" content="Paulo Pamplona is a Brazilian-Portuguese Front-End Web Developer. This website was coded from the scratch using HTML5, CSS3, SCSS, JavaScript, jQuery, AJAX, and PHP. Click here and check this out!" />
+	<meta property="og:image" content="http://www.paulopamplona.com/assets/icons-logos/logo-thumb-200.png" />
+    <meta property="og:image:alt" content="Paulo's Website" />	
+	<meta property="og:site_name" content="PauloPamplona"/>
+	<meta property="fb:admins" content="473940199653904" />
+<!--
+	<meta property="twitter:account_id" content="________" />
+	<meta name="twitter:url" content="http://www.___________.com/">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:creator" content="">
+	<meta name="twitter:site" content="">
+	<link rel=publisher href="https://plus.google.com/+paulopamplona" />
+    <meta name="google-site-verification" content="" />    
+-->
+   
     <!-- CSS reset -->
 	<link rel="stylesheet" href="../css/reset.css">
 
@@ -24,11 +47,11 @@
 
     <title>Contact</title>
     
-    <link href="../assets/favicon.png" rel="icon" type="image/x-icon" />
+    <link href="../assets/icons-logos/favicon.png" rel="icon" type="image/x-icon" />
 
 <body>
 	<header class="header">
-        <div id="logo"><a href="../index.html"><img src="../assets/logo-white.svg" class="shadow" alt="Logo" /></a></div>
+        <div id="logo"><a href="../index.html"><img src="../assets/icons-logos/logo-white.svg" class="shadow" alt="Logo" /></a></div>
 
     <!-- Hamburguer Icon -->
         <div class="nav-hamb" id="hamb-nav">
@@ -56,7 +79,7 @@
 	</header>
    
     <!-- Hero Image -->
-    <section id="heroImage" style="background-image: url(../assets/hero-contact.jpg);">
+    <section id="heroImage" style="background-image: url(../assets/headers/hero-contact.jpg);">
         <article class="headerSection">
             <div class="headerWrap">
                <div class="main-content container-lg">
@@ -137,24 +160,24 @@
 
 	<footer>
         <div class="container-lg">          
-            <div id="logo-bottom"><img src="../assets/logo-white.svg" alt="Logo" />
+            <div id="logo-bottom"><img src="../assets/icons-logos/logo-white.svg" alt="Logo" />
             </div>
 
             <p><en>Paulo Pamplona<br />Front-End Web Developer</en></p>
             <div class="social">
                 <div class="linkedin">
             <!--    E.g.: LinkedIn Icon made by Freepik from www.flaticon.com -->
-                    <a href="https://www.linkedin.com/in/paulopamplona" target="_blank" ><img src="../assets/linkedin.svg" alt="LinkedIn" /></a>
+                    <a href="https://www.linkedin.com/in/paulopamplona" target="_blank" ><img src="../assets/icons-logos/linkedin.svg" alt="LinkedIn" /></a>
                 </div>
 
                 <div class="github">
             <!--    E.g.: GitHub Icon made by Dave Gandy from www.flaticon.com -->
-                    <a href="https://github.com/pamplonapaulo" target="_blank" ><img src="../assets/github.svg" alt="GitHub" /></a>
+                    <a href="https://github.com/pamplonapaulo" target="_blank" ><img src="../assets/icons-logos/github.svg" alt="GitHub" /></a>
                 </div>
 
                 <div class="codepen">
             <!--    E.g.: Codepen Icon made by Icons8 from https://icons8.com --> 
-                    <a href="https://codepen.io/pamplonapaulo/pens/public/" target="_blank" ><img src="../assets/CodePen.svg" alt="CodePen" /></a>
+                    <a href="https://codepen.io/pamplonapaulo/pens/public/" target="_blank" ><img src="../assets/icons-logos/CodePen.svg" alt="CodePen" /></a>
                 </div>
             </div>
 

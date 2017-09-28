@@ -4,26 +4,36 @@
 * Author: Paulo da Silva Pamplona
 * www.paulopamplona.com
 * Version 1.0
-* Last Update: 9/16/2017
+* Last Update: 9/28/2017
 */
 /* Table of Content
 ==================================================
-- Grid System
-- Primary Style
-- Header Components
-- Animated Hamburguer Icon
-- Responsive Top Menu
-- Slider
-- Single Slide Style
-- Single Slide Animation
-- Slider Navigation
-- Main Content
-- Animated Title
+- Grid System 
+- Primary Style             (155)
+- Header Components         (187)
+- Hamburguer Icon           (247)
+- Top Menu                  (357)
+- Hero Image                (557)
+- Animated Title            (580)
+- Scroll down arrow icon    (673)
+- Slider                    (766)
+- Single Slide Style        (824)
+- Single Slide Animation    (1052)
+- Slider Navigation         (1146)
+- Main Content              (1238)
+- Skill Bars                (1462)
+- Light Box                 (1721)
+- Forms                     (1905)
+- Footer                    (2336)
+- Javascript disabled       (2426)
 */
 @import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i|Maven+Pro:400,500,700,900|Oswald:400|Lato:400");
 /* -------------------------------- 
+
 Grid System
+
 Acknowledgement: Special thanks to it's author Alex Garcia, a classmate and one of my partners at our final project www.PlumageCSS.com, from which I took this grid. 
+
 -------------------------------- */
 /*CONTENT CONTAINER BASED ON 960PX*/
 .container {
@@ -219,7 +229,9 @@ Acknowledgement: Special thanks to it's author Alex Garcia, a classmate and one 
   .col-xl-12 {
     width: 100%; } }
 /* -------------------------------- 
+
 Primary style
+
 -------------------------------- */
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
@@ -244,7 +256,9 @@ img {
   max-width: 100%; }
 
 /* -------------------------------- 
+
 Header Components 
+
 -------------------------------- */
 .header {
   position: fixed;
@@ -293,7 +307,9 @@ Header Components
   filter: drop-shadow(-2px 2px 1px rgba(0, 0, 0, 0.5)); }
 
 /* -------------------------------- 
+
 Hamburguer Icon
+
 -------------------------------- */
 .nav-hamb div {
   position: relative;
@@ -385,7 +401,9 @@ Hamburguer Icon
   box-shadow: none; }
 
 /* -------------------------------- 
-Responsive Top Menu
+
+Top Menu
+
 -------------------------------- */
 .menu {
   z-index: 90;
@@ -535,7 +553,9 @@ Responsive Top Menu
       background-color: #b2d430; } }
 
 /* -------------------------------- 
+
 Hero Image 
+
 -------------------------------- */
 #heroImage {
   background-size: cover;
@@ -552,7 +572,9 @@ Hero Image
       height: 680px; } }
 
 /* -------------------------------- 
+
 Animated Title
+
 -------------------------------- */
 .headerSection {
   position: relative;
@@ -624,7 +646,9 @@ Animated Title
             display: inline-block; }
 
 /* -------------------------------- 
+
 Scroll down arrow icon
+
 -------------------------------- */
 @media only screen and (min-width: 1170px) {
   .arrow-wrapper {
@@ -686,7 +710,9 @@ Scroll down arrow icon
     100% {
       background: #BDBDBD; } } }
 /* -------------------------------- 
+
 Slider
+
 -------------------------------- */
 .hero {
   position: relative;
@@ -738,7 +764,9 @@ Slider
       height: 680px; } }
 
 /* -------------------------------- 
+
 Single Slide Style + Mobile Images
+
 -------------------------------- */
 .hero-slider li {
   background-position: center center;
@@ -746,19 +774,19 @@ Single Slide Style + Mobile Images
   background-repeat: no-repeat; }
 .hero-slider li:first-of-type {
   background-color: #2C343B;
-  background-image: url("../assets/m_portfolio.jpg"); }
+  background-image: url("../assets/headers/m_portfolio.jpg"); }
 .hero-slider li:nth-of-type(2) {
   background-color: #202020;
-  background-image: url("../assets/m_jquery.jpg"); }
+  background-image: url("../assets/headers/m_jquery.jpg"); }
 .hero-slider li:nth-of-type(3) {
   background-color: #d4cfcb;
-  background-image: url("../assets/m_ia.jpg"); }
+  background-image: url("../assets/headers/m_ia.jpg"); }
 .hero-slider li:nth-of-type(4) {
   background-color: #2C343B;
-  background-image: url("../assets/m_blog.jpg"); }
+  background-image: url("../assets/headers/m_blog.jpg"); }
 .hero-slider li:nth-of-type(5) {
   background-color: #2C343B;
-  background-image: url(../assets/m_contact.jpg); }
+  background-image: url(../assets/headers/m_contact.jpg); }
 .hero-slider .full-width,
 .hero-slider .half-width {
   position: absolute;
@@ -892,7 +920,9 @@ Single Slide Style + Mobile Images
     font-size: 1.6rem; } }
 
 /* -------------------------------- 
+
 Single Slide Animation
+
 -------------------------------- */
 @media only screen and (min-width: 768px) {
   .hero-slider .half-width {
@@ -973,7 +1003,9 @@ Single Slide Animation
     -moz-transition: opacity 0.4s 0.3s, -moz-transform 0.5s 0.3s;
     transition: opacity 0.4s 0.3s, transform 0.5s 0.3s; } }
 /* -------------------------------- 
+
 Slider Navigation
+
 -------------------------------- */
 .slider-nav {
   position: absolute;
@@ -1046,7 +1078,9 @@ Slider Navigation
       background-color: rgba(0, 0, 0, 0.5); }
 
 /* -------------------------------- 
+
 Main Content
+
 -------------------------------- */
 main.main-content {
   margin: 0 auto 5em auto;
@@ -1070,6 +1104,14 @@ main.main-content {
     line-height: 1.8;
     color: #2a3138;
     margin: .8em 16px; }
+  main.main-content .singleImg {
+    width: 80%;
+    margin: auto 10%; }
+  main.main-content .twoImgWrapper img {
+    width: 30%;
+    margin: auto 10%; }
+  main.main-content .twoImgWrapper img:last-child {
+    float: right; }
   main.main-content p:first-of-type {
     padding-top: 1.5em; }
     @media only screen and (min-width: 768px) {
@@ -1219,6 +1261,11 @@ main > p > a {
         -webkit-box-shadow: inset 0px 0px 0px 10px #B2D430;
         box-shadow: inset 0px 0px 0px 10px #B2D430; } }
 
+/* -------------------------------- 
+
+Skills Bars
+
+-------------------------------- */
 .skillsWrapper {
   margin: 0 auto; }
   @media only screen and (min-width: 640px) {
@@ -1278,7 +1325,9 @@ main > p > a {
     background-color: #2C343B; }
 
 /* -------------------------------- 
+
 Gallery
+
 -------------------------------- */
 .gallery {
   display: table;
@@ -1416,7 +1465,9 @@ Gallery
         color: black; } }
 
 /* -------------------------------- 
+
 Light Box
+
 -------------------------------- */
 #overlay {
   width: 100%;
@@ -1565,7 +1616,9 @@ article[id^="galleryItemContent"] {
         margin: 2.5% 12.5%; } }
 
 /* -------------------------------- 
+
 Forms
+
 -------------------------------- */
 .error {
   position: absolute;
@@ -1909,7 +1962,9 @@ Forms
   border-bottom: 3px solid rgba(0, 0, 0, 0.26); }
 
 /* -------------------------------- 
+
 Footer
+
 -------------------------------- */
 footer {
   background: #2C343B;
@@ -1974,7 +2029,9 @@ footer {
         margin-right: 16px; } }
 
 /* -------------------------------- 
+
 Javascript disabled
+
 -------------------------------- */
 .no-js .hero-slider li {
   display: none; }

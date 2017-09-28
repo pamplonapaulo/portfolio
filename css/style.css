@@ -1183,10 +1183,6 @@ main > p > a {
     .circle {
       width: 50%;
       float: right; } }
-  @media only screen and (min-width: 768px) {
-    .circle {
-      width: 50%;
-      float: right; } }
   .circle .textWrap {
     text-align: center;
     position: relative;
@@ -1260,6 +1256,31 @@ main > p > a {
         -moz-box-shadow: inset 0px 0px 0px 10px #B2D430;
         -webkit-box-shadow: inset 0px 0px 0px 10px #B2D430;
         box-shadow: inset 0px 0px 0px 10px #B2D430; } }
+  .circle .frame.caricatura {
+    -moz-box-shadow: inset 0px 0px 0px 6px #1A8B9D;
+    -webkit-box-shadow: inset 0px 0px 0px 6px #1A8B9D;
+    box-shadow: inset 0px 0px 0px 6px #1A8B9D; }
+    @media only screen and (min-width: 768px) {
+      .circle .frame.caricatura {
+        width: 300px;
+        height: 300px;
+        margin: .5em auto; } }
+    @media only screen and (min-width: 1170px) {
+      .circle .frame.caricatura {
+        width: 300px;
+        height: 300px; } }
+
+@media only screen and (min-width: 640px) {
+  p.home-single-p {
+    width: 45%;
+    float: left;
+    top: 300px; } }
+@media only screen and (min-width: 768px) {
+  p.home-single-p {
+    margin-left: 30px;
+    margin-top: 100px;
+    padding-left: 30px;
+    margin: .5em auto 3em auto; } }
 
 /* -------------------------------- 
 

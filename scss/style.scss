@@ -4,7 +4,7 @@
 * Author: Paulo da Silva Pamplona
 * www.paulopamplona.com
 * Version 1.0
-* Last Update: 9/28/2017
+* Last Update: 9/29/2017
 */
 
 /* Table of Content
@@ -199,6 +199,61 @@ Header Components
 	height: $header-S;
 	background-color: darken($color-black, 5%);
 	@include font-smoothing; // see partials > _mixins.scss
+    
+    #logo {
+    width: 40px;
+    height: auto;
+	float: left;
+	margin: 13px 0 0 16px;
+    z-index: 95;
+    
+    .shadow {
+    -webkit-filter: drop-shadow( -2px 2px 1px rgba(#000, .5));
+            filter: drop-shadow( -2px 2px 1px rgba(#000, .5));
+    }
+
+	> a > img {
+		display: block;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+	}
+    
+    > a > img:hover {
+        -webkit-transform: scale3d(1.2, 1.2, 1);
+        transform: scale3d(1.2, 1.2, 1);
+    }
+        
+    .languages {
+        z-index: 99;
+        background: red;
+        margin-top: 5em;
+        margin-left: 100px;
+        width: 100px;
+        
+        border: solid 1px yellow;
+        
+        > a > img {
+            padding: 5px;
+            width: 40px;
+            float: right;
+        }
+
+            
+    }
+        
+    
+    
+	@include MQ(M) {
+        width: 60px;
+		margin: 15px 0 0 16px;
+	}
+}
+    
+    
+    
+    
+    
+    
 
 	@include MQ(M) {
         position: absolute;
@@ -215,35 +270,9 @@ Header Components
     }
 }
 
-#logo {
-    position: relative;
-    width: 40px;
-    height: auto;
-	float: left;
-	margin: 13px 0 0 16px;
-    z-index: 95;
 
-	> a > img {
-		display: block;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-	}
-    
-    > a > img:hover {
-        -webkit-transform: scale3d(1.2, 1.2, 1);
-        transform: scale3d(1.2, 1.2, 1);
-    }
-    
-	@include MQ(M) {
-        width: 60px;
-		margin: 15px 0 0 16px;
-	}
-}
 
-.shadow {
-    -webkit-filter: drop-shadow( -2px 2px 1px rgba(#000, .5));
-            filter: drop-shadow( -2px 2px 1px rgba(#000, .5));
-}
+
 
 /* -------------------------------- 
 

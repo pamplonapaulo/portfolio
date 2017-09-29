@@ -4,7 +4,7 @@
 * Author: Paulo da Silva Pamplona
 * www.paulopamplona.com
 * Version 1.0
-* Last Update: 9/28/2017
+* Last Update: 9/29/2017
 */
 /* Table of Content
 ==================================================
@@ -271,6 +271,37 @@ Header Components
   background-color: #21272c;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+  .header #logo {
+    width: 40px;
+    height: auto;
+    float: left;
+    margin: 13px 0 0 16px;
+    z-index: 95; }
+    .header #logo .shadow {
+      -webkit-filter: drop-shadow(-2px 2px 1px rgba(0, 0, 0, 0.5));
+      filter: drop-shadow(-2px 2px 1px rgba(0, 0, 0, 0.5)); }
+    .header #logo > a > img {
+      display: block;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+    .header #logo > a > img:hover {
+      -webkit-transform: scale3d(1.2, 1.2, 1);
+      transform: scale3d(1.2, 1.2, 1); }
+    .header #logo .languages {
+      z-index: 99;
+      background: red;
+      margin-top: 5em;
+      margin-left: 100px;
+      width: 100px;
+      border: solid 1px yellow; }
+      .header #logo .languages > a > img {
+        padding: 5px;
+        width: 40px;
+        float: right; }
+    @media only screen and (min-width: 768px) {
+      .header #logo {
+        width: 60px;
+        margin: 15px 0 0 16px; } }
   @media only screen and (min-width: 768px) {
     .header {
       position: absolute;
@@ -283,29 +314,6 @@ Header Components
       margin: -70px auto 0 auto;
       padding-top: 70px;
       position: relative; } }
-
-#logo {
-  position: relative;
-  width: 40px;
-  height: auto;
-  float: left;
-  margin: 13px 0 0 16px;
-  z-index: 95; }
-  #logo > a > img {
-    display: block;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
-  #logo > a > img:hover {
-    -webkit-transform: scale3d(1.2, 1.2, 1);
-    transform: scale3d(1.2, 1.2, 1); }
-  @media only screen and (min-width: 768px) {
-    #logo {
-      width: 60px;
-      margin: 15px 0 0 16px; } }
-
-.shadow {
-  -webkit-filter: drop-shadow(-2px 2px 1px rgba(0, 0, 0, 0.5));
-  filter: drop-shadow(-2px 2px 1px rgba(0, 0, 0, 0.5)); }
 
 /* -------------------------------- 
 

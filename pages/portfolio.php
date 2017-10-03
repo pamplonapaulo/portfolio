@@ -137,12 +137,12 @@ include_once('lang.php');
     
         <section class="gallery">
         
-        <!-------------- Images must be 640x640px------------->
+        <!-------------- Images must be 380x380px------------->
         <div id="overlay"></div>
            <div class="galleryItem" name="1">
                 <figure>
                  <div class="galleryItem-overlay"></div>
-                  <img src="../assets/portfolio/ppWebsite-print-380x380.png" alt="paulopamplona.com"/>
+                  <img src="../assets/portfolio/ppWebsite-380x380.jpg" alt="paulopamplona.com"/>
                    <figcaption class="captionTop">PauloPamplona.com</figcaption>
                    <figcaption class="captionBottom">[ Sep. /2017 ]</figcaption>
                 </figure>
@@ -150,7 +150,7 @@ include_once('lang.php');
            <div class="galleryItem" name="2">
                 <figure>
                  <div class="galleryItem-overlay"></div>
-                  <img src="../assets/portfolio/plumageCSS.png" alt="Apple Watch"/>
+                  <img src="../assets/portfolio/plumage-380x380.png" alt="Apple Watch"/>
                   <figcaption class="captionTop">Plumage CSS</figcaption>
                    <figcaption class="captionBottom">[ Jun. / 2017 ]</figcaption>
                 </figure>
@@ -158,12 +158,16 @@ include_once('lang.php');
            <div class="galleryItem" name="3">
                 <figure>
                  <div class="galleryItem-overlay"></div>
-                  <img src="../assets/portfolio/appleWatch-640x640.jpg" alt="Apple Watch"/>
-                   <figcaption class="captionTop">Caption Top 3</figcaption>
-                   <figcaption class="captionBottom">Caption Bottom 3</figcaption>
+                  <img src="../assets/portfolio/theBlend-380x380.png" alt="Apple Watch"/>
+                   <figcaption class="captionTop">The Blend</figcaption>
+                   <figcaption class="captionBottom">[ Jan. / 2017 ]</figcaption>
                 </figure>
            </div>
-           <div class="galleryItem" name="4">
+           
+           
+           
+           
+<!--           <div class="galleryItem" name="4">
                 <figure>
                  <div class="galleryItem-overlay"></div>
                   <img src="../assets/portfolio/appleWatch-640x640.jpg" alt="Apple Watch"/>
@@ -211,13 +215,14 @@ include_once('lang.php');
                    <figcaption class="captionBottom">Caption Bottom 9</figcaption>
                 </figure>
            </div>
+           -->
   
         </section>
 
         <article id="galleryItemContent1">
             <a class="close" id="close">x</a>
             <figure>
-                <img src="../assets/portfolio/ppWebsite-print.png" alt="EMPITY 2" />
+                <img src="../assets/portfolio/ppWebsite-print.jpg" alt="EMPITY 2" />
                 <figcaption>PauloPamplona.com</figcaption>
             </figure>
             <p>My portifolio's website is the first built after my certification program. It was totally coded from scratch with HTML5, CSS3, SCSS, javascript, jQuery, AJAX, and PHP. Most of the features here were presented to me during the course in San Diego. So this job was a great way to review some of this and try to make it better.</p>
@@ -232,7 +237,7 @@ include_once('lang.php');
                 <img src="../assets/portfolio/plumage-print.png" alt="Plumage Website" />
                 <figcaption>Plumage CSS Framework</figcaption>
             </figure>
-            <p>Plumage is a CSS framework built by me and three classmates as our final project at the Front-End Web Development Certification Programm from San Diego Continuing Education, in California. The project took about three weeks and we got 279 points in a total of 300.</p>
+            <p>Plumage is a CSS framework built by me and three classmates as our final project at the Front-End Web Development Certification Program from San Diego Continuing Education, in California. The project took about three weeks and we got 279 points in a total of 300.</p>
             
             <p>My special thanks to Alex Garcia, Natalia Lipovskaia, and Tracey Olson, a lovable and very professional team who taught me that we can do beuatiful things if we have passion and discipline together.</p>
             <a href="http://plumagecss.com/" target="_blank">Visit</a>
@@ -240,14 +245,17 @@ include_once('lang.php');
         <article id="galleryItemContent3">
             <a class="close" id="close">x</a>
             <figure>
-                <img src="../assets/portfolio/appleWatch-print.jpg" alt="EMPITY 3" />
-                <figcaption>EMPITY 3</figcaption>
+                <img src="../assets/portfolio/theBlend-print.jpg" alt="The Blend Website" />
+                <figcaption>The Blend Superfood</figcaption>
             </figure>
-            <p>Plumage is a CSS framework built by me and three classmates as our final project at the Front-End Web Development Certification Programm from San Diego Continuing Education, in California. The project took about three weeks and we got 279 points in a total of 300.</p>
+            <p>It's the final project of the 1st semester at my certification program. Built with two classmates (Jane La Motte and Sam Lee), using HTML5, CSS3, and jQuery. Our code was shared among us during the development by Cloud9. It's a review of the original website from a real company.</p>
             
-            <p>My special thanks to Alex Garcia, Natalia Lipovskaia, and Tracey Olson, a lovable and very professional team who taught me that we can do beuatiful things if we have passion and discipline together.</p>
-            <a href="http" target="_blank">Visit</a>
+            <p>We started by the diagnosis, reviewing the content and rethinking the information architecture using the "card sorting" method. We also build some prototypes using Axure and Adobe Photoshop.</p>
+            
+            <a href="https://pamplonapaulo.github.io/TheBlend/" target="_blank">Visit</a>
         </article>
+        
+        <!--
         <article id="galleryItemContent4">
             <a class="close" id="close">x</a>
             <figure>
@@ -313,7 +321,8 @@ include_once('lang.php');
             
             <p>My special thanks to Alex Garcia, Natalia Lipovskaia, and Tracey Olson, a lovable and very professional team who taught me that we can do beuatiful things if we have passion and discipline together.</p>
             <a href="http" target="_blank">Visit</a>
-        </article>        
+        </article>
+        -->        
 
 	</main><!-- .main-content -->
 

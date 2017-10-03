@@ -1596,9 +1596,19 @@ Gallery
     display: table;
     max-width: 100%;
     margin: auto;
+    margin-bottom: -36px;
     
     @include MQ(SM) {
         max-width: 93.5%;
+    }
+    
+    @include MQ(M) {
+        margin-top: -30px;
+    }
+    
+    @include MQ(L) {
+        margin-top: -58px;
+        margin-bottom: -28px;
     }
 
     .galleryItem {
@@ -1800,6 +1810,8 @@ article[id^="galleryItemContent"] {
     z-index: 901;
     display: none;
     margin: auto 0;
+    
+    overflow-y: scroll;
     
     @include MQ(SM) {
         top:10%;

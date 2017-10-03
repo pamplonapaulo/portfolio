@@ -1,3 +1,8 @@
+<?php 
+session_start();
+include_once('lang.php');
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -66,7 +71,18 @@
 </head> 
 <body>
 	<header class="header">
-        <div id="logo"><a href="../index.html"><img src="../assets/icons-logos/logo-white.svg" class="shadow" alt="Logo" /></a></div>
+        <div id="logo">
+            <a href="../index.php">
+                <img src="../assets/icons-logos/logo-white.svg" class="shadow" alt="Logo" />
+            </a>
+        </div>
+
+    <!-- Language Flags -->
+        <div class="idioms">
+            <a href="?lang=en" class="flags langEN">&nbsp;</a>
+            <a href="?lang=pt" class="flags langPT">&nbsp;</a>     
+        </div>
+        
 
     <!-- Hamburguer Icon -->
         <div class="nav-hamb" id="hamb-nav">
@@ -78,17 +94,17 @@
     <!-- Menu -->
         <nav class="menu"> 
             <ul>
-                <li><a href="about.html">About me</a></li>
-                <li href="#" class="subMenu"><a>Know-how</a>
+                <li><a href="about.php" ><?php echo $about; ?></a></li>
+                <li href="#" class="subMenu"><a>Expertise</a>
                     <ul class="touchDropDown">
-                        <li><a href="front-end.html">Front-End</a></li>
-                        <li><a href="journalism.html">Journalism</a></li>
-                        <li><a href="branding.html">Branding</a></li>
+                        <li><a href="front-end.php">Front-End</a></li>
+                        <li><a href="content.php"><?php echo $content; ?></a></li>
+                        <li><a href="branding.php">Branding</a></li>
                     </ul>
                 </li>
-                <li><a href="portfolio.html" class="current">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a class="current"><?php echo $portfolio; ?></a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="contact.php"><?php echo $contact; ?></a></li>
             </ul>   
         </nav>
 	</header>

@@ -1,3 +1,8 @@
+<?php 
+session_start();
+include_once('lang.php');
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -38,7 +43,7 @@
 	<link rel=publisher href="https://plus.google.com/+paulopamplona" />
     <meta name="google-site-verification" content="" />    
 -->
-   
+    
     <!-- CSS reset -->
 	<link rel="stylesheet" href="../css/reset.css">
 
@@ -59,14 +64,25 @@
 <!-- remove before publish and turn on the link right bellow. Here now just working offline -->
 <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
 
-    <title>Front-End</title>
+    <title><?php echo $about; ?></title>
     
     <link href="../assets/icons-logos/favicon.png" rel="icon" type="image/x-icon" />
 
 </head> 
 <body>
 	<header class="header">
-        <div id="logo"><a href="../index.html"><img src="../assets/icons-logos/logo-white.svg" class="shadow" alt="Logo" /></a></div>
+        <div id="logo">
+            <a href="../index.php">
+                <img src="../assets/icons-logos/logo-white.svg" class="shadow" alt="Logo" />
+            </a>
+        </div>
+
+    <!-- Language Flags -->
+        <div class="idioms">
+            <a href="?lang=en" class="flags langEN">&nbsp;</a>
+            <a href="?lang=pt" class="flags langPT">&nbsp;</a>     
+        </div>
+        
 
     <!-- Hamburguer Icon -->
         <div class="nav-hamb" id="hamb-nav">
@@ -78,27 +94,27 @@
     <!-- Menu -->
         <nav class="menu"> 
             <ul>
-                <li><a href="about.html" >About me</a></li>
-                <li href="#" class="subMenu"><a class="current">Know-how</a>
+                <li><a class="current"><?php echo $about; ?></a></li>
+                <li href="#" class="subMenu"><a>Expertise</a>
                     <ul class="touchDropDown">
-                        <li><a href="front-end.html">Front-End</a></li>
-                        <li><a class="subCurrent">Journalism</a></li>
-                        <li><a href="branding.html">Branding</a></li>
+                        <li><a href="front-end.php">Front-End</a></li>
+                        <li><a href="content.php"><?php echo $content; ?></a></li>
+                        <li><a href="branding.php">Branding</a></li>
                     </ul>
                 </li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="portfolio.php"><?php echo $portfolio; ?></a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="contact.php"><?php echo $contact; ?></a></li>
             </ul>   
         </nav>
 	</header>
    
     <!-- Hero Image -->
-    <section id="heroImage" style="background-image: url(../assets/headers/hero-journalism.jpg);">
+    <section id="heroImage" style="background-image: url(../assets/headers/hero-about.jpg);">
         <article class="headerSection">
             <div class="headerWrap">
                <div class="main-content container-lg">
-                   <h6>My journalistic hat</h6>
+                   <h6><?php echo $about_hero; ?></h6>
                </div>
             </div>
         </article>
@@ -118,12 +134,31 @@
         </div>
        </a>
        
-    <h2>Moving foward doesn't mean quitting knowledge!</h2>
+    <h2><?php echo $about_h2_1; ?></h2>
     
-    <p>Despite being anxious to become a master in programming languages, I couldn't say that I regret my Journalism college at all. The impact of its lessons will always reverberate in my personality and work.</p>
+    <p><?php echo $about_p1; ?></p>
     
-    <p>With this background, I can provide some extra advices to small business that are starting their digital presence and can't afford expensive agencies. And you cannot forget that your website is going to be your main public media, the public hub of all information under your control. Be aware about what you should or shouldn't include there.</p>    
+    <p><?php echo $about_p2; ?></p>
+    
+    <h2><?php echo $about_h2_2; ?></h2>
+    
+    <p><?php echo $about_p3; ?></p>
+    
+    <p><?php echo $about_p4; ?></p>
+    
+    <div class="parallax" style="background-image:url('../assets/content/front-end-school.jpg')"></div>
+
+    <h2><?php echo $about_h2_3; ?></h2>
+            
+    <p><?php echo $about_p5; ?></p>
            
+    <section>
+                
+        <article style="text-align: center;">
+            <ul id="instaFeed"></ul>
+        </article>
+    </section>
+
 	</main><!-- .main-content -->
 
 	<footer>
@@ -149,7 +184,7 @@
                 </div>
             </div>
 
-            <p>&copy; 2017. All rights reserved.</p> 
+            <p><?php echo $copyRight; ?></p> 
         </div>
 	</footer>
 	   
@@ -157,7 +192,10 @@
 
 <script src="../js/jquery.lettering-0.6.1.min.js" type="text/javascript"></script>
 
-<script src="../js/title-animation.js" type="text/javascript"></script>            
+<script src="../js/title-animation.js" type="text/javascript"></script>
+
+<script src="../js/ajaxInstagram.js" type="text/javascript"></script>
+            
                     
 </body>
 </html>

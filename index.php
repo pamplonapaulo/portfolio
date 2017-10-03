@@ -1,3 +1,8 @@
+<?php 
+session_start();
+include_once('pages/lang.php');
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -19,7 +24,7 @@
 <!--    Thumbnail for Facebook   -->
     <link rel="canonical" href="http://www.paulopamplona.com/" /> 
     <meta name="title" content="Paulo Pamplona Developer" />
-	<meta name="description" content="Paulo Pamplona is a Brazilian-Portuguese Front-End Web Developer. This website was coded from the scratch using HTML5, CSS3, SCSS, JavaScript, jQuery, AJAX, and PHP." />
+	<meta name="description" content="Paulo Pamplona is a Brazilian-Portuguese Front-End Web Developer. This website was coded from scratch using HTML5, CSS3, SCSS, JavaScript, jQuery, AJAX, and PHP." />
 	<meta property="og:locale" content="en_US"/>
 	<meta property="og:url" content="http://www.paulopamplona.com/index.html/" />
 	<meta property="og:type" content="article" />
@@ -63,8 +68,15 @@
 </head> 
 <body>
 	<header class="header">
-		<div id="logo"><a href="index.html"><img src="assets/icons-logos/logo-white.svg" class="shadow" alt="Logo" /></a></div>
-		
+		<div id="logo"><a href="index.php"><img src="assets/icons-logos/logo-white.svg" class="shadow" alt="Logo" /></a></div>
+
+
+    <!-- Language Flags -->
+        <div class="idioms">
+            <a href="?lang=en" class="flags langEN">&nbsp;</a>
+            <a href="?lang=pt" class="flags langPT">&nbsp;</a>     
+        </div>
+        
     <!-- Hamburguer Icon -->
 		<div class="nav-hamb" id="hamb-nav">
           <span></span>
@@ -75,17 +87,17 @@
     <!-- Menu -->
 		<nav class="menu"> 
 		    <ul>
-				<li><a href="pages/about.html">About me</a></li>
-				<li href="#" class="subMenu"><a>Know-how</a>
+				<li><a href="pages/about.php"><?php echo $about; ?></a></li>
+				<li href="#" class="subMenu"><a>Expertise</a>
 				    <ul class="touchDropDown">
-                        <li><a href="pages/front-end.html">Front-End</a></li>
-                        <li><a href="pages/journalism.html">Journalism</a></li>
-                        <li><a href="pages/branding.html">Branding</a></li>
+                        <li><a href="pages/front-end.php">Front-End</a></li>
+                        <li><a href="pages/content.php"><?php echo $content; ?></a></li>
+                        <li><a href="pages/branding.php">Branding</a></li>
 				    </ul>
 				</li>
-				<li><a href="pages/portfolio.html">Portfolio</a></li>
-				<li><a href="pages/blog.html">Blog</a></li>
-				<li><a href="pages/contact.php">Contact</a></li>
+				<li><a href="pages/portfolio.php"><?php echo $portfolio; ?></a></li>
+				<li><a href="pages/blog.php">Blog</a></li>
+				<li><a href="pages/contact.php"><?php echo $contact; ?></a></li>
             </ul>   
 		</nav>
 
@@ -99,18 +111,18 @@
 					<img src="assets/headers/slider-large-portfolio.jpg" alt="Portfolio">
 				</div> 
                 <div class="full-width">
-                    <h2>Welcome to<br/>Paulo Pamplona's portifolio</h2>
+                    <h2><?php echo $slide1; ?></h2>
                     <p></p>
-                    <a href="pages/portfolio.html" class="btn">See Portifolio</a>
+                    <a href="pages/portfolio.php" class="btn"><?php echo $slide1_btn; ?></a>
                 </div>  <!-- .full-width -->
             </li>
     <!-- Slide 2/5 ------ FRONT-END ------>
             <li>
 				<div class="half-width">
-					<h2>Front-End Web Development</h2>
+					<h2><?php echo $slide2; ?></h2>
 					<p></p>
 <!--					<a href="#0" class="btn">Request For Proposal</a>-->
-					<a href="pages/front-end.html" class="btn secondary">Learn More</a>
+					<a href="pages/front-end.php" class="btn secondary"><?php echo $slide2_btn; ?></a>
 				</div> <!-- .half-width -->
 
 				<div class="half-width img-container">
@@ -126,7 +138,7 @@
 				</div> <!-- .half-width.img-container -->
 
 				<div class="half-width">
-					<h2>Information Architecture</h2>
+					<h2><?php echo $slide3; ?></h2>
 					<p></p>
 <!--
 					<a href="#0" class="btn">Buy now</a>
@@ -141,9 +153,9 @@
 					<img src="assets/headers/slider-large-blog.jpg" alt="Blog">
 				</div> 
 				<div class="full-width">
-					<h2>My random blog</h2>
+					<h2><?php echo $slide4; ?></h2>
 					<p></p>
-					<a href="pages/blog.html" class="btn">Explore articles</a>
+					<a href="pages/blog.php" class="btn"><?php echo $slide4_btn; ?></a>
 <!--					<a href="#0" class="btn secondary">Learn More</a>-->
 				</div> <!-- .full-width -->
 			</li>
@@ -154,9 +166,9 @@
 					<img src="assets/headers/slider-large-contact.jpg" alt="Blog">
 				</div> 
 				<div class="full-width">
-					<h2>Let's have a coffee?</h2>
+					<h2><?php echo $slide5; ?></h2>
 					<p></p>
-					<a href="pages/contact.php" class="btn">Contact me</a>
+					<a href="pages/contact.php" class="btn"><?php echo $slide5_btn; ?></a>
 <!--					<a href="#0" class="btn secondary">Email me</a>-->
 				</div> <!-- .full-width -->
 			</li>			
@@ -181,8 +193,7 @@
    
    <main class="main-content container-lg">
        
-        <p class="home-single-p">My name is Paulo Pamplona and I'm a Brazilian-Portuguese web developer certified by San Diego Continuing Education, from California. My websites are built with  technologies like HTML5, CSS3, SCSS, JavaScript, jQuery, AJAX, JSON, and PHP.
-       </p>
+        <p class="home-single-p"><?php echo $home_p1; ?></p>
 
        
    <div>
@@ -193,13 +204,7 @@
    
    <div class="clear"></div>
    
-	
-		
-		
-		
-		
-
-	</main><!-- .main-content -->
+   </main><!-- .main-content -->
 
 	<footer>
         <div class="container-lg">          
@@ -224,7 +229,7 @@
                 </div>
             </div>
 
-            <p>&copy; 2017. All rights reserved.</p> 
+            <p><?php echo $copyRight; ?></p> 
         </div>
 	</footer>
 	    

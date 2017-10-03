@@ -1,3 +1,8 @@
+<?php 
+session_start();
+include_once('lang.php');
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -66,7 +71,18 @@
 </head> 
 <body>
 	<header class="header">
-        <div id="logo"><a href="../index.html"><img src="../assets/icons-logos/logo-white.svg" class="shadow" alt="Logo" /></a></div>
+        <div id="logo">
+            <a href="../index.php">
+                <img src="../assets/icons-logos/logo-white.svg" class="shadow" alt="Logo" />
+            </a>
+        </div>
+
+    <!-- Language Flags -->
+        <div class="idioms">
+            <a href="?lang=en" class="flags langEN">&nbsp;</a>
+            <a href="?lang=pt" class="flags langPT">&nbsp;</a>     
+        </div>
+        
 
     <!-- Hamburguer Icon -->
         <div class="nav-hamb" id="hamb-nav">
@@ -78,17 +94,17 @@
     <!-- Menu -->
         <nav class="menu"> 
             <ul>
-                <li><a href="about.html" >About me</a></li>
-                <li href="#" class="subMenu"><a class="current">Know-how</a>
+                <li><a href="about.php" ><?php echo $about; ?></a></li>
+                <li href="#" class="subMenu"><a class="current">Expertise</a>
                     <ul class="touchDropDown">
                         <li><a class="subCurrent">Front-End</a></li>
-                        <li><a href="journalism.html">Journalism</a></li>
-                        <li><a href="branding.html">Branding</a></li>
+                        <li><a href="content.php"><?php echo $content; ?></a></li>
+                        <li><a href="branding.php">Branding</a></li>
                     </ul>
                 </li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="portfolio.php"><?php echo $portfolio; ?></a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="contact.php"><?php echo $contact; ?></a></li>
             </ul>   
         </nav>
 	</header>
@@ -98,7 +114,7 @@
         <article class="headerSection">
             <div class="headerWrap">
                <div class="main-content container-lg">
-                   <h6>My front-end skills</h6>
+                   <h6><?php echo $frontend_hero; ?></h6>
                </div>
             </div>
         </article>
@@ -118,11 +134,11 @@
         </div>
        </a>
        
-    <h2>Certification in California</h2>
+    <h2><?php echo $frontend_h2; ?></h2>
     
-    <p>First of all I want to thank my professor <a href="https://www.linkedin.com/in/emikay/" target="_blank">Emily Kay</a> and the San Diego Continuing Education school. I wouldn't be able to face a new career without this help. Emily tought me how to make my path in this field using my own legs.</p>
+    <p><?php echo $frontend_p1; ?></p>
     
-    <p>That said, I would like to invite you to check <a href="http://www.sdce.edu/job-training/computers/front-end-web-developer" target="_blank">the scope of this certification program</a>, which took me wo semesters of 360 hours each one. And here bellow you can have a quick overview of the knowledge that I'm getting so far:</p>
+    <p><?php echo $frontend_p2; ?></p>
         
         <div class="skillsWrapper">        
             <p>HTML5</p>
@@ -211,13 +227,13 @@
         
         <div class="noClear">&nbsp;</div>
         
-        <p>And just for the records, a proud student is suppose to share the certificates itself. Right? So here they are:</p>
+        <p><?php echo $frontend_p3; ?></p>
 
         <div class="parallax" style="background-image:url('../assets/content/certification.jpg')"></div>
 
-        <p>That's it. In case you have any extra question about my front-end skills, please <a href="contact.php">contact me</a>. I'll be excited to know what exactly are you looking for.</p>
+        <p><?php echo $frontend_p4; ?></p>
 
-        <p>Thank you!</p>
+        <p><?php echo $frontend_p5; ?></p>
 	</main><!-- .main-content -->
 
 	<footer>
@@ -243,7 +259,7 @@
                 </div>
             </div>
 
-            <p>&copy; 2017. All rights reserved.</p> 
+            <p><?php echo $copyRight; ?></p> 
         </div>
 	</footer>
 

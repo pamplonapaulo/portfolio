@@ -201,11 +201,12 @@ Header Components
 	@include font-smoothing; // see partials > _mixins.scss
     
     #logo {
-    width: 40px;
-    height: auto;
-	float: left;
-	margin: 13px 0 0 16px;
-    z-index: 95;
+        position: relative;
+        width: 40px;
+        height: auto;
+        float: left;
+        margin: 13px 0 0 16px;
+        z-index: 95;
     
     .shadow {
     -webkit-filter: drop-shadow( -2px 2px 1px rgba(#000, .5));
@@ -222,39 +223,13 @@ Header Components
         -webkit-transform: scale3d(1.2, 1.2, 1);
         transform: scale3d(1.2, 1.2, 1);
     }
-        
-    .languages {
-        z-index: 99;
-        background: red;
-        margin-top: 5em;
-        margin-left: 100px;
-        width: 100px;
-        
-        border: solid 1px yellow;
-        
-        > a > img {
-            padding: 5px;
-            width: 40px;
-            float: right;
-        }
 
-            
-    }
         
-    
-    
 	@include MQ(M) {
         width: 60px;
 		margin: 15px 0 0 16px;
 	}
 }
-    
-    
-    
-    
-    
-    
-
 	@include MQ(M) {
         position: absolute;
 		height: $header-M;
@@ -269,10 +244,35 @@ Header Components
         position: relative;
     }
 }
-
-
-
-
+        
+    .idioms {
+        position: absolute;
+        display: inline-block;
+        width: 100px;
+        z-index: 89;
+            
+        .flags {
+            float: left;
+            width: 25px;
+            height: auto;
+            margin: 18px 0 auto 15px;
+            background-position: center center;
+		    background-size: cover;
+		    background-repeat: no-repeat; 
+            
+            @include MQ(M) {
+                margin: 26px auto auto 22.5px;
+            }              
+        }
+        
+        .langPT {
+            background-image: url('../assets/headers/flag-pt.png');
+        }
+        
+        .langEN {
+            background-image: url('../assets/headers/flag-en.png');
+        }
+    }
 
 /* -------------------------------- 
 
@@ -441,13 +441,12 @@ Top Menu
     }
     
     @include MQ(L) {
+        width: 600px;
+        right: 0;        
         position: absolute;
         display: block;
-        width: 100%;
         height: auto;
         background: none;
-        clear: right;
-        float: right;
         font-family: $font-1;
         font-weight: 100;
         margin-top: 0;
@@ -532,7 +531,7 @@ Top Menu
         background-color: rgba($color-green, .3);
         display: block;
         font-size: 1em;
-        margin-left: 134px;
+        margin-left: 100px;
         text-align: center;
         padding: auto auto;
         top: -30px;
@@ -1412,11 +1411,6 @@ main > p > a {
         width: 50%;
         float: right;
     }
-    
-//    @include MQ(M) {
-//        width: 50%;
-//        float: right;
-//    }
 
     .textWrap {
         text-align: center;

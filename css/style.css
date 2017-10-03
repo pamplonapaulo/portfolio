@@ -272,6 +272,7 @@ Header Components
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
   .header #logo {
+    position: relative;
     width: 40px;
     height: auto;
     float: left;
@@ -287,17 +288,6 @@ Header Components
     .header #logo > a > img:hover {
       -webkit-transform: scale3d(1.2, 1.2, 1);
       transform: scale3d(1.2, 1.2, 1); }
-    .header #logo .languages {
-      z-index: 99;
-      background: red;
-      margin-top: 5em;
-      margin-left: 100px;
-      width: 100px;
-      border: solid 1px yellow; }
-      .header #logo .languages > a > img {
-        padding: 5px;
-        width: 40px;
-        float: right; }
     @media only screen and (min-width: 768px) {
       .header #logo {
         width: 60px;
@@ -314,6 +304,27 @@ Header Components
       margin: -70px auto 0 auto;
       padding-top: 70px;
       position: relative; } }
+
+.idioms {
+  position: absolute;
+  display: inline-block;
+  width: 100px;
+  z-index: 89; }
+  .idioms .flags {
+    float: left;
+    width: 25px;
+    height: auto;
+    margin: 18px 0 auto 15px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    @media only screen and (min-width: 768px) {
+      .idioms .flags {
+        margin: 26px auto auto 22.5px; } }
+  .idioms .langPT {
+    background-image: url("../assets/headers/flag-pt.png"); }
+  .idioms .langEN {
+    background-image: url("../assets/headers/flag-en.png"); }
 
 /* -------------------------------- 
 
@@ -454,13 +465,12 @@ Top Menu
       margin-top: 0; } }
   @media only screen and (min-width: 1170px) {
     .menu {
+      width: 600px;
+      right: 0;
       position: absolute;
       display: block;
-      width: 100%;
       height: auto;
       background: none;
-      clear: right;
-      float: right;
       font-family: "Lato", sans-serif;
       font-weight: 100;
       margin-top: 0; }
@@ -526,7 +536,7 @@ Top Menu
       background-color: rgba(178, 212, 48, 0.3);
       display: block;
       font-size: 1em;
-      margin-left: 134px;
+      margin-left: 100px;
       text-align: center;
       padding: auto auto;
       top: -30px; }

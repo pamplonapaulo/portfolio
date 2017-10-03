@@ -1,4 +1,10 @@
+<?php 
+session_start();
+include_once('lang.php');
+?>
+
 <?php include('form_process.php'); ?>
+
 <!-- Global Site Tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107261432-1"></script>
 <script>
@@ -54,13 +60,24 @@
 <!-- remove before publish and turn on the link right bellow. Here now just working offline -->
 <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
 
-    <title>Contact</title>
+    <title><?php echo $contact; ?></title>
     
     <link href="../assets/icons-logos/favicon.png" rel="icon" type="image/x-icon" />
 
 <body>
 	<header class="header">
-        <div id="logo"><a href="../index.html"><img src="../assets/icons-logos/logo-white.svg" class="shadow" alt="Logo" /></a></div>
+        <div id="logo">
+            <a href="../index.php">
+                <img src="../assets/icons-logos/logo-white.svg" class="shadow" alt="Logo" />
+            </a>
+        </div>
+
+    <!-- Language Flags -->
+        <div class="idioms">
+            <a href="?lang=en" class="flags langEN">&nbsp;</a>
+            <a href="?lang=pt" class="flags langPT">&nbsp;</a>     
+        </div>
+        
 
     <!-- Hamburguer Icon -->
         <div class="nav-hamb" id="hamb-nav">
@@ -72,17 +89,17 @@
     <!-- Menu -->
         <nav class="menu"> 
             <ul>
-                <li><a href="about.html">About me</a></li>
-                <li href="#" class="subMenu"><a>Know-how</a>
+                <li><a href="about.php" ><?php echo $about; ?></a></li>
+                <li href="#" class="subMenu"><a>Expertise</a>
                     <ul class="touchDropDown">
-                        <li><a href="front-end.html">Front-End</a></li>
-                        <li><a href="journalism.html">Journalism</a></li>
-                        <li><a href="branding.html">Branding</a></li>
+                        <li><a href="front-end.php">Front-End</a></li>
+                        <li><a href="content.php"><?php echo $content; ?></a></li>
+                        <li><a href="branding.php">Branding</a></li>
                     </ul>
                 </li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="#" class="current">Contact</a></li>
+                <li><a href="portfolio.php"><?php echo $portfolio; ?></a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a class="current"><?php echo $contact; ?></a></li>
             </ul>   
         </nav>
 	</header>
@@ -92,7 +109,7 @@
         <article class="headerSection">
             <div class="headerWrap">
                <div class="main-content container-lg">
-                   <h6>What is your need?</h6>
+                   <h6><?php echo $contact_hero; ?></h6>
                </div>
             </div>
         </article>
@@ -112,11 +129,11 @@
         </div>
        </a>
        
-    <h2>Let's talk about your business?</h2>
+    <h2><?php echo $contact_h2_1; ?></h2>
               
-    <p>Please fill out the form bellow and let me know more about you and your needs, ok?</p>
+    <p><?php echo $contact_p1; ?></p>
     
-    <p>I’m looking forward to hearing from you!</p>
+    <p><?php echo $contact_p2; ?></p>
     
     <!----------------   CONTACT FORM   ---------------->
     
@@ -134,33 +151,33 @@
             </div>
             <div class="success"><?= $success ?></div>
             <fieldset>
-                <input placeholder="NAME" type="text" name="name" value="<?= $name ?>" tabindex="1" />
+                <input placeholder="<?php echo $contact_name; ?>" type="text" name="name" value="<?= $name ?>" tabindex="1" />
                 <span class="error"><?= $name_error ?></span>
 
                 <input placeholder="EMAIL" type="text" name="email" value="<?= $email ?>" tabindex="2" />
                 <span class="error"><?= $email_error ?></span>
 
-                <input placeholder="PHONE" type="text" name="phone" value="<?= $phone ?>" tabindex="3" />
+                <input placeholder="<?php echo $contact_phone; ?>" type="text" name="phone" value="<?= $phone ?>" tabindex="3" />
                 <span class="error"><?= $phone_error ?></span>
 
                 <input placeholder="WEBSITE" type="text" name="url" value="<?= $url ?>" tabindex="4" />
                 <span class="error"><?= $url_error ?></span>
             </fieldset>
 
-            <h4 class="formSubHeader">REQUEST TYPE</h4>
+            <h4 class="formSubHeader"><?php echo $contact_request; ?></h4>
             <fieldset>
                 <input type="radio" value="quotation" id="quotation" name="requestType" tabindex="5" />
-                <label for="quotation">Website quotation</label>
+                <label for="quotation"><?php echo $contact_quotation; ?></label>
                 <input type="radio" value="comment" id="question" name="requestType" tabindex="6" />
-                <label for="question">Just a question</label>
+                <label for="question"><?php echo $contact_question; ?></label>
 
-                <textarea placeholder="MESSAGE" name="message" value="<?= $message ?>" tabindex="7"></textarea>
+                <textarea placeholder="<?php echo $contact_message; ?>" name="message" value="<?= $message ?>" tabindex="7"></textarea>
 
                 <input type="checkbox" value="yesSubscribe" id="subscribe" name="blogSubscription" tabindex="8"/>
-                <label for="subscribe">Subscribe to my blog</label>
+                <label for="subscribe"><?php echo $contact_subscribe; ?></label>
             </fieldset>
             <fieldset>
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Send</button>
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending"><?php echo $contact_submit; ?></button>
             </fieldset>
       </form>
     </div>    
@@ -190,7 +207,7 @@
                 </div>
             </div>
 
-            <p>&copy; 2017. All rights reserved.</p> 
+            <p><?php echo $copyRight; ?></p> 
         </div>
 	</footer>
 	   

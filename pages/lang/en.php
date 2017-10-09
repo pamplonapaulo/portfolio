@@ -30,7 +30,7 @@ $home_p1="My name is Paulo Pamplona and I'm a Brazilian-Portuguese web developer
 
 //ABOUT
 
-$about_hero="The story of Paulo Pamplona";
+$about_hero="My story";
 
 $about_h2_1="It's a story of languages.";
 

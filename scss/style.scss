@@ -1345,6 +1345,13 @@ main > p > a {
 
 
 
+#instaFeed {
+    margin-bottom: -35px;
+    
+    @include MQ(L) {
+        margin-bottom: -28px;
+    }
+}
 
 #instaFeed > li {
     list-style: none;

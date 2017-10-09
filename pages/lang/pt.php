@@ -28,7 +28,7 @@ $home_p1="Meu nome é Paulo Pamplona. Sou um desenvolvedor web luso-brasileiro, 
 
 //ABOUT
 
-$about_hero="A história de Paulo Pamplona";
+$about_hero="Minha história";
 
 $about_h2_1="Uma história de linguagens.";
 
